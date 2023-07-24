@@ -28,7 +28,7 @@ jobs:
 
   ec2_deploy:
     name: Push to EC2 Instance
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy Docker to AWS (EC2)
         uses: bitovi/github-actions-deploy-docker-to-ec2@v0.5.4
