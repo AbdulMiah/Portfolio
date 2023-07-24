@@ -27,6 +27,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
 
   ec2_deploy:
+    needs: push_to_registry
     name: Push to EC2 Instance
     runs-on: ubuntu-latest
     steps:
@@ -39,4 +40,4 @@ jobs:
           script:
             docker stop portfolio || true
             docker rm portfolio || true
-            docker run -d --rm -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+            docker run -d -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
