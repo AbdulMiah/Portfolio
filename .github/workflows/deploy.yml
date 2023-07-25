@@ -38,6 +38,4 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script:
-            docker stop portfolio || true
-            docker rm portfolio || true
             docker run -d -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
