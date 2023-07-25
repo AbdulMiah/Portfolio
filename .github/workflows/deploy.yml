@@ -38,6 +38,5 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script:
-            docker stop $(docker ps -a -q)
-            docker rm $(docker ps -a -q)
-            docker run -d -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+            sh stop_and_remove.sh
+            docker run -d --name portfolio_app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
