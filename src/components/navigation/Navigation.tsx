@@ -2,16 +2,16 @@ import { useState } from "react";
 import IconButton from "./reusable/IconButton";
 import { XMarkIcon, Bars3Icon, MoonIcon, SunIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
-function Navigation() {
+type NavigationProp = {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+};
+
+function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   const [isMenuOpen, setMenuOpen] = useState(true);
-  const [isDarkMode, setDarkMode] = useState(true);
 
   function toggleMenu() {
     setMenuOpen((prevState) => !prevState);
-  }
-
-  function toggleDarkMode() {
-    setDarkMode((prevState) => !prevState);
   }
 
   return (

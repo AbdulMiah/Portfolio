@@ -1,10 +1,11 @@
-import Navigation from "../components/navigation/Navigation";
+type LandingPageProp = {
+  isDarkMode: boolean;
+};
 
-function LandingPage() {
+function LandingPage({ isDarkMode }: LandingPageProp) {
   return (
     <>
-      <Navigation />
-      <h1>Landing Page!</h1>
+      <h1 className={`${isDarkMode ? "dark": ""}`}>Landing Page!</h1>
     </>
   );
 }
