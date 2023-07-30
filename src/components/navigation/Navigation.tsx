@@ -20,12 +20,15 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
       </a>
-      <div className="block lg:hidden">
-        <button 
-        className="px-3 py-2 border rounded border-black dark:bg-white"
-        onClick={toggleMenu}
-        >
-          {isMenuOpen ? <XMarkIcon className="h-6 w-6 text-black" /> : <Bars3Icon className="h-6 w-6 text-black" />}
+      <div className="block lg:hidden flex items-center">
+        <a className="mr-4" onClick={toggleDarkMode}>
+          {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black fill-black hover:fill-white" />}
+        </a>
+        <a className="mr-5" href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
+          <IconButton icon={<ArrowDownTrayIcon className="h-5 w-5" />} text="Download CV" />
+        </a>
+        <button onClick={toggleMenu}>
+          {isMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
         </button>
       </div>
       <div className={`w-full block flex-grow ${isMenuOpen ? "lg:flex" : "hidden"} lg:items-center lg:w-auto`}>
@@ -53,7 +56,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             Contact
           </a>
         </div>
-        <div className="flex items-center mt-4 lg:mt-0">
+        <div className="flex items-center hidden lg:inline-flex">
           <a className="mr-4" onClick={toggleDarkMode}>
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black fill-black hover:fill-white" />}
           </a>
