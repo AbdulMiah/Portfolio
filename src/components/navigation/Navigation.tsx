@@ -15,7 +15,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   }
 
   return (
-    <nav className={`${isDarkMode ? "dark": ""} flex items-center justify-between flex-wrap p-6`}>
+    <nav className={`${isDarkMode ? "dark": ""} w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}>
       <a href="/" className="flex items-end text-black dark:text-white">
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
@@ -58,7 +58,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         </div>
         <div className="flex items-center hidden lg:inline-flex">
           <a className="mr-4" onClick={toggleDarkMode}>
-            {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black fill-black hover:fill-white" />}
+            {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black hover:fill-black" />}
           </a>
           <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
             <IconButton icon={<ArrowDownTrayIcon className="h-5 w-5" />} text="Download CV" />
