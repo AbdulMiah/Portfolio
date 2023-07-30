@@ -1,7 +1,25 @@
+import { useState } from "react";
 import IconButton from "./reusable/IconButton";
 
 function Navigation() {
-  const svgIcon = (
+  const [isMenuOpen, setMenuOpen] = useState(true);
+
+  function toggleMenu() {
+    setMenuOpen((prevState) => !prevState);
+  }
+
+  const menuSvg = (
+    <svg
+            className="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+  );
+
+  const downloadSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -18,7 +36,7 @@ function Navigation() {
     </svg>
   );
 
-  const darkSvg = (
+  const moonSvg = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="bg-black"
@@ -37,49 +55,45 @@ function Navigation() {
 
   return (
     <nav className="flex items-center justify-between flex-wrap p-6">
-      <a href="#Home" className="flex items-end flex-shrink-0 text-black mr-6">
+      <a href="#Home" className="flex items-end text-black">
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
       </a>
       <div className="block lg:hidden">
-        <button className="flex items-center px-3 py-2 border rounded text-black border-black">
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+        <button 
+        className="px-3 py-2 border rounded border-black"
+        onClick={toggleMenu}
+        >
+          {isMenuOpen ? "X" : menuSvg}
         </button>
       </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-base lg:flex-grow">
-          <a href="#About" className="block mt-4 lg:inline-block lg:mt-0 mr-4">
+      <div className={`w-full block flex-grow ${isMenuOpen ? "lg:flex" : "hidden"} lg:items-center lg:w-auto`}>
+        <div className="text-base lg:flex lg:justify-center lg:flex-grow">
+          <a href="#About" className="hover:bg-grey px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4">
             About
           </a>
           <a
             href="#Experience"
-            className="block mt-4 lg:inline-block lg:mt-0 mr-4"
+            className="hover:bg-grey px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Experience
           </a>
           <a
             href="#Projects"
-            className="block mt-4 lg:inline-block lg:mt-0 mr-4"
+            className="hover:bg-grey px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Projects
           </a>
-          <a href="#Contact" className="block mt-4 lg:inline-block lg:mt-0">
+          <a href="#Contact" className="hover:bg-grey px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0">
             Contact
           </a>
         </div>
-        <div className="flex items-center flex-shrink-0">
-          <a href="#darkmode" className="mr-4">
-            {darkSvg}
+        <div className="flex items-center mt-4 lg:mt-0">
+          <a href="DarkMode" className="mr-4">
+            {moonSvg}
           </a>
           <a href="#DownloadCV">
-            <IconButton icon={svgIcon} text="Download CV" />
+            <IconButton icon={downloadSvg} text="Download CV" />
           </a>
         </div>
       </div>
