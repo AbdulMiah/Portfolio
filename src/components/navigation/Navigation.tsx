@@ -92,7 +92,7 @@ function Navigation() {
           <a href="DarkMode" className="mr-4">
             {moonSvg}
           </a>
-          <a href="#DownloadCV">
+          <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
             <IconButton icon={downloadSvg} text="Download CV" />
           </a>
         </div>
