@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'media',
   theme: {
     colors: {
       transparent: "transparent",
@@ -12,6 +13,7 @@ export default {
       white: "#FFFFFF",
       black: "#000000",
       grey: "#DCDCDC",
+      dark: "#27282C",
     },
   },
   plugins: [],
