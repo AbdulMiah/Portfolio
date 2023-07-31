@@ -18,6 +18,8 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMenuOpen(true);
+      } else {
+        setMenuOpen(false);
       }
     };
 
