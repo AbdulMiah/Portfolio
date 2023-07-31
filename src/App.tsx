@@ -1,36 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import LandingPage from "./pages/LandingPage";
+import Navigation from "./components/navigation/Navigation";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDarkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    const colourPreference = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+  
+    if (colourPreference.matches) {
+      setDarkMode(true);
+    }
+
+    colourPreference.addEventListener("change", (evt) => setDarkMode(evt.matches));
+  }, []);
+
+  function toggleDarkMode() {
+    setDarkMode((prevState) => !prevState);
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Welcome to Abdul's Website!</h1>
-      <h4>This website is under construction! Please wait patiently.</h4>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <LandingPage isDarkMode={isDarkMode} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
