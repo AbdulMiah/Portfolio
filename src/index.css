@@ -9,5 +9,13 @@
 }
 
 .dark {
-    @apply bg-dark text-white
+    @apply bg-dark-100 text-white
+}
+
+.dark-nav {
+    @apply bg-dark-200
+}
+
+.light-nav {
+    @apply bg-grey-100
 }

@@ -12,8 +12,14 @@ export default {
       },
       white: "#FFFFFF",
       black: "#000000",
-      grey: "#DCDCDC",
-      dark: "#27282C",
+      grey: {
+        100: "#F5F5F5",
+        200: "#DCDCDC",
+      },
+      dark: {
+        100: "#27282C",
+        200: "#242529"
+      },
     },
   },
   plugins: [],

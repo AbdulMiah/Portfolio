@@ -15,14 +15,14 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   }
 
   return (
-    <nav className={`${isDarkMode ? "dark": ""} w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}>
+    <nav className={`${isDarkMode ? "dark dark-nav": "light-nav"} w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}>
       <a href="/" className="flex items-end text-black dark:text-white">
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
       </a>
       <div className="block lg:hidden flex items-center">
         <a className="mr-4" onClick={toggleDarkMode}>
-          {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black fill-black hover:fill-white" />}
+        {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black hover:fill-black" />}
         </a>
         <a className="mr-5" href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
           <IconButton icon={<ArrowDownTrayIcon className="h-5 w-5" />} text="Download CV" />
@@ -35,24 +35,24 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
           <a 
             href="#About" 
-            className="hover:bg-grey dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4">
+            className="hover:bg-grey-200 dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4">
             About
           </a>
           <a
             href="#Experience"
-            className="hover:bg-grey dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
+            className="hover:bg-grey-200 dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Experience
           </a>
           <a
             href="#Projects"
-            className="hover:bg-grey dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
+            className="hover:bg-grey-200 dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Projects
           </a>
           <a 
             href="#Contact" 
-            className="hover:bg-grey dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0">
+            className="hover:bg-grey-200 dark:hover:bg-black px-2 py-1 rounded block mt-4 lg:inline-block lg:mt-0">
             Contact
           </a>
         </div>
