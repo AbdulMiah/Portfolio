@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LandingPage from "./pages/LandingPage";
 import Navigation from "./components/navigation/Navigation";
 
 
 function App() {
-  const [isDarkMode, setDarkMode] = useState(true);
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const colourPreference = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+  
+    if (colourPreference.matches) {
+      setDarkMode(true);
+    }
+
+    colourPreference.addEventListener("change", (evt) => setDarkMode(evt.matches));
+  }, []);
 
   function toggleDarkMode() {
     setDarkMode((prevState) => !prevState);
