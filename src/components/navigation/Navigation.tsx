@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import IconButton from "../reusable/IconButton";
 import { XMarkIcon, Bars3Icon, MoonIcon, SunIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -13,7 +14,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   const LinkedInIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 mr-6 hover:fill-royal-blue-100"
+      className="h-5 w-5 hover:fill-royal-blue-100"
       fill="currentColor"
       viewBox="0 0 24 24">
       <path
@@ -23,7 +24,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   const GitHubLogo = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 mr-6 hover:fill-royal-blue-100"
+      className="h-5 w-5 hover:fill-royal-blue-100"
       fill="currentColor"
       viewBox="0 0 24 24">
       <path
@@ -67,44 +68,69 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
       </div>
       <div className={`w-full block flex-grow ${isMenuOpen ? "lg:flex" : "hidden"} lg:items-center lg:w-auto`}>
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
-          <a 
+          <motion.a 
+            whileHover={{scale: [null, 1.1, 1.05]}}
+            transition={{duration: 0.1}} 
             href="#About" 
             className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4">
             About
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{scale: [null, 1.1, 1.05]}}
+            transition={{duration: 0.1}} 
             href="#Experience"
             className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Experience
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{scale: [null, 1.1, 1.05]}}
+            transition={{duration: 0.1}} 
             href="#Projects"
             className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
           >
             Projects
-          </a>
-          <a 
+          </motion.a>
+          <motion.a 
+            whileHover={{scale: [null, 1.1, 1.05]}}
+            transition={{duration: 0.1}} 
             href="#Contact" 
             className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0">
             Contact
-          </a>
+          </motion.a>
         </div>
-        <div className="block lg:hidden flex items-center justify-center mt-4">
-          <a href="https://www.linkedin.com/in/abdul-m-miah/" target="_blank">
+        <div className="block lg:hidden flex items-center justify-center space-x-6 mt-4">
+          <motion.a 
+            whileHover={{scale: [null, 1.3, 1.2]}}
+            transition={{duration: 0.1}}
+            href="https://www.linkedin.com/in/abdul-m-miah/" target="_blank"
+          >
             {LinkedInIcon}
-          </a>
-          <a href="https://github.com/AbdulMiah" target="_blank">
+          </motion.a>
+          <motion.a 
+            whileHover={{scale: [null, 1.3, 1.2]}}
+            transition={{duration: 0.1}}
+            href="https://github.com/AbdulMiah" target="_blank"
+          >
             {GitHubLogo}
-          </a>
-          <a onClick={toggleDarkMode}>
+          </motion.a>
+          <motion.a 
+            whileHover={{scale: [null, 1.3, 1.2]}}
+            transition={{duration: 0.1}}
+            onClick={toggleDarkMode}
+          >
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black hover:fill-black" />}
-          </a>
+          </motion.a>
         </div>
         <div className="flex items-center hidden lg:inline-flex">
-          <a className="mr-4" onClick={toggleDarkMode}>
+          <motion.a 
+            whileHover={{scale: [null, 1.3, 1.2]}}
+            transition={{duration: 0.1}} 
+            className="mr-4" 
+            onClick={toggleDarkMode}
+          >
             {isDarkMode ? <SunIcon className="h-6 w-6 text-white hover:fill-white" /> : <MoonIcon className="h-6 w-6 text-black hover:fill-black" />}
-          </a>
+          </motion.a>
           <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
             <IconButton icon={<ArrowDownTrayIcon className="h-5 w-5" />} text="Download CV" />
           </a>
