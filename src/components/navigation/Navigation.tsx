@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IconButton from "./reusable/IconButton";
+import IconButton from "../reusable/IconButton";
 import { XMarkIcon, Bars3Icon, MoonIcon, SunIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 type NavigationProp = {
