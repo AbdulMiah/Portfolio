@@ -5,11 +5,11 @@ type LandingPageProp = {
 function LandingPage({ isDarkMode }: LandingPageProp) {
   return (
     <div className={`${isDarkMode ? "dark" : ""} flex flex-col justify-center items-center h-screen`}>
-        <h1 className="text-7xl font-bold">
+        <h1 className="font-bold">
           Hi, I'm
           <span className="text-royal-blue-100"> Abdul!</span>
         </h1>
-        <h3 className="text-xl mt-6">I'm a Software Engineer.</h3>
+        <h4 className="mt-6">I'm a Software Engineer.</h4>
     </div>
   );
 }
