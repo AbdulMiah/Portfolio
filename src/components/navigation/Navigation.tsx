@@ -39,10 +39,10 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
       </a>
       <div className="block lg:hidden flex items-center">
         <a className="mr-5" href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
-          <IconButton icon={<IconDownload className="h-5 w-5" />} text="CV" />
+          <IconButton icon={<IconDownload />} text="CV" />
         </a>
         <button onClick={toggleMenu}>
-          {isMenuOpen ? <IconX className="h-6 w-6" /> : <IconMenu2 className="h-6 w-6" />}
+          {isMenuOpen ? <IconX /> : <IconMenu2 />}
         </button>
       </div>
       <div className={`w-full block flex-grow ${isMenuOpen ? "lg:flex" : "hidden"} lg:items-center lg:w-auto`}>
@@ -98,7 +98,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             transition={{duration: 0.1}}
             onClick={toggleDarkMode}
           >
-            {isDarkMode ? <IconSun className="h-6 w-6 text-white hover:fill-white" /> : <IconMoon className="h-6 w-6 text-black hover:fill-black" />}
+            {isDarkMode ? <IconSun className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
           </motion.a>
         </div>
         <div className="flex items-center hidden lg:inline-flex">
@@ -108,10 +108,10 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             className="mr-4" 
             onClick={toggleDarkMode}
           >
-            {isDarkMode ? <IconSun className="h-6 w-6 text-white hover:fill-white" /> : <IconMoon className="h-6 w-6 text-black hover:fill-black" />}
+            {isDarkMode ? <IconSun className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
           </motion.a>
           <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
-            <IconButton icon={<IconDownload className="h-5 w-5" />} text="Download CV" />
+            <IconButton icon={<IconDownload />} text="Download CV" />
           </a>
         </div>
       </div>
