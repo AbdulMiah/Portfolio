@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import IconButton from "../reusable/IconButton";
-import { IconX, IconMenu2, IconMoon, IconSun, IconDownload, IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { IconX, IconMenu2, IconMoon, IconSunHigh, IconDownload, IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
 type NavigationProp = {
@@ -98,7 +98,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             transition={{duration: 0.1}}
             onClick={toggleDarkMode}
           >
-            {isDarkMode ? <IconSun className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
+            {isDarkMode ? <IconSunHigh className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
           </motion.a>
         </div>
         <div className="flex items-center hidden lg:inline-flex">
@@ -108,7 +108,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             className="mr-4" 
             onClick={toggleDarkMode}
           >
-            {isDarkMode ? <IconSun className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
+            {isDarkMode ? <IconSunHigh className="text-white hover:fill-white" /> : <IconMoon className="text-black hover:fill-black" />}
           </motion.a>
           <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
             <IconButton icon={<IconDownload />} text="Download CV" />
