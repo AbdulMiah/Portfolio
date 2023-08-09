@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Avatar } from "../reusable/Avatar";
 import { Canvas } from "@react-three/fiber";
+import { OfficeChair } from "../reusable/OfficeChair";
+import { Suspense } from "react";
+import CanvasLoader from "../reusable/CanvasLoader";
 
 type LandingPageProp = {
   isDarkMode: boolean;
@@ -36,10 +39,13 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
             I'm a Software Engineer.
           </motion.h4>
           <Canvas shadows camera={{ position: [0, 0, 5], fov: 20 }}>
-            <group position-y={-0.5}>
-              <Avatar />
-              <ambientLight intensity={2} />
-            </group>
+            <Suspense fallback={<CanvasLoader />}>
+              <group position-y={-0.7}>
+                <OfficeChair position={[0, 0.5, 0]} />
+                <Avatar />
+                <ambientLight intensity={2} />
+              </group>
+            </Suspense>
           </Canvas>
         </div>
       </div>
