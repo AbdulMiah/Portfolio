@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OfficeChair } from "../reusable/OfficeChair";
 import { Suspense } from "react";
 import CanvasLoader from "../reusable/CanvasLoader";
+import { IconMouse } from "@tabler/icons-react";
 
 type LandingPageProp = {
   isDarkMode: boolean;
@@ -47,6 +48,7 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
               </group>
             </Suspense>
           </Canvas>
+          <IconMouse className="animate-bounce h-12 w-12" />
         </div>
       </div>
     </section>
