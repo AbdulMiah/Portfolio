@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Avatar } from "../Avatar";
+import { Avatar } from "../reusable/Avatar";
 import { Canvas } from "@react-three/fiber";
 
 type LandingPageProp = {
@@ -19,7 +19,7 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
                 delay: 0.4,
                 ease: [0, 0.71, 0.2, 1.01]
               }}
-              className="font-bold"
+              className="font-bold text-center"
             >
               Hi, I'm
               <span className="text-royal-blue-100"> Abdul!</span>
@@ -35,8 +35,8 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
             >
               I'm a Software Engineer.
             </motion.h4>
-            <Canvas shadows camera={{ position: [0, 1, 5], fov: 8 }}>
-              <group position-y={-1.5}>
+            <Canvas shadows camera={{ position: [0, 0, 5], fov: 20 }}>
+              <group position-y={-0.5}>
                 <Avatar />
                 <ambientLight intensity={2} />
               </group>

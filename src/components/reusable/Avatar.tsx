@@ -1,6 +1,8 @@
-import * as THREE from 'three'
-import { useGLTF } from '@react-three/drei'
+import * as THREE from 'three';
+import { useRef, useEffect } from 'react';
+import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
+import { Group } from 'three';
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -32,10 +34,24 @@ type GLTFResult = GLTF & {
 }
 
 export function Avatar(props: JSX.IntrinsicElements['group']) {
+    const group = useRef<Group>(null);
   const { nodes, materials } = useGLTF('src/assets/models/avatar.glb') as GLTFResult;
 
+  const { animations: sittingAnimation } = useFBX("src/assets/animations/Sitting.fbx");
+
+  console.log(sittingAnimation);
+
+  sittingAnimation[0].name = "Sitting";
+
+  const { actions } = useAnimations(sittingAnimation, group);
+
+  useEffect(() => {
+    actions["Sitting"]?.reset().play();
+  }, []);
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} ref={group} dispose={null}>
+        <group rotation-x={-Math.PI / 2}>
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
@@ -48,6 +64,7 @@ export function Avatar(props: JSX.IntrinsicElements['group']) {
       <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials.Wolf3D_Skin} skeleton={nodes.Wolf3D_Head.skeleton} morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences} />
       <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials.Wolf3D_Teeth} skeleton={nodes.Wolf3D_Teeth.skeleton} morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences} />
       <skinnedMesh name="Wolf3D_Beard" geometry={nodes.Wolf3D_Beard.geometry} material={materials.Wolf3D_Beard} skeleton={nodes.Wolf3D_Beard.skeleton} morphTargetDictionary={nodes.Wolf3D_Beard.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Beard.morphTargetInfluences} />
+    </group>
     </group>
   )
 }
