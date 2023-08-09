@@ -1,8 +1,9 @@
 import * as THREE from "three";
+import { Group } from "three";
 import { useRef, useEffect } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
-import { Group } from "three";
+import { useFrame } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -45,6 +46,11 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
   sittingAnimation[0].name = "Sitting";
 
   const { actions } = useAnimations(sittingAnimation, group);
+
+  useFrame((state) => {
+    const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+    group.current?.getObjectByName("Head")?.lookAt(target);
+  });
 
   useEffect(() => {
     actions["Sitting"]?.reset().play();
