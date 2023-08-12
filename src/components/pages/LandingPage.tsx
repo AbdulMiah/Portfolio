@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Avatar } from "../reusable/Avatar";
 import { Canvas } from "@react-three/fiber";
@@ -11,6 +12,8 @@ type LandingPageProp = {
 };
 
 function LandingPage({ isDarkMode }: LandingPageProp) {
+  const [lookAtTarget, setLookAtTarget] = useState(false);
+
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
       <div className="absolute inset-0 top-[120px] items-start">
@@ -39,11 +42,16 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
           >
             I'm a Software Engineer.
           </motion.h4>
-          <Canvas shadows camera={{ position: [0, 0, 5], fov: 20 }}>
+          <Canvas
+            shadows
+            camera={{ position: [0, 0, 5], fov: 20 }}
+            onPointerEnter={() => setLookAtTarget(true)}
+            onPointerLeave={() => setLookAtTarget(false)}
+          >
             <Suspense fallback={<CanvasLoader />}>
               <group position-y={-0.7}>
                 <OfficeChair position={[0, 0.5, 0]} />
-                <Avatar />
+                <Avatar lookAtTarget={lookAtTarget} />
                 <ambientLight intensity={2} />
               </group>
             </Suspense>

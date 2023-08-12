@@ -34,7 +34,11 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function Avatar(props: JSX.IntrinsicElements["group"]) {
+type AvatarProp = {
+  lookAtTarget: boolean;
+} & JSX.IntrinsicElements["group"];
+
+export function Avatar(props: AvatarProp) {
   const group = useRef<Group>(null);
   const { nodes, materials } = useGLTF(
     "src/assets/models/avatar.glb"
@@ -49,7 +53,9 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
 
   useFrame((state) => {
     const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-    group.current?.getObjectByName("Head")?.lookAt(target);
+    if (props.lookAtTarget) {
+      group.current?.getObjectByName("Head")?.lookAt(target);
+    }
   });
 
   useEffect(() => {
@@ -136,3 +142,21 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
 }
 
 useGLTF.preload("src/assets/models/avatar.glb");
+
+// useFrame((state, delta) => {
+//   const canvasWidth = state.viewport.width;
+//   const canvasHeight = state.viewport.height;
+//   const mouse = new THREE.Vector2();
+//   mouse.x = (state.mouse.x / canvasWidth) * 2 - 1;
+//   mouse.y = -(state.mouse.y / canvasHeight) * 2 + 1;
+
+//   const raycaster = new THREE.Raycaster();
+//   raycaster.setFromCamera(mouse, state.camera);
+
+//   const intersects = raycaster.intersectObject(group.current!, true);
+
+//   if (intersects.length > 0) {
+//     const target = intersects[0].point;
+//     group.current?.getObjectByName("Head")?.lookAt(target);
+//   }
+// });
