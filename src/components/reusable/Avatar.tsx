@@ -142,21 +142,3 @@ export function Avatar(props: AvatarProp) {
 }
 
 useGLTF.preload("src/assets/models/avatar.glb");
-
-// useFrame((state, delta) => {
-//   const canvasWidth = state.viewport.width;
-//   const canvasHeight = state.viewport.height;
-//   const mouse = new THREE.Vector2();
-//   mouse.x = (state.mouse.x / canvasWidth) * 2 - 1;
-//   mouse.y = -(state.mouse.y / canvasHeight) * 2 + 1;
-
-//   const raycaster = new THREE.Raycaster();
-//   raycaster.setFromCamera(mouse, state.camera);
-
-//   const intersects = raycaster.intersectObject(group.current!, true);
-
-//   if (intersects.length > 0) {
-//     const target = intersects[0].point;
-//     group.current?.getObjectByName("Head")?.lookAt(target);
-//   }
-// });

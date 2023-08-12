@@ -1,19 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Avatar } from "../reusable/Avatar";
-import { Canvas } from "@react-three/fiber";
-import { OfficeChair } from "../reusable/OfficeChair";
-import { Suspense } from "react";
-import CanvasLoader from "../reusable/CanvasLoader";
 import { IconMouse } from "@tabler/icons-react";
+import AvatarSitting from "./AvatarSitting";
 
 type LandingPageProp = {
   isDarkMode: boolean;
 };
 
 function LandingPage({ isDarkMode }: LandingPageProp) {
-  const [lookAtPointer, setLookAtPointer] = useState(false);
-
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
       <div className="absolute inset-0 top-[120px] items-start">
@@ -48,20 +41,7 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
             animate={{ opacity: 1, scale: [null, 1.4, 1] }}
             transition={{ duration: 0.3, delay: 2.5 }}
           >
-            <Canvas
-              shadows
-              camera={{ position: [0, 0, 5], fov: 20 }}
-              onPointerEnter={() => setLookAtPointer(true)}
-              onPointerLeave={() => setLookAtPointer(false)}
-            >
-              <Suspense fallback={<CanvasLoader />}>
-                <group position-y={-0.7}>
-                  <OfficeChair position={[0, 0.5, 0]} />
-                  <Avatar lookAtPointer={lookAtPointer} />
-                  <ambientLight intensity={2} />
-                </group>
-              </Suspense>
-            </Canvas>
+            <AvatarSitting />
           </motion.div>
           <IconMouse className="animate-bounce h-12 w-12" />
         </div>
