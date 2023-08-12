@@ -12,7 +12,7 @@ type LandingPageProp = {
 };
 
 function LandingPage({ isDarkMode }: LandingPageProp) {
-  const [lookAtTarget, setLookAtTarget] = useState(false);
+  const [lookAtPointer, setLookAtPointer] = useState(false);
 
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
@@ -45,13 +45,13 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
           <Canvas
             shadows
             camera={{ position: [0, 0, 5], fov: 20 }}
-            onPointerEnter={() => setLookAtTarget(true)}
-            onPointerLeave={() => setLookAtTarget(false)}
+            onPointerEnter={() => setLookAtPointer(true)}
+            onPointerLeave={() => setLookAtPointer(false)}
           >
             <Suspense fallback={<CanvasLoader />}>
               <group position-y={-0.7}>
                 <OfficeChair position={[0, 0.5, 0]} />
-                <Avatar lookAtTarget={lookAtTarget} />
+                <Avatar lookAtPointer={lookAtPointer} />
                 <ambientLight intensity={2} />
               </group>
             </Suspense>

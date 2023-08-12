@@ -35,7 +35,7 @@ type GLTFResult = GLTF & {
 };
 
 type AvatarProp = {
-  lookAtTarget: boolean;
+  lookAtPointer: boolean;
 } & JSX.IntrinsicElements["group"];
 
 export function Avatar(props: AvatarProp) {
@@ -52,9 +52,9 @@ export function Avatar(props: AvatarProp) {
   const { actions } = useAnimations(sittingAnimation, group);
 
   useFrame((state) => {
-    const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-    if (props.lookAtTarget) {
-      group.current?.getObjectByName("Head")?.lookAt(target);
+    const pointer = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+    if (props.lookAtPointer) {
+      group.current?.getObjectByName("Head")?.lookAt(pointer);
     }
   });
 
