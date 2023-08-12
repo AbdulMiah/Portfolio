@@ -17,7 +17,7 @@ type NavigationProp = {
 };
 
 function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
-  const [isMenuOpen, setMenuOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(window.innerWidth >= 1024);
 
   function toggleMenu() {
     setMenuOpen((prevState) => !prevState);
