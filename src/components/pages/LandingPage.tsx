@@ -42,20 +42,22 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
           >
             I'm a Software Engineer.
           </motion.h4>
-          <Canvas
-            shadows
-            camera={{ position: [0, 0, 5], fov: 20 }}
-            onPointerEnter={() => setLookAtPointer(true)}
-            onPointerLeave={() => setLookAtPointer(false)}
-          >
-            <Suspense fallback={<CanvasLoader />}>
-              <group position-y={-0.7}>
-                <OfficeChair position={[0, 0.5, 0]} />
-                <Avatar lookAtPointer={lookAtPointer} />
-                <ambientLight intensity={2} />
-              </group>
-            </Suspense>
-          </Canvas>
+          <div className="w-[60vw] h-[60vh]">
+            <Canvas
+              shadows
+              camera={{ position: [0, 0, 5], fov: 20 }}
+              onPointerEnter={() => setLookAtPointer(true)}
+              onPointerLeave={() => setLookAtPointer(false)}
+            >
+              <Suspense fallback={<CanvasLoader />}>
+                <group position-y={-0.7}>
+                  <OfficeChair position={[0, 0.5, 0]} />
+                  <Avatar lookAtPointer={lookAtPointer} />
+                  <ambientLight intensity={2} />
+                </group>
+              </Suspense>
+            </Canvas>
+          </div>
           <IconMouse className="animate-bounce h-12 w-12" />
         </div>
       </div>
