@@ -42,7 +42,12 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
           >
             I'm a Software Engineer.
           </motion.h4>
-          <div className="w-[60vw] h-[60vh]">
+          <motion.div
+            className="w-[60vw] h-[60vh]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, scale: [null, 1.4, 1] }}
+            transition={{ duration: 0.3, delay: 2.5 }}
+          >
             <Canvas
               shadows
               camera={{ position: [0, 0, 5], fov: 20 }}
@@ -57,7 +62,7 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
                 </group>
               </Suspense>
             </Canvas>
-          </div>
+          </motion.div>
           <IconMouse className="animate-bounce h-12 w-12" />
         </div>
       </div>
