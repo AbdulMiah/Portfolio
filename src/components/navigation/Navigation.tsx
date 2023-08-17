@@ -6,10 +6,9 @@ import {
   IconMoon,
   IconSunHigh,
   IconDownload,
-  IconBrandGithub,
-  IconBrandLinkedin,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import Socials from "../reusable/Socials";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -101,22 +100,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
           </motion.a>
         </div>
         <div className="block lg:hidden flex items-center justify-center space-x-6 mt-4">
-          <motion.a
-            whileHover={{ scale: [null, 1.3, 1.2] }}
-            transition={{ duration: 0.1 }}
-            href="https://www.linkedin.com/in/abdul-m-miah/"
-            target="_blank"
-          >
-            <IconBrandLinkedin className="hover:fill-royal-blue-200" />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.3, 1.2] }}
-            transition={{ duration: 0.1 }}
-            href="https://github.com/AbdulMiah"
-            target="_blank"
-          >
-            <IconBrandGithub className="hover:fill-royal-blue-200" />
-          </motion.a>
+          <Socials />
           <motion.a
             whileHover={{ scale: [null, 1.3, 1.2] }}
             transition={{ duration: 0.1 }}
