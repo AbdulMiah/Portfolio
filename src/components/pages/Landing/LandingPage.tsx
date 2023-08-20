@@ -37,12 +37,13 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
             I'm a Software Engineer.
           </motion.h4>
           <motion.div
-            className="w-[60vw] h-[60vh]"
+            className="w-[60vw] h-[60vh] flex justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, scale: [null, 1.4, 1] }}
             transition={{ duration: 0.3, delay: 2.5 }}
           >
-            <AvatarSitting />
+            {/* <AvatarSitting /> */}
+            <img src="src/assets/avatar.png" alt="avatar" />
           </motion.div>
           <Socials />
           <IconMouse className="animate-bounce h-12 w-12" />
