@@ -30,9 +30,5 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
-### Fixed
-
-- N/A
-
 [1.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v1.0.0
 [2.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.0.0
