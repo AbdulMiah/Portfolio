@@ -25,7 +25,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 ### Changed
 
 - Updated `deploy.yml` file to follow semantic versioning.
-- Updated `README.md`
+- Updated `README.md`.
 
 ### Fixed
 
