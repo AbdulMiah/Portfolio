@@ -2,6 +2,16 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.1.0] (2023-08-20)
+
+### Added
+
+- Added image of 3D model.
+
+### Changed
+
+- Removed 3D model and replace it with image of avatar.
+
 ## [2.0.0] (2023-08-20)
 
 ### Added
@@ -30,5 +40,6 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
-[1.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v1.0.0
+[2.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.1.0
 [2.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.0.0
+[1.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v1.0.0
