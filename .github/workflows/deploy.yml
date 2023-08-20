@@ -3,7 +3,7 @@ name: Build and Push Docker image to Docker Hub
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   push_to_registry:
@@ -18,13 +18,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-        
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v1.0.0
 
   ec2_deploy:
     needs: push_to_registry
@@ -37,5 +37,4 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          script:
-            sh stop_and_remove.sh && docker run -d --name portfolio_app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+          script: sh stop_and_remove.sh && docker run -d --name portfolio_app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v1.0.0
