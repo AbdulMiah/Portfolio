@@ -18,6 +18,10 @@ I've implemented a robust CI/CD workflow to ensure seamless updates and deployme
 4. **Deployment to AWS EC2:** The Docker image is deployed to an AWS EC2 instance, ensuring the latest version is live.
 5. **Live Website Update:** Updates to the portfolio are swiftly reflected on the live website.
 
+## Keeping Up to Date
+
+Stay informed about the changes in this project by viewing the [Changelog](CHANGELOG.md).
+
 ## Build and Run Locally
 
 To explore the portfolio locally, follow these steps:
