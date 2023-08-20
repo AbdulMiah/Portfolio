@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { IconMouse } from "@tabler/icons-react";
-import AvatarSitting from "./AvatarSitting";
+// import AvatarSitting from "./AvatarSitting";
 import Socials from "../../reusable/Socials";
 
 type LandingPageProp = {
