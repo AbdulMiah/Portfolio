@@ -7,6 +7,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 ### Changed
 
 - Moved `models/` and `animations/` folders into `public/`.
+- Updated path definitions for the models.
 
 ## [2.1.0] (2023-08-20)
 
