@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { IconMouse } from "@tabler/icons-react";
-// import AvatarSitting from "./AvatarSitting";
+import AvatarSitting from "./AvatarSitting";
 import Socials from "../../reusable/Socials";
 
 type LandingPageProp = {
@@ -42,8 +42,7 @@ function LandingPage({ isDarkMode }: LandingPageProp) {
             animate={{ opacity: 1, scale: [null, 1.4, 1] }}
             transition={{ duration: 0.3, delay: 2.5 }}
           >
-            {/* <AvatarSitting /> */}
-            <img src="src/assets/avatar.png" alt="avatar" />
+            <AvatarSitting />
           </motion.div>
           <Socials />
           <IconMouse className="animate-bounce h-12 w-12" />

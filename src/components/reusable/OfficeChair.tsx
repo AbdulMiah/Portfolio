@@ -12,9 +12,7 @@ type GLTFResult = GLTF & {
 };
 
 export function OfficeChair(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF(
-    "src/assets/models/office_chair.glb"
-  ) as GLTFResult;
+  const { nodes, materials } = useGLTF("models/office_chair.glb") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.531}>
@@ -28,4 +26,4 @@ export function OfficeChair(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("src/assets/models/office_chair.glb");
+useGLTF.preload("models/office_chair.glb");
