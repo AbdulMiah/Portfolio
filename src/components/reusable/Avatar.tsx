@@ -40,13 +40,9 @@ type AvatarProp = {
 
 export function Avatar(props: AvatarProp) {
   const group = useRef<Group>(null);
-  const { nodes, materials } = useGLTF(
-    "public/models/avatar.glb"
-  ) as GLTFResult;
+  const { nodes, materials } = useGLTF("models/avatar.glb") as GLTFResult;
 
-  const { animations: sittingAnimation } = useFBX(
-    "public/animations/Sitting.fbx"
-  );
+  const { animations: sittingAnimation } = useFBX("animations/Sitting.fbx");
   sittingAnimation[0].name = "Sitting";
 
   const { actions } = useAnimations(sittingAnimation, group);
@@ -141,4 +137,4 @@ export function Avatar(props: AvatarProp) {
   );
 }
 
-useGLTF.preload("public/models/avatar.glb");
+useGLTF.preload("models/avatar.glb");
