@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { IconMouse } from "@tabler/icons-react";
 import AvatarSitting from "./AvatarSitting";
-import Socials from "../../reusable/Socials";
+import Socials from "../../components/Socials";
 
 type LandingPageProp = {
   isDarkMode: boolean;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IconButton from "../reusable/IconButton";
+import IconButton from "../../components/IconButton";
 import {
   IconX,
   IconMenu2,
@@ -8,7 +8,7 @@ import {
   IconDownload,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import Socials from "../reusable/Socials";
+import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../constants";
 
 type NavigationProp = {

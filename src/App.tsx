@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import LandingPage from "./components/pages/Landing/LandingPage";
-import Navigation from "./components/navigation/Navigation";
+import LandingPage from "./pages/landing/LandingPage";
+import Navigation from "./pages/navigation/Navigation";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
