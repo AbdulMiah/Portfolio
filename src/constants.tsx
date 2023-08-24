@@ -21,3 +21,5 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/abdul-m-miah/",
   github: "https://github.com/AbdulMiah",
 };
+
+export const cvPath = "/src/assets/Abdul Muktadir Miah - CV.pdf";

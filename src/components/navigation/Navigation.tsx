@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Socials from "../reusable/Socials";
-import { navLinks } from "../../constants";
+import { cvPath, navLinks } from "../../constants";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -50,11 +50,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <span className="text-sm">.com</span>
       </a>
       <div className="block lg:hidden flex items-center">
-        <a
-          className="mr-5"
-          href="/src/assets/Abdul Muktadir Miah - CV.pdf"
-          download={true}
-        >
+        <a className="mr-5" href={cvPath} download={true}>
           <IconButton icon={<IconDownload />} text="CV" />
         </a>
         <button onClick={toggleMenu}>
@@ -105,7 +101,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               <IconMoon className="text-black hover:fill-black" />
             )}
           </motion.a>
-          <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
+          <a href={cvPath} download={true}>
             <IconButton icon={<IconDownload />} text="Download CV" />
           </a>
         </div>
