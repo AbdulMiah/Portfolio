@@ -16,3 +16,8 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
+export const socialLinks = {
+  linkedin: "https://www.linkedin.com/in/abdul-m-miah/",
+  github: "https://github.com/AbdulMiah",
+};
