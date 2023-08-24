@@ -9,6 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Socials from "../reusable/Socials";
+import { navLinks } from "../../constants";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -66,38 +67,16 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         } lg:items-center lg:w-auto`}
       >
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#About"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            About
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Experience"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            Experience
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Projects"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            Projects
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Contact"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0"
-          >
-            Contact
-          </motion.a>
+          {navLinks.map((nav) => (
+            <motion.a
+              whileHover={{ scale: [null, 1.1, 1.05] }}
+              transition={{ duration: 0.1 }}
+              href={`#${nav.id}`}
+              className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
+            >
+              {nav.title}
+            </motion.a>
+          ))}
         </div>
         <div className="block lg:hidden flex items-center justify-center space-x-6 mt-4">
           <Socials />
