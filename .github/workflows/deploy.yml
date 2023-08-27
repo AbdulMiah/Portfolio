@@ -7,10 +7,10 @@ on:
 
 jobs:
   push_to_registry:
-    name: Push Docker image to Docker Hub
+    name: Push Image to Docker Hub for Backup
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Login to Docker Hub
@@ -26,15 +26,29 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.0
 
-  ec2_deploy:
+  s3_deploy:
     needs: push_to_registry
-    name: Push to EC2 Instance
+    name: Deploy/Sync to S3 Bucket
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Docker Container to EC2 Instance
-        uses: appleboy/ssh-action@master
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build static files
+        run: npm run build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_PRIVATE_KEY }}
-          script: sh stop_and_remove.sh && docker run -d --name portfolio_app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.0
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: Sync static contents to S3 bucket
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
