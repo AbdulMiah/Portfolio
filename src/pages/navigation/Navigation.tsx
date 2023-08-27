@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IconButton from "../reusable/IconButton";
+import IconButton from "../../components/IconButton";
 import {
   IconX,
   IconMenu2,
@@ -8,7 +8,8 @@ import {
   IconDownload,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import Socials from "../reusable/Socials";
+import Socials from "../../components/Socials";
+import { cvPath, navLinks } from "../../constants";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -49,11 +50,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <span className="text-sm">.com</span>
       </a>
       <div className="block lg:hidden flex items-center">
-        <a
-          className="mr-5"
-          href="/src/assets/Abdul Muktadir Miah - CV.pdf"
-          download={true}
-        >
+        <a className="mr-5" href={cvPath} download={true}>
           <IconButton icon={<IconDownload />} text="CV" />
         </a>
         <button onClick={toggleMenu}>
@@ -66,38 +63,16 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         } lg:items-center lg:w-auto`}
       >
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#About"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            About
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Experience"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            Experience
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Projects"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
-          >
-            Projects
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: [null, 1.1, 1.05] }}
-            transition={{ duration: 0.1 }}
-            href="#Contact"
-            className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0"
-          >
-            Contact
-          </motion.a>
+          {navLinks.map((nav) => (
+            <motion.a
+              whileHover={{ scale: [null, 1.1, 1.05] }}
+              transition={{ duration: 0.1 }}
+              href={`#${nav.id}`}
+              className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
+            >
+              {nav.title}
+            </motion.a>
+          ))}
         </div>
         <div className="block lg:hidden flex items-center justify-center space-x-6 mt-4">
           <Socials />
@@ -126,7 +101,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               <IconMoon className="text-black hover:fill-black" />
             )}
           </motion.a>
-          <a href="/src/assets/Abdul Muktadir Miah - CV.pdf" download={true}>
+          <a href={cvPath} download={true}>
             <IconButton icon={<IconDownload />} text="Download CV" />
           </a>
         </div>

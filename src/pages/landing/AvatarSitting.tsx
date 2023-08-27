@@ -1,8 +1,8 @@
-import { Avatar } from "../../reusable/Avatar";
+import { Avatar } from "../../components/canvas/Avatar";
 import { Canvas } from "@react-three/fiber";
-import { OfficeChair } from "../../reusable/OfficeChair";
+import { OfficeChair } from "../../components/canvas/OfficeChair";
 import { Suspense } from "react";
-import CanvasLoader from "../../reusable/CanvasLoader";
+import CanvasLoader from "../../components/canvas/CanvasLoader";
 import { useState } from "react";
 import { ContactShadows } from "@react-three/drei";
 

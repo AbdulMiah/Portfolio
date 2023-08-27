@@ -2,6 +2,18 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.2.1] (2023-08-27)
+
+### Added
+
+- Added `constants.ts` file and added all hardcoded strings.
+
+### Changed
+
+- Removed all hardcoded strings from `.tsx` files.
+- Moved CV file to `public/` folder.
+- Updated deploy.yml to deploy static web content to S3 bucket.
+
 ## [2.2.0] (2023-08-21)
 
 ### Changed
@@ -47,6 +59,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[2.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.1
 [2.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.0
 [2.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.1.0
 [2.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.0.0
