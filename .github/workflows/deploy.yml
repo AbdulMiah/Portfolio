@@ -44,7 +44,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.2
 
   s3_deploy:
-    needs: build
+    needs: push_to_registry
     name: Deploy/Sync to S3 Bucket
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +57,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build static files
         run: npm run build
 
       - name: Configure AWS Credentials
