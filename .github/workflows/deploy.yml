@@ -7,14 +7,22 @@ on:
 
 jobs:
   build:
-    name: Build App
+    name: Build Application
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Build
         run: npm run build
 
   push_to_registry:
-    needs: build
     name: Push Image to Docker Hub for Backup
     runs-on: ubuntu-latest
     steps:
@@ -35,21 +43,12 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.2
 
   s3_deploy:
-    needs: push_to_registry
+    needs: build
     name: Deploy/Sync to S3 Bucket
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
-      - name: Setup node
-        uses: actions/setup-node@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build static files
-        run: npm run build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
