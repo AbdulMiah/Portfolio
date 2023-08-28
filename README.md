@@ -16,7 +16,7 @@ I've implemented a robust CI/CD workflow to ensure seamless updates and deployme
 2. **GitHub Actions:** GitHub Actions initiates the workflow.
 3. **Build Application:** The initial job executes the build command to confirm the successful compilation of the application.
 4. **Docker Image Creation:** A Docker image is created to encapsulate the application, which is then pushed to Docker Hub for backup.
-5. **AWS S3 Deployment:** Sync the static web contents to the S3 bucket.
+5. **AWS S3 Deployment:** The static web contents are synced to the S3 bucket.
 6. **AWS CloudFront Integration:** The web content stored in the S3 bucket is integrated with AWS CloudFront, a content delivery network (CDN), which enables efficient distribution of content to users worldwide, reducing latency and enhancing user experience.
 7. **Live Website Update:** Updates to the portfolio are swiftly reflected on the live website.
 
