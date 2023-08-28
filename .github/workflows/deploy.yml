@@ -68,4 +68,4 @@ jobs:
           aws-region: eu-west-2
 
       - name: Sync static contents to S3 bucket
-        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} && aws cloudfront create-invalidation --distribution-id E2QONPGKKKXECR --paths '/*'
