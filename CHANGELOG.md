@@ -2,6 +2,20 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.2.2] (2023-08-28)
+
+### Added
+
+- Added an additional build step to the GitHub Actions workflow to improve code quality and enhance the deployment process.
+
+### Changed
+
+- Updated the CI/CD section of the README to include new changes in the workflow.
+
+### Fixed
+
+- Fixed the file path so you can now download the CV.
+
 ## [2.2.1] (2023-08-27)
 
 ### Added
@@ -59,6 +73,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[2.2.2]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.2
 [2.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.1
 [2.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.0
 [2.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.1.0

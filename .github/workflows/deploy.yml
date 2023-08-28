@@ -1,4 +1,4 @@
-name: Build and Push Docker image to Docker Hub
+name: Build, push Docker image to Docker Hub, and deploy to S3 bucket
 
 on:
   push:
@@ -6,7 +6,15 @@ on:
       - main
 
 jobs:
+  build:
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: npm run build
+
   push_to_registry:
+    needs: build
     name: Push Image to Docker Hub for Backup
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.2
 
   s3_deploy:
     needs: push_to_registry

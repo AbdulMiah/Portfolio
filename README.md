@@ -10,13 +10,15 @@ Welcome to my personal portfolio repository! This project showcases my journey, 
 
 ## CI/CD Workflow and Automated Deployment
 
-I've implemented a robust CI/CD workflow to ensure seamless updates and deployment. Leveraging Docker 🐳, AWS EC2 ☁️, and GitHub Actions 🚀, the process is automated. Here's how it works:
+I've implemented a robust CI/CD workflow to ensure seamless updates and deployment. Leveraging Docker 🐳, AWS S3 and CloudFront ☁️, and GitHub Actions 🚀, the process is automated. Here's how it works:
 
 1. **Push to GitHub:** Any code pushed to the main branch triggers the CI/CD pipeline.
-2. **GitHub Actions:** GitHub Actions initiates the workflow, building the Docker image.
-3. **Docker Image Creation:** A Docker image is created to encapsulate the application.
-4. **Deployment to AWS EC2:** The Docker image is deployed to an AWS EC2 instance, ensuring the latest version is live.
-5. **Live Website Update:** Updates to the portfolio are swiftly reflected on the live website.
+2. **GitHub Actions:** GitHub Actions initiates the workflow.
+3. **Build Application:** The initial job executes the build command to confirm the successful compilation of the application.
+4. **Docker Image Creation:** A Docker image is created to encapsulate the application, which is then pushed to Docker Hub for backup.
+5. **AWS S3 Deployment:** The static web contents are synced to the S3 bucket.
+6. **AWS CloudFront Integration:** The web content stored in the S3 bucket is integrated with AWS CloudFront, a content delivery network (CDN), which enables efficient distribution of content to users worldwide, reducing latency and enhancing user experience.
+7. **Live Website Update:** Updates to the portfolio are swiftly reflected on the live website.
 
 ## Keeping Up to Date
 
