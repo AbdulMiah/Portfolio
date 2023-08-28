@@ -8,9 +8,13 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Added an additional build step to the GitHub Actions workflow to improve code quality and enhance the deployment process.
 
+### Changed
+
+- Updated the CI/CD section of the README to include new changes in the workflow.
+
 ### Fixed
 
-- Fixed file path so you can now download the CV.
+- Fixed the file path so you can now download the CV.
 
 ## [2.2.1] (2023-08-27)
 
