@@ -22,4 +22,4 @@ export const socialLinks = {
   github: "https://github.com/AbdulMiah",
 };
 
-export const cvPath = "/Abdul Muktadir Miah - CV.pdf";
+export const cvPath = "/assets/Abdul Muktadir Miah - CV.pdf";
