@@ -41,7 +41,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.2
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.3
 
   s3_deploy:
     needs: push_to_registry
@@ -68,4 +68,7 @@ jobs:
           aws-region: eu-west-2
 
       - name: Sync static contents to S3 bucket
-        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} && aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }}
+
+      - name: Invalidate caches on CloudFront
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'

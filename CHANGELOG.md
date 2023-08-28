@@ -2,6 +2,16 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.2.3] (2023-08-28)
+
+### Added
+
+- Added step in deploy job to invalidate caches on CloudFront when S3 bucket is synced.
+
+### Changed
+
+- Updated CV.
+
 ## [2.2.2] (2023-08-28)
 
 ### Added
@@ -73,6 +83,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[2.2.3]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.3
 [2.2.2]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.2
 [2.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.1
 [2.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.0
