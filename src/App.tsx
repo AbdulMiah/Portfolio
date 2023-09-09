@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import LandingPage from "./pages/landing/LandingPage";
 import Navigation from "./pages/navigation/Navigation";
+import ExperienceSection from "./pages/experience/ExperienceSection";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -24,6 +25,7 @@ function App() {
     <div className="overflow-y-scroll w-full h-screen">
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <LandingPage isDarkMode={isDarkMode} />
+      <ExperienceSection isDarkMode={isDarkMode} />
     </div>
   );
 }
