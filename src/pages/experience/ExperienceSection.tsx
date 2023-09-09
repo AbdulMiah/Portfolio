@@ -29,9 +29,11 @@ function ExperienceSection({ isDarkMode }: ExperienceSectionProp) {
       <div>
         <VerticalTimeline lineColor="#fff">
           {experiences.map((experience, index) => (
-            <div>
-              <p>{experience.title}</p>
-            </div>
+            <ExperienceCard
+              isDarkMode={isDarkMode}
+              key={index}
+              experience={experience}
+            />
           ))}
         </VerticalTimeline>
       </div>
