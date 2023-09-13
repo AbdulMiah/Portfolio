@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import { IconMapPinFilled } from "@tabler/icons-react";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
@@ -48,8 +49,18 @@ function ExperienceCard({ isDarkMode, key, experience }: ExperienceCardProp) {
       }
     >
       <div className="text-white">
-        <h4>{experience.title}</h4>
-        <div>{experience.summary}</div>
+        <div className="flex justify-between">
+          <h4>{experience.title}</h4>
+          <h6>
+            {experience.companyName}
+            <span> • {experience.employmentType}</span>
+          </h6>
+        </div>
+        <h6 className="flex space-x-1 items-center">
+          <IconMapPinFilled className="h-5 w-5" />
+          <span> {experience.location}</span>
+        </h6>
+        <p>{experience.summary}</p>
       </div>
     </VerticalTimelineElement>
   );
