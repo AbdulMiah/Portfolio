@@ -33,7 +33,7 @@ export const experiences = [
     companyName: "Creditsafe",
     location: "Caerphilly, Wales",
     icon: creditsafe,
-    iconBg: "#000000",
+    iconBg: "#EE2A1F",
     date: "May 2023 - Present",
     summary: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

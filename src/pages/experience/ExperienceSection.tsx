@@ -20,14 +20,14 @@ function ExperienceSection({ isDarkMode }: ExperienceSectionProp) {
           delay: 0.4,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="font-bold text-center"
+        className="font-bold text-center mb-14"
       >
         <h1>Professional</h1>
         <h2 className="text-royal-blue-100">Experience</h2>
       </motion.div>
 
       <div>
-        <VerticalTimeline lineColor="#fff">
+        <VerticalTimeline lineColor={`${isDarkMode ? "#fff" : "#000"}`}>
           {experiences.map((experience, index) => (
             <ExperienceCard
               isDarkMode={isDarkMode}
