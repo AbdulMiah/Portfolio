@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { IconMapPinFilled } from "@tabler/icons-react";
+import Skill from "../../components/Skill";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
@@ -29,7 +30,10 @@ function ExperienceCard({ isDarkMode, key, experience }: ExperienceCardProp) {
 
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#465FE5" }}
+      contentStyle={{
+        background: "#465FE5",
+        borderBottom: isDarkMode ? "none" : "4px solid black",
+      }}
       contentArrowStyle={{
         borderRight: `${isDarkMode ? "8px solid #fff" : "8px solid #000"}`,
       }}
@@ -61,6 +65,12 @@ function ExperienceCard({ isDarkMode, key, experience }: ExperienceCardProp) {
           <span> {experience.location}</span>
         </h6>
         <p>{experience.summary}</p>
+
+        <div className="flex flex-wrap gap-1 justify-center mt-5">
+          {experience.skills.map((skill: string) => (
+            <Skill text={skill} isDarkMode={isDarkMode} />
+          ))}
+        </div>
       </div>
     </VerticalTimelineElement>
   );
