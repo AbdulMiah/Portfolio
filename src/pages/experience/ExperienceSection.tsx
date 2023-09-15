@@ -7,9 +7,10 @@ import ExperienceCard from "./ExperienceCard";
 
 type ExperienceSectionProp = {
   isDarkMode: boolean;
+  isMobile: boolean;
 };
 
-function ExperienceSection({ isDarkMode }: ExperienceSectionProp) {
+function ExperienceSection({ isDarkMode, isMobile }: ExperienceSectionProp) {
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
       <motion.div
@@ -22,8 +23,17 @@ function ExperienceSection({ isDarkMode }: ExperienceSectionProp) {
         }}
         className="font-bold text-center mb-14"
       >
-        <h1>Professional</h1>
-        <h2 className="text-royal-blue-100">Experience</h2>
+        {isMobile ? (
+          <>
+            <h2>Professional</h2>
+            <h3 className="text-royal-blue-100">Experience</h3>
+          </>
+        ) : (
+          <>
+            <h1>Professional</h1>
+            <h2 className="text-royal-blue-100">Experience</h2>
+          </>
+        )}
       </motion.div>
 
       <div>
@@ -31,6 +41,7 @@ function ExperienceSection({ isDarkMode }: ExperienceSectionProp) {
           {experiences.map((experience, index) => (
             <ExperienceCard
               isDarkMode={isDarkMode}
+              isMobile={isMobile}
               key={index}
               experience={experience}
             />

@@ -1,33 +1,20 @@
-import { useEffect, useState } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { IconMapPinFilled } from "@tabler/icons-react";
 import Skill from "../../components/Skill";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
+  isMobile: boolean;
   key: number;
   experience: any;
 };
 
-function ExperienceCard({ isDarkMode, key, experience }: ExperienceCardProp) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1024) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+function ExperienceCard({
+  isDarkMode,
+  isMobile,
+  key,
+  experience,
+}: ExperienceCardProp) {
   return (
     <VerticalTimelineElement
       contentStyle={{
