@@ -43,7 +43,13 @@ function ExperienceCard({
         <div className="flex justify-between">
           <h4>{experience.title}</h4>
           <h6>
-            {experience.companyName}
+            <a
+              className="hover:underline"
+              href={experience.companyLink}
+              target="_blank"
+            >
+              {experience.companyName}
+            </a>
             <span> • {experience.employmentType}</span>
           </h6>
         </div>
