@@ -7,12 +7,12 @@ import ExperienceCard from "./ExperienceCard";
 
 import SectionWrapper from "../../utils/SectionWrapper";
 
-type ExperienceSectionProp = {
+type ExperienceProp = {
   isDarkMode: boolean;
   isMobile: boolean;
 };
 
-function ExperienceSection({ isDarkMode, isMobile }: ExperienceSectionProp) {
+function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
       <motion.div
@@ -54,4 +54,4 @@ function ExperienceSection({ isDarkMode, isMobile }: ExperienceSectionProp) {
   );
 }
 
-export default SectionWrapper(ExperienceSection, "experience");
+export default SectionWrapper(Experience, "experience");

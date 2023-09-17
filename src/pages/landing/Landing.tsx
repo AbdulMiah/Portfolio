@@ -3,12 +3,12 @@ import { IconMouse } from "@tabler/icons-react";
 import AvatarSitting from "./AvatarSitting";
 import Socials from "../../components/Socials";
 
-type LandingPageProp = {
+type LandingProp = {
   isDarkMode: boolean;
   isMobile: boolean;
 };
 
-function LandingPage({ isDarkMode, isMobile }: LandingPageProp) {
+function Landing({ isDarkMode, isMobile }: LandingProp) {
   return (
     <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
       <div className="absolute inset-0 top-[120px] items-start">
@@ -85,4 +85,4 @@ function LandingPage({ isDarkMode, isMobile }: LandingPageProp) {
   );
 }
 
-export default LandingPage;
+export default Landing;
