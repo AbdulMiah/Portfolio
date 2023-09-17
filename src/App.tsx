@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import LandingPage from "./pages/landing/LandingPage";
-import Navigation from "./pages/navigation/Navigation";
-import ExperienceSection from "./pages/experience/ExperienceSection";
+import { Navigation, LandingPage, ExperienceSection } from "./pages";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
