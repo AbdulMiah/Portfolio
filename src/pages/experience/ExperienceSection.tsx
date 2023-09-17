@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { experiences } from "../../constants";
 import ExperienceCard from "./ExperienceCard";
 
+import SectionWrapper from "../../utils/SectionWrapper";
+
 type ExperienceSectionProp = {
   isDarkMode: boolean;
   isMobile: boolean;
@@ -52,4 +54,4 @@ function ExperienceSection({ isDarkMode, isMobile }: ExperienceSectionProp) {
   );
 }
 
-export default ExperienceSection;
+export default SectionWrapper(ExperienceSection, "experience");
