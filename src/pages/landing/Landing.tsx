@@ -77,7 +77,9 @@ function Landing({ isMobile }: LandingProp) {
             <AvatarSitting />
           </motion.div>
           <Socials />
-          <IconMouse className="animate-bounce h-12 w-12" />
+          <a href="#about">
+            <IconMouse className="animate-bounce h-12 w-12" />
+          </a>
         </div>
       </div>
     </section>

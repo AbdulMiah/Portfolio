@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const SectionWrapper = (PageComponent: any, id: string) =>
+const SectionWrapper = (PageComponent: any, id: string, offset: number = 0) =>
   function HOC(props: any) {
     return (
       <motion.section
@@ -8,8 +8,12 @@ const SectionWrapper = (PageComponent: any, id: string) =>
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <span id={id} />
-        <PageComponent {...props} />
+        <div
+          id={id}
+          style={{ paddingTop: `${offset}px`, marginTop: `-${offset}px` }}
+        >
+          <PageComponent {...props} />
+        </div>
       </motion.section>
     );
   };

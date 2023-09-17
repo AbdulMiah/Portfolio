@@ -54,4 +54,4 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   );
 }
 
-export default SectionWrapper(Experience, "experience");
+export default SectionWrapper(Experience, "experience", 120);
