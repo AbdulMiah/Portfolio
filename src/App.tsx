@@ -37,9 +37,13 @@ function App() {
     setDarkMode((prevState) => !prevState);
   }
   return (
-    <div className="overflow-y-scroll w-full h-screen">
+    <div
+      className={`${
+        isDarkMode ? "dark" : ""
+      } overflow-y-scroll w-full h-screen`}
+    >
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Landing isDarkMode={isDarkMode} isMobile={isMobile} />
+      <Landing isMobile={isMobile} />
       <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
     </div>
   );

@@ -4,13 +4,12 @@ import AvatarSitting from "./AvatarSitting";
 import Socials from "../../components/Socials";
 
 type LandingProp = {
-  isDarkMode: boolean;
   isMobile: boolean;
 };
 
-function Landing({ isDarkMode, isMobile }: LandingProp) {
+function Landing({ isMobile }: LandingProp) {
   return (
-    <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
+    <section className="relative w-full h-screen">
       <div className="absolute inset-0 top-[120px] items-start">
         <div className="flex flex-col justify-center items-center h-[80vh] gap-9">
           {isMobile ? (

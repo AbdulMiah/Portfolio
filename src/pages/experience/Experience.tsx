@@ -14,7 +14,7 @@ type ExperienceProp = {
 
 function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
-    <section className={`${isDarkMode ? "dark" : ""} relative w-full h-screen`}>
+    <section className="relative w-full h-screen">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
