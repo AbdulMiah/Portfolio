@@ -57,9 +57,18 @@ function ExperienceCard({
           <IconMapPinFilled className="h-5 w-5 animate-bounce" />
           <span> {experience.location}</span>
         </h6>
-        <p>{experience.summary}</p>
+        <ul className="p-5 list-disc">
+          {experience.summary.map((point: string) => {
+            const [boldText, restOfText] = point.split(": ");
+            return (
+              <li>
+                <strong>{boldText}:</strong> {restOfText}
+              </li>
+            );
+          })}
+        </ul>
 
-        <div className="flex flex-wrap gap-1 justify-center mt-5">
+        <div className="flex flex-wrap gap-1 justify-center">
           {experience.skills.map((skill: string) => (
             <Skill text={skill} isDarkMode={isDarkMode} />
           ))}
