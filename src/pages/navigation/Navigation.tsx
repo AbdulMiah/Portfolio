@@ -18,6 +18,7 @@ type NavigationProp = {
 
 function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   const [isMenuOpen, setMenuOpen] = useState(window.innerWidth >= 1024);
+  const [active, setActive] = useState("");
 
   function toggleMenu() {
     setMenuOpen((prevState) => !prevState);
@@ -65,10 +66,14 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
           {navLinks.map((nav) => (
             <motion.a
+              key={nav.id}
               whileHover={{ scale: [null, 1.1, 1.05] }}
               transition={{ duration: 0.1 }}
               href={`#${nav.id}`}
-              className="hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4"
+              className={`${
+                active === nav.title ? "bg-grey-200 dark:bg-black" : ""
+              } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
+              onClick={() => setActive(nav.title)}
             >
               {nav.title}
             </motion.a>
