@@ -17,7 +17,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
     <section className="relative w-full h-screen">
       <motion.div
-        variants={popOutAnimation(0.8, 0.4)}
+        variants={popOutAnimation(0.8, 0.2)}
         className="font-bold text-center mb-14"
       >
         {isMobile ? (
@@ -33,7 +33,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
         )}
       </motion.div>
 
-      <div>
+      <motion.div variants={popOutAnimation(0.8, 0.3)}>
         <VerticalTimeline lineColor={`${isDarkMode ? "#fff" : "#000"}`}>
           {experiences.map((experience, index) => (
             <ExperienceCard
@@ -44,7 +44,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
             />
           ))}
         </VerticalTimeline>
-      </div>
+      </motion.div>
     </section>
   );
 }
