@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../constants";
+import { scaleAnimation } from "../../utils/motionVariants";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -67,8 +68,9 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
           {navLinks.map((nav) => (
             <motion.a
               key={nav.id}
-              whileHover={{ scale: [null, 1.1, 1.05] }}
-              transition={{ duration: 0.1 }}
+              variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
+              initial="hidden"
+              whileHover="show"
               href={`#${nav.id}`}
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
@@ -82,8 +84,9 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         <div className="block lg:hidden flex items-center justify-center space-x-6 mt-4">
           <Socials />
           <motion.a
-            whileHover={{ scale: [null, 1.3, 1.2] }}
-            transition={{ duration: 0.1 }}
+            variants={scaleAnimation([null, 1.3, 1.2], 0.1)}
+            initial="hidden"
+            whileHover="show"
             onClick={toggleDarkMode}
           >
             {isDarkMode ? (
@@ -95,8 +98,9 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         </div>
         <div className="flex items-center hidden lg:inline-flex">
           <motion.a
-            whileHover={{ scale: [null, 1.3, 1.2] }}
-            transition={{ duration: 0.1 }}
+            variants={scaleAnimation([null, 1.3, 1.2], 0.1)}
+            initial="hidden"
+            whileHover="show"
             className="mr-4"
             onClick={toggleDarkMode}
           >

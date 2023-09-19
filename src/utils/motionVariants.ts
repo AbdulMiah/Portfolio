@@ -24,3 +24,15 @@ export const popOutAnimation = (duration: number, delay: number) => {
     }
   }
 }
+
+export const scaleAnimation = (scale: any[], duration: number) => {
+  return {
+    hidden: {},
+    show: {
+      scale: scale,
+      transition: {
+        duration: duration,
+      }
+    }
+  }
+}
