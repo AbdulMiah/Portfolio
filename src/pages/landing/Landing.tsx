@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { IconMouse } from "@tabler/icons-react";
 import AvatarSitting from "./AvatarSitting";
 import Socials from "../../components/Socials";
+import { popOutAnimation } from "../../utils/motionVariants";
 
 type LandingProp = {
   isMobile: boolean;
@@ -15,26 +16,18 @@ function Landing({ isMobile }: LandingProp) {
           {isMobile ? (
             <>
               <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.4,
-                  ease: [0, 0.71, 0.2, 1.01],
-                }}
+                variants={popOutAnimation(0.8, 0.4)}
+                initial="hidden"
+                animate="show"
                 className="font-bold text-center"
               >
                 Hi, I'm
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h2>
               <motion.h5
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.5,
-                  ease: [0, 0.71, 0.2, 1.01],
-                }}
+                variants={popOutAnimation(0.8, 0.5)}
+                initial="hidden"
+                animate="show"
               >
                 I'm a Software Engineer.
               </motion.h5>
@@ -42,26 +35,18 @@ function Landing({ isMobile }: LandingProp) {
           ) : (
             <>
               <motion.h1
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.4,
-                  ease: [0, 0.71, 0.2, 1.01],
-                }}
+                variants={popOutAnimation(0.8, 0.4)}
+                initial="hidden"
+                animate="show"
                 className="font-bold text-center"
               >
                 Hi, I'm
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h1>
               <motion.h4
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.5,
-                  ease: [0, 0.71, 0.2, 1.01],
-                }}
+                variants={popOutAnimation(0.8, 0.5)}
+                initial="hidden"
+                animate="show"
               >
                 I'm a Software Engineer.
               </motion.h4>
