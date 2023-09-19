@@ -6,7 +6,7 @@ import { experiences } from "../../constants";
 import ExperienceCard from "./ExperienceCard";
 
 import SectionWrapper from "../../utils/SectionWrapper";
-import { popOutAnimation } from "../../utils/motionVariants";
+import { popOutAnimation, slideDown } from "../../utils/motionVariants";
 
 type ExperienceProp = {
   isDarkMode: boolean;
@@ -17,7 +17,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
     <section className="relative w-full h-screen">
       <motion.div
-        variants={popOutAnimation(0.8, 0.2)}
+        variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
       >
         {isMobile ? (

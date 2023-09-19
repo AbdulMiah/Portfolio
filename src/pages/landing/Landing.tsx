@@ -16,7 +16,7 @@ function Landing({ isMobile }: LandingProp) {
           {isMobile ? (
             <>
               <motion.h2
-                variants={popOutAnimation(0.8, 0.4)}
+                variants={popOutAnimation(0.8, 0.2)}
                 initial="hidden"
                 animate="show"
                 className="font-bold text-center"
@@ -25,7 +25,7 @@ function Landing({ isMobile }: LandingProp) {
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h2>
               <motion.h5
-                variants={popOutAnimation(0.8, 0.5)}
+                variants={popOutAnimation(0.8, 0.3)}
                 initial="hidden"
                 animate="show"
               >
@@ -35,7 +35,7 @@ function Landing({ isMobile }: LandingProp) {
           ) : (
             <>
               <motion.h1
-                variants={popOutAnimation(0.8, 0.4)}
+                variants={popOutAnimation(0.8, 0.2)}
                 initial="hidden"
                 animate="show"
                 className="font-bold text-center"
@@ -44,7 +44,7 @@ function Landing({ isMobile }: LandingProp) {
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h1>
               <motion.h4
-                variants={popOutAnimation(0.8, 0.5)}
+                variants={popOutAnimation(0.8, 0.3)}
                 initial="hidden"
                 animate="show"
               >
