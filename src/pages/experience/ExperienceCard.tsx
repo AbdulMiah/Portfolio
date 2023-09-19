@@ -1,6 +1,8 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { IconMapPinFilled } from "@tabler/icons-react";
 import Skill from "../../components/Skill";
+import { motion } from "framer-motion";
+import { popOutAnimation, staggerAnimation } from "../../utils/motionVariants";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
@@ -57,16 +59,25 @@ function ExperienceCard({
           <IconMapPinFilled className="h-5 w-5 animate-bounce" />
           <span> {experience.location}</span>
         </h6>
-        <ul className="p-5 list-disc">
+        <motion.ul
+          variants={staggerAnimation(0.2)}
+          initial="hidden"
+          whileInView="show"
+          className="p-5 list-disc"
+        >
           {experience.summary.map((point: string) => {
             const [boldText, restOfText] = point.split(": ");
             return (
-              <li>
+              <motion.li
+                variants={popOutAnimation(0.5, 0.2)}
+                initial="hidden"
+                whileInView="show"
+              >
                 <strong>{boldText}:</strong> {restOfText}
-              </li>
+              </motion.li>
             );
           })}
-        </ul>
+        </motion.ul>
 
         <div className="flex flex-wrap gap-1 justify-center">
           {experience.skills.map((skill: string) => (
