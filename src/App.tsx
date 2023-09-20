@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import LandingPage from "./pages/landing/LandingPage";
-import Navigation from "./pages/navigation/Navigation";
+import { Navigation, Landing, Experience } from "./pages";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
     const colourPreference = window.matchMedia("(prefers-color-scheme: dark)");
@@ -17,13 +17,34 @@ function App() {
     );
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   function toggleDarkMode() {
     setDarkMode((prevState) => !prevState);
   }
   return (
-    <div className="overflow-y-scroll w-full h-screen">
+    <div
+      className={`${
+        isDarkMode ? "dark" : ""
+      } overflow-y-scroll w-full h-screen`}
+    >
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <LandingPage isDarkMode={isDarkMode} />
+      <Landing isMobile={isMobile} />
+      <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
     </div>
   );
 }

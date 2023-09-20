@@ -41,7 +41,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v2.2.3
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:v3.0.0
 
   s3_deploy:
     needs: push_to_registry

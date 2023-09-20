@@ -2,6 +2,26 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [3.0.0] (2023-09-20)
+
+### Added
+
+- Added experience data to constants.
+- Added experience section.
+- Created a higher-order wrapper component and enable stagger animations and achor links.
+- Introduced index files for easier imports.
+- Implemented functionality to automatically highlight the currently selected navigation item upon user selection.
+
+### Changed
+
+- Updated favicon.
+- Moved logic for checking if device is mobile to parent component and pass bool value as props.
+- Moved all framer-motion animation logic to a separate utils file.
+
+### Fixed
+
+- Fixed heading text on mobile view.
+
 ## [2.2.3] (2023-08-28)
 
 ### Added
@@ -83,6 +103,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[3.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.0
 [2.2.3]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.3
 [2.2.2]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.2
 [2.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.1
