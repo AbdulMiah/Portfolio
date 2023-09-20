@@ -7,14 +7,12 @@ import { popOutAnimation, staggerAnimation } from "../../utils/motionVariants";
 type ExperienceCardProp = {
   isDarkMode: boolean;
   isMobile: boolean;
-  key: number;
   experience: any;
 };
 
 function ExperienceCard({
   isDarkMode,
   isMobile,
-  key,
   experience,
 }: ExperienceCardProp) {
   return (
@@ -65,10 +63,11 @@ function ExperienceCard({
           whileInView="show"
           className="p-5 list-disc"
         >
-          {experience.summary.map((point: string) => {
+          {experience.summary.map((point: string, index: number) => {
             const [boldText, restOfText] = point.split(": ");
             return (
               <motion.li
+                key={index}
                 variants={popOutAnimation(0.5, 0.2)}
                 initial="hidden"
                 whileInView="show"
@@ -80,8 +79,8 @@ function ExperienceCard({
         </motion.ul>
 
         <div className="flex flex-wrap gap-1 justify-center">
-          {experience.skills.map((skill: string) => (
-            <Skill text={skill} isDarkMode={isDarkMode} />
+          {experience.skills.map((skill: string, index: number) => (
+            <Skill key={index} text={skill} isDarkMode={isDarkMode} />
           ))}
         </div>
       </div>
