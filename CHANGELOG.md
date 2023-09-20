@@ -2,6 +2,12 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [3.0.1] (2023-09-20)
+
+### Fixed
+
+- Resolve missing lodash dependencies to fix Docker build failure.
+
 ## [3.0.0] (2023-09-20)
 
 ### Added
@@ -103,6 +109,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[3.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.1
 [3.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.0
 [2.2.3]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.3
 [2.2.2]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.2
