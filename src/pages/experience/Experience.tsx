@@ -39,7 +39,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
             <ExperienceCard
               isDarkMode={isDarkMode}
               isMobile={isMobile}
-              key={index}
+              key={`experience-${index}`}
               experience={experience}
             />
           ))}

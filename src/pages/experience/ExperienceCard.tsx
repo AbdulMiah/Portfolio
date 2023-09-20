@@ -67,7 +67,7 @@ function ExperienceCard({
             const [boldText, restOfText] = point.split(": ");
             return (
               <motion.li
-                key={index}
+                key={`summary-point-${index}`}
                 variants={popOutAnimation(0.5, 0.2)}
                 initial="hidden"
                 whileInView="show"
@@ -80,7 +80,11 @@ function ExperienceCard({
 
         <div className="flex flex-wrap gap-1 justify-center">
           {experience.skills.map((skill: string, index: number) => (
-            <Skill key={index} text={skill} isDarkMode={isDarkMode} />
+            <Skill
+              key={`skill-${index}`}
+              text={skill}
+              isDarkMode={isDarkMode}
+            />
           ))}
         </div>
       </div>
