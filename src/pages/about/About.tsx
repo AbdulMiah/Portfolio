@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { about } from "../../constants";
 import SectionWrapper from "../../utils/SectionWrapper";
-import { slideDown } from "../../utils/motionVariants";
+import { popOutAnimation, slideDown } from "../../utils/motionVariants";
 
 type AboutProp = {
   isDarkMode: boolean;
@@ -28,7 +28,19 @@ function About({ isDarkMode, isMobile }: AboutProp) {
         )}
       </motion.div>
 
-      <motion.p className="">{about.description}</motion.p>
+      <motion.p variants={popOutAnimation(0.8, 0.4)} className="p-5">
+        {about.description}
+      </motion.p>
+
+      <div className="p-5">
+        {about.interests.map((interest, index) => (
+          <div className="mb-5" key={index}>
+            <p>{interest.title}</p>
+            <interest.icon />
+            <p>{interest.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { creditsafe, financialforce } from "./assets";
+import { IconBarbell, IconCpu, IconPlaneTilt, IconCar, IconPlayFootball, IconDeviceGamepad } from "@tabler/icons-react";
 
 export const navLinks = [
   {
@@ -31,32 +32,32 @@ export const about = {
   interests: [
     {
       title: "Gym",
-      icon: "",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
+      icon: IconBarbell,
+      description: "Gym Enthusiast 💪🏋️‍♂️ The gym is my second home, where iron meets determination and sweat transforms into strength. I find solace in the rhythmic clank of weights, the adrenaline of a challenging workout, and the pursuit of personal records. It's more than just exercise; it's a lifestyle."
     },
     {
       title: "Tech",
-      icon: "",
+      icon: IconCpu,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
     },
     {
       title: "Travel",
-      icon: "",
+      icon: IconPlaneTilt,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
     },
     {
       title: "Cars",
-      icon: "",
+      icon: IconCar,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
     },
     {
       title: "Sport",
-      icon: "",
+      icon: IconPlayFootball,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
     },
     {
       title: "Games",
-      icon: "",
+      icon: IconDeviceGamepad,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus commodo convallis."
     },
   ]
