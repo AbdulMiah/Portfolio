@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navigation, Landing, Experience } from "./pages";
+import { Navigation, Landing, About, Experience } from "./pages";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -44,6 +44,7 @@ function App() {
     >
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Landing isMobile={isMobile} />
+      <About isDarkMode={isDarkMode} isMobile={isMobile} />
       <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
     </div>
   );
