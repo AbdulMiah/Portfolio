@@ -23,12 +23,12 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
         {isMobile ? (
           <>
             <h2>Professional</h2>
-            <h3 className="text-royal-blue-100">Experience</h3>
+            <h3 className="text-royal-blue-100">Experience.</h3>
           </>
         ) : (
           <>
             <h1>Professional</h1>
-            <h2 className="text-royal-blue-100">Experience</h2>
+            <h2 className="text-royal-blue-100">Experience.</h2>
           </>
         )}
       </motion.div>
