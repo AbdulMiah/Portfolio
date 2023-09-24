@@ -25,48 +25,58 @@ function About({ isDarkMode, isMobile }: AboutProp) {
           </div>
         )}
 
-        <div className={`${isMobile ? "" : "col-span-2 col-start-2"}`}>
-          <motion.div variants={slideDown(0.2)} className="font-bold">
-            {isMobile ? (
-              <h2>
-                About
-                <span className="text-royal-blue-100"> Me.</span>
-              </h2>
-            ) : (
-              <h1>
-                About
-                <span className="text-royal-blue-100"> Me.</span>
-              </h1>
-            )}
-          </motion.div>
+        <motion.div
+          variants={slideDown(0.2)}
+          className={`${isMobile ? "" : "col-span-2 col-start-2"} font-bold`}
+        >
+          {isMobile ? (
+            <h2>
+              About
+              <span className="text-royal-blue-100"> Me.</span>
+            </h2>
+          ) : (
+            <h1>
+              About
+              <span className="text-royal-blue-100"> Me.</span>
+            </h1>
+          )}
+        </motion.div>
 
-          <motion.div variants={popOutAnimation(0.8, 0.4)} className="text-lg">
-            {about.description}
-          </motion.div>
+        <motion.div
+          variants={popOutAnimation(0.8, 0.4)}
+          className={`${isMobile ? "" : "col-span-2 col-start-2"} text-lg`}
+        >
+          {about.description}
+        </motion.div>
 
-          <motion.h3 variants={popOutAnimation(0.8, 0.6)} className="font-bold">
-            My
-            <span className="text-royal-blue-100"> Interests.</span>
-          </motion.h3>
-        </div>
+        <motion.h3
+          variants={popOutAnimation(0.8, 0.6)}
+          className={`${isMobile ? "" : "col-span-2 col-start-2"} font-bold`}
+        >
+          My
+          <span className="text-royal-blue-100"> Interests.</span>
+        </motion.h3>
 
-        <div
+        <motion.div
+          variants={popOutAnimation(0.8, 0.8)}
           className={`${
             isMobile ? "" : "col-span-1 col-start-2"
           } bg-royal-blue-100`}
         >
           Interest Grid
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={popOutAnimation(0.8, 1)}
           className={`${
             isMobile ? "" : "col-span-1 col-start-3"
           }  bg-royal-blue-100`}
         >
           Popup
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={popOutAnimation(0.8, 1.2)}
           className={`${
             isMobile ? "justify-between" : "col-span-2 col-start-2 space-x-48"
           } flex items-center`}
@@ -80,7 +90,7 @@ function About({ isDarkMode, isMobile }: AboutProp) {
               <Socials />
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
