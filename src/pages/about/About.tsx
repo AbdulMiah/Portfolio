@@ -5,6 +5,7 @@ import { popOutAnimation, slideDown } from "../../utils/motionVariants";
 import Socials from "../../components/Socials";
 import IconButton from "../../components/IconButton";
 import { IconDownload } from "@tabler/icons-react";
+import InterestsGrid from "./InterestsGrid";
 
 type AboutProp = {
   isDarkMode: boolean;
@@ -59,11 +60,9 @@ function About({ isDarkMode, isMobile }: AboutProp) {
 
         <motion.div
           variants={popOutAnimation(0.8, 0.8)}
-          className={`${
-            isMobile ? "" : "col-span-1 col-start-2"
-          } bg-royal-blue-100`}
+          className={`${isMobile ? "" : "col-span-1 col-start-2"}`}
         >
-          Interest Grid
+          <InterestsGrid isDarkMode={isDarkMode} interests={about.interests} />
         </motion.div>
 
         <motion.div
