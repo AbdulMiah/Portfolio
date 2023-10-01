@@ -22,7 +22,7 @@ function InterestsGrid({
           key={`interest-${index}`}
           className={`${
             isDarkMode ? "bg-black" : "bg-grey-200"
-          } flex flex-col items-center justify-center rounded-xl p-5`}
+          } cursor-pointer flex flex-col items-center justify-center rounded-xl p-5`}
           onClick={() => setDescription(interest.description)}
         >
           <interest.icon className="h-8 w-8 mb-3" />

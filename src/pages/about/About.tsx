@@ -4,7 +4,7 @@ import SectionWrapper from "../../utils/SectionWrapper";
 import { popOutAnimation, slideDown } from "../../utils/motionVariants";
 import Socials from "../../components/Socials";
 import IconButton from "../../components/IconButton";
-import { IconArrowLeft, IconDownload } from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowUp, IconDownload } from "@tabler/icons-react";
 import InterestsGrid from "./InterestsGrid";
 import InterestsPopup from "./InterestsDetail";
 import { useState } from "react";
@@ -85,7 +85,12 @@ function About({ isDarkMode, isMobile }: AboutProp) {
             />
           ) : (
             <div className="h-full w-full flex justify-center items-center animate-pulse space-x-2">
-              <IconArrowLeft className="h-7 w-7" />
+              {isMobile ? (
+                <IconArrowUp className="h-7 w-7" />
+              ) : (
+                <IconArrowLeft className="h-7 w-7" />
+              )}
+
               <span> Click for more Info</span>
             </div>
           )}
