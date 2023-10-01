@@ -41,6 +41,14 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
     };
   }, []);
 
+  function handleNavClick(title: string) {
+    setActive(title);
+
+    if (window.innerWidth <= 1024) {
+      setMenuOpen(false);
+    }
+  }
+
   return (
     <nav
       className={`${
@@ -75,7 +83,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
               } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavClick(nav.title)}
             >
               {nav.title}
             </motion.a>
