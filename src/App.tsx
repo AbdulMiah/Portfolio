@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigation, Landing, About, Experience } from "./pages";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -36,16 +37,14 @@ function App() {
   function toggleDarkMode() {
     setDarkMode((prevState) => !prevState);
   }
+
   return (
-    <div
-      className={`${
-        isDarkMode ? "dark" : ""
-      } overflow-y-scroll w-full h-screen`}
-    >
+    <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Landing isMobile={isMobile} />
       <About isDarkMode={isDarkMode} isMobile={isMobile} />
       <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
+      <ScrollToTopButton />
     </div>
   );
 }

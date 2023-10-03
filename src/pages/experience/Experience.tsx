@@ -15,7 +15,7 @@ type ExperienceProp = {
 
 function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-screen overflow-hidden">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
