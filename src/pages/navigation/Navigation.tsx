@@ -41,14 +41,8 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
     setMenuOpen((prevState) => !prevState);
   };
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    section && section.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleNavClick = (title: string, id: string) => {
+  const handleNavClick = (title: string) => {
     setActive(title);
-    scrollToSection(id);
 
     if (window.innerWidth <= 1024) {
       setMenuOpen(false);
@@ -63,7 +57,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
     >
       <a
         className="flex items-end text-black dark:text-white cursor-pointer"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0 })}
       >
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
@@ -85,13 +79,14 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
           {navLinks.map((nav) => (
             <motion.a
               key={nav.id}
+              href={`#${nav.id}`}
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
               initial="hidden"
               whileHover="show"
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
-              } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4 cursor-pointer`}
-              onClick={() => handleNavClick(nav.title, nav.id)}
+              } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
+              onClick={() => handleNavClick(nav.title)}
             >
               {nav.title}
             </motion.a>
