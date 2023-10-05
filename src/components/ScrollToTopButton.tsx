@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { scaleAnimation } from "../utils/motionVariants";
 
-function ScrollToTopButton() {
+type ScrollToTopButtonProp = {
+  isMobile: boolean;
+};
+
+function ScrollToTopButton({ isMobile }: ScrollToTopButtonProp) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -19,7 +23,7 @@ function ScrollToTopButton() {
   });
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   };
 
   return (
@@ -31,7 +35,9 @@ function ScrollToTopButton() {
       }
       initial="hidden"
       animate="show"
-      className="fixed bottom-5 right-8 z-50 p-4 rounded-xl bg-royal-blue-200"
+      className={`${
+        isMobile ? "p-2" : "p-4"
+      } fixed bottom-5 right-8 z-50 rounded-xl bg-royal-blue-200`}
       onClick={scrollToTop}
     >
       <IconArrowUp className="h-10 w-10" />

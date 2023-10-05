@@ -44,7 +44,7 @@ function App() {
       <Landing isMobile={isMobile} />
       <About isDarkMode={isDarkMode} isMobile={isMobile} />
       <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
-      <ScrollToTopButton />
+      <ScrollToTopButton isMobile={isMobile} />
     </div>
   );
 }
