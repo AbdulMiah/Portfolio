@@ -1,5 +1,7 @@
 import { IconArrowUp } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { scaleAnimation } from "../utils/motionVariants";
 
 function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);
@@ -21,14 +23,19 @@ function ScrollToTopButton() {
   };
 
   return (
-    visible && (
-      <button
-        className="fixed bottom-5 right-8 z-50 p-5 rounded-xl bg-royal-blue-100"
-        onClick={scrollToTop}
-      >
-        <IconArrowUp className="h-10 w-10" />
-      </button>
-    )
+    <motion.button
+      variants={
+        visible
+          ? scaleAnimation([null, 1.2, 1], 0.4)
+          : scaleAnimation([1, 1.2, 0], 0.2)
+      }
+      initial="hidden"
+      animate="show"
+      className="fixed bottom-5 right-8 z-50 p-4 rounded-xl bg-royal-blue-200"
+      onClick={scrollToTop}
+    >
+      <IconArrowUp className="h-10 w-10" />
+    </motion.button>
   );
 }
 
