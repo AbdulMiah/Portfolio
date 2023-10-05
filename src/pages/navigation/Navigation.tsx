@@ -21,10 +21,6 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   const [isMenuOpen, setMenuOpen] = useState(window.innerWidth >= 1024);
   const [active, setActive] = useState("");
 
-  function toggleMenu() {
-    setMenuOpen((prevState) => !prevState);
-  }
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -41,13 +37,23 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
     };
   }, []);
 
-  function handleNavClick(title: string) {
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState);
+  };
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section && section.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNavClick = (title: string, id: string) => {
     setActive(title);
+    scrollToSection(id);
 
     if (window.innerWidth <= 1024) {
       setMenuOpen(false);
     }
-  }
+  };
 
   return (
     <nav
@@ -55,7 +61,10 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         isDarkMode ? "dark dark-nav" : "light-nav"
       } w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}
     >
-      <a href="/" className="flex items-end text-black dark:text-white">
+      <a
+        className="flex items-end text-black dark:text-white cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
       </a>
@@ -79,11 +88,10 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
               initial="hidden"
               whileHover="show"
-              href={`#${nav.id}`}
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
-              } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
-              onClick={() => handleNavClick(nav.title)}
+              } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4 cursor-pointer`}
+              onClick={() => handleNavClick(nav.title, nav.id)}
             >
               {nav.title}
             </motion.a>
