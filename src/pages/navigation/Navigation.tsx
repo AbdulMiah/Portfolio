@@ -79,10 +79,10 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
           {navLinks.map((nav) => (
             <motion.a
               key={nav.id}
-              href={`#${nav.id}`}
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
               initial="hidden"
               whileHover="show"
+              href={`#${nav.id}`}
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
               } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
