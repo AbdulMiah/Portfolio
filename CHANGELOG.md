@@ -2,6 +2,25 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [4.0.0] (2023-10-08)
+
+### Added
+
+- Inserted 'about' data to constants.
+- Added 'about me' section.
+- Added avatar to about section with new animation.
+- Created a scroll to top button.
+- Added smooth scroll behaviour when clicking on anchor links.
+
+### Changed
+
+- Updated skills for experience constants.
+- Change cursor style to default while hovering over skills.
+
+### Fixed
+
+- Hide navigation bar when clicking on a nav item while in mobile view.
+
 ## [3.0.1] (2023-09-20)
 
 ### Fixed
@@ -109,6 +128,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[4.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v4.0.0
 [3.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.1
 [3.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.0
 [2.2.3]: https://github.com/AbdulMiah/Portfolio/releases/tag/v2.2.3
