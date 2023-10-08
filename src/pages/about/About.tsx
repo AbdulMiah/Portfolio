@@ -6,7 +6,7 @@ import Socials from "../../components/Socials";
 import IconButton from "../../components/IconButton";
 import { IconArrowLeft, IconArrowUp, IconDownload } from "@tabler/icons-react";
 import InterestsGrid from "./InterestsGrid";
-import InterestDetail from "./InterestDetail";
+import InterestPopup from "./InterestPopup";
 import { useState } from "react";
 import AvatarStanding from "./AvatarStanding";
 
@@ -32,9 +32,9 @@ function About({ isDarkMode, isMobile }: AboutProp) {
             animate={{ opacity: 1, scale: [null, 1.4, 1] }}
             transition={{ duration: 0.3, delay: 2.5 }}
           >
-            <h5 className="animate-pulse font-bold">
+            <p className="animate-pulse font-bold">
               Click and drag to rotate me
-            </h5>
+            </p>
             <AvatarStanding />
           </motion.div>
         </div>
@@ -88,13 +88,18 @@ function About({ isDarkMode, isMobile }: AboutProp) {
         className={`${isMobile ? "" : "col-span-1 col-start-3"}`}
       >
         {description ? (
-          <InterestDetail
+          <InterestPopup
             isDarkMode={isDarkMode}
             description={description}
             setDescription={setDescription}
           />
         ) : (
-          <div className="h-full w-full flex justify-center items-center animate-pulse space-x-2">
+          <motion.div
+            variants={popOutAnimation(0.2, 0.1)}
+            initial="hidden"
+            animate="show"
+            className="h-full w-full flex justify-center items-center animate-pulse space-x-2"
+          >
             {isMobile ? (
               <IconArrowUp className="h-7 w-7" />
             ) : (
@@ -102,7 +107,7 @@ function About({ isDarkMode, isMobile }: AboutProp) {
             )}
 
             <span> Click for more Info</span>
-          </div>
+          </motion.div>
         )}
       </motion.div>
 
