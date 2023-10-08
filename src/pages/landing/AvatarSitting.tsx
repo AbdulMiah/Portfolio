@@ -1,4 +1,4 @@
-import { Avatar } from "../../components/canvas/Avatar";
+import { AnimationConfig, Avatar } from "../../components/canvas/Avatar";
 import { Canvas } from "@react-three/fiber";
 import { OfficeChair } from "../../components/canvas/OfficeChair";
 import { Suspense } from "react";
@@ -27,7 +27,10 @@ function AvatarSitting() {
             color={"#000000"}
           />
           <OfficeChair position={[0, 0.5, 0]} />
-          <Avatar lookAtPointer={lookAtPointer} />
+          <Avatar
+            lookAtPointer={lookAtPointer}
+            animationConfig={AnimationConfig.Sitting}
+          />
           <ambientLight intensity={2} />
         </group>
       </Suspense>

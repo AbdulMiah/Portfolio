@@ -1,16 +1,16 @@
 import { IconX } from "@tabler/icons-react";
 
-type InterestsPopupProp = {
+type InterestDetailProp = {
   isDarkMode: boolean;
   description: string;
   setDescription: (description: string) => void;
 };
 
-function InterestsPopup({
+function InterestDetail({
   isDarkMode,
   description,
   setDescription,
-}: InterestsPopupProp) {
+}: InterestDetailProp) {
   return (
     <div
       className={`${
@@ -25,4 +25,4 @@ function InterestsPopup({
   );
 }
 
-export default InterestsPopup;
+export default InterestDetail;

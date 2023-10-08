@@ -6,8 +6,9 @@ import Socials from "../../components/Socials";
 import IconButton from "../../components/IconButton";
 import { IconArrowLeft, IconArrowUp, IconDownload } from "@tabler/icons-react";
 import InterestsGrid from "./InterestsGrid";
-import InterestsPopup from "./InterestsDetail";
+import InterestDetail from "./InterestDetail";
 import { useState } from "react";
+import AvatarStanding from "./AvatarStanding";
 
 type AboutProp = {
   isDarkMode: boolean;
@@ -24,10 +25,15 @@ function About({ isDarkMode, isMobile }: AboutProp) {
       } gap-7 p-5 mb-10`}
     >
       {!isMobile && (
-        <div className="col-span-1 row-span-6 bg-royal-blue-100">
-          <div className="justify-center">
-            <h1>Avatar</h1>
-          </div>
+        <div className="col-span-1 row-span-6">
+          <motion.div
+            className="w-full h-full flex justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, scale: [null, 1.4, 1] }}
+            transition={{ duration: 0.3, delay: 2.5 }}
+          >
+            <AvatarStanding />
+          </motion.div>
         </div>
       )}
 
@@ -79,7 +85,7 @@ function About({ isDarkMode, isMobile }: AboutProp) {
         className={`${isMobile ? "" : "col-span-1 col-start-3"}`}
       >
         {description ? (
-          <InterestsPopup
+          <InterestDetail
             isDarkMode={isDarkMode}
             description={description}
             setDescription={setDescription}
