@@ -43,7 +43,7 @@ export const about = {
     {
       title: "Travel",
       icon: IconPlaneTilt,
-      description: "Eager to explore the world 🌍, I'm captivated by the endless possibilities of travel ✈️. My heart belongs to the thrill of discovering new destinations 🗺️ and immersing myself in diverse cultures"
+      description: "Eager to explore the world 🌍, I'm captivated by the endless possibilities of travel ✈️. My heart belongs to the thrill of discovering new destinations 🗺️ and immersing myself in diverse cultures."
     },
     {
       title: "Cars",
