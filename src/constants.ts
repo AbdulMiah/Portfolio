@@ -82,9 +82,10 @@ export const experiences = [
     skills: [
       "React.js",
       "JavaScript",
-      "Node.js",
       "C# ASP .Net",
-      "Docker",
+      "Oracle DB",
+      "Python",
+      "AWS Lambda",
     ]
   },
   {
