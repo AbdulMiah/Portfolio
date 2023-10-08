@@ -22,7 +22,7 @@ function AvatarStanding() {
             minAzimuthAngle={-Math.PI / 4}
             maxAzimuthAngle={Math.PI / 4}
             minPolarAngle={Math.PI / 6}
-            maxPolarAngle={Math.PI - Math.PI / 6}
+            maxPolarAngle={Math.PI - Math.PI / 2}
           />
           <Avatar animationConfig={AnimationConfig.LookAround} />
           <ambientLight intensity={2} />

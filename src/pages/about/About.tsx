@@ -27,11 +27,14 @@ function About({ isDarkMode, isMobile }: AboutProp) {
       {!isMobile && (
         <div className="col-span-1 row-span-6">
           <motion.div
-            className="w-full h-full flex justify-center"
+            className="w-full h-full flex flex-col items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, scale: [null, 1.4, 1] }}
             transition={{ duration: 0.3, delay: 2.5 }}
           >
+            <h5 className="animate-pulse font-bold">
+              Click and drag to rotate me
+            </h5>
             <AvatarStanding />
           </motion.div>
         </div>
