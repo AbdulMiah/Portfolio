@@ -34,18 +34,34 @@ type GLTFResult = GLTF & {
   };
 };
 
+export const AnimationConfig = {
+  Sitting: {
+    modelPath: "models/avatar.glb",
+    animationPath: "animations/Sitting.fbx",
+    name: "Sitting",
+  },
+  LookAround: {
+    modelPath: "models/avatar2.glb",
+    animationPath: "animations/Look Around.fbx",
+    name: "Look Around",
+  },
+};
+
 type AvatarProp = {
-  lookAtPointer: boolean;
+  lookAtPointer?: boolean;
+  animationConfig: any;
 } & JSX.IntrinsicElements["group"];
 
 export function Avatar(props: AvatarProp) {
   const group = useRef<Group>(null);
-  const { nodes, materials } = useGLTF("models/avatar.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF(
+    props.animationConfig.modelPath
+  ) as GLTFResult;
 
-  const { animations: sittingAnimation } = useFBX("animations/Sitting.fbx");
-  sittingAnimation[0].name = "Sitting";
+  const { animations: animation } = useFBX(props.animationConfig.animationPath);
+  animation[0].name = props.animationConfig.name;
 
-  const { actions } = useAnimations(sittingAnimation, group);
+  const { actions } = useAnimations(animation, group);
 
   useFrame((state) => {
     const pointer = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
@@ -55,7 +71,7 @@ export function Avatar(props: AvatarProp) {
   });
 
   useEffect(() => {
-    actions["Sitting"]?.reset().play();
+    actions[props.animationConfig.name]?.reset().play();
   }, []);
 
   return (

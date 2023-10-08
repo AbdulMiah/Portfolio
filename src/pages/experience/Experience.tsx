@@ -15,7 +15,7 @@ type ExperienceProp = {
 
 function Experience({ isDarkMode, isMobile }: ExperienceProp) {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-full overflow-hidden">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
@@ -23,17 +23,17 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
         {isMobile ? (
           <>
             <h2>Professional</h2>
-            <h3 className="text-royal-blue-100">Experience</h3>
+            <h3 className="text-royal-blue-100">Experience.</h3>
           </>
         ) : (
           <>
             <h1>Professional</h1>
-            <h2 className="text-royal-blue-100">Experience</h2>
+            <h2 className="text-royal-blue-100">Experience.</h2>
           </>
         )}
       </motion.div>
 
-      <motion.div variants={popOutAnimation(0.8, 0.3)}>
+      <motion.div variants={popOutAnimation(0.8, 0.4)}>
         <VerticalTimeline lineColor={`${isDarkMode ? "#fff" : "#000"}`}>
           {experiences.map((experience, index) => (
             <ExperienceCard

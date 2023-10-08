@@ -5,6 +5,7 @@
 @layer base {
     html {
         font-family: 'Ubuntu', sans-serif;
+        scroll-behavior: smooth;
     }
     h1 {
         @apply text-7xl;

@@ -10,7 +10,7 @@ type LandingProp = {
 
 function Landing({ isMobile }: LandingProp) {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0 top-[120px] items-start">
         <div className="flex flex-col justify-center items-center h-[80vh] gap-9">
           {isMobile ? (
