@@ -11,20 +11,20 @@ type ProjectsProp = {
 
 function Projects({ isMobile, isDarkMode }: ProjectsProp) {
   return (
-    <section className="relative w-full h-full overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
       >
         {isMobile ? (
           <>
-            <h2>My</h2>
-            <h3 className="text-royal-blue-100">Projects.</h3>
+            <h3>My</h3>
+            <h2 className="text-royal-blue-100">Projects.</h2>
           </>
         ) : (
           <>
-            <h1>My</h1>
-            <h2 className="text-royal-blue-100">Projects.</h2>
+            <h2>My</h2>
+            <h1 className="text-royal-blue-100">Projects.</h1>
           </>
         )}
       </motion.div>
