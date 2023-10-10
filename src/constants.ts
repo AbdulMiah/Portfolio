@@ -130,7 +130,7 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "InStock App",
+    title: "InStock App",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
     skills: ["Flutter", "Dart", "C# ASP .Net", "AWS"],
@@ -139,7 +139,7 @@ export const projects = [
     images: [],
   },
   {
-    name: "E2S System",
+    title: "E2S System",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
     skills: ["React.js", "TypeScript", "Node.js", "MySQL"],
@@ -148,7 +148,7 @@ export const projects = [
     images: [],
   },
   {
-    name: "PrayerPal App",
+    title: "PrayerPal App",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
     skills: ["Java", "XML"],
@@ -157,7 +157,7 @@ export const projects = [
     images: [],
   },
   {
-    name: "WrackReport",
+    title: "WrackReport",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
     skills: ["Java", "HTML", "CSS", "JavaScript", "MySQL"],
