@@ -1,4 +1,4 @@
-import { creditsafe, financialforce } from "./assets";
+import { creditsafe, financialforce, prayerpal } from "./assets";
 import {
   IconBarbell,
   IconCpu,
@@ -156,7 +156,7 @@ export const projects = [
     skills: ["Java", "XML"],
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
-    images: [],
+    images: prayerpal,
     delay: 1,
   },
   {

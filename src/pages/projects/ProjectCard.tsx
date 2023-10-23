@@ -45,6 +45,10 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
             </a>
           </div>
 
+          {project.images.map((image: string, index: number) => (
+            <img src={image} />
+          ))}
+
           <div className="mt-5 space-y-4">
             <h4>{project.title}</h4>
             <p>{project.description}</p>
