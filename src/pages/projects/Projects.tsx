@@ -11,7 +11,7 @@ type ProjectsProp = {
 
 function Projects({ isMobile, isDarkMode }: ProjectsProp) {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden p-5 mt-10">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
@@ -29,9 +29,13 @@ function Projects({ isMobile, isDarkMode }: ProjectsProp) {
         )}
       </motion.div>
 
-      <ProjectCard isDarkMode={isDarkMode} projects={projects} />
+      <ProjectCard
+        isDarkMode={isDarkMode}
+        isMobile={isMobile}
+        projects={projects}
+      />
     </section>
   );
 }
 
-export default SectionWrapper(Projects, "projects", 120);
+export default SectionWrapper(Projects, "projects", 80);

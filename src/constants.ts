@@ -72,7 +72,7 @@ export const about = {
       title: "Games",
       icon: IconDeviceGamepad,
       description:
-        "In the captivating realm of video games 🎮, I thrive on the thrill of competition 🏆. Whether it's epic quests or strategic battles, I relish the opportunity to test my skills and outwit opponents in every game I play 🧠💪. These digital adventures not only ignite my imagination but also fuel my competitive spirit 🔥!",
+        "In the captivating realm of video games 🎮, I thrive on the thrill of competition 🏆. Whether it's epic quests or strategic battles, I relish the opportunity to test my skills and outwit opponents in every game I play 🧠. These digital adventures not only ignite my imagination but also fuel my competitive spirit 🔥!",
     },
   ],
 };
@@ -137,6 +137,7 @@ export const projects = [
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
     images: [],
+    delay: 0.6,
   },
   {
     title: "E2S System",
@@ -146,6 +147,7 @@ export const projects = [
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: [],
+    delay: 0.8,
   },
   {
     title: "PrayerPal App",
@@ -155,6 +157,7 @@ export const projects = [
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
     images: [],
+    delay: 1,
   },
   {
     title: "WrackReport",
