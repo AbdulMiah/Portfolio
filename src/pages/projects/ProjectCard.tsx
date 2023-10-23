@@ -1,6 +1,7 @@
 import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { scaleAnimation, slideDown } from "../../utils/motionVariants";
+import Skill from "../../components/Skill";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
@@ -43,7 +44,20 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
               <IconArrowRight />
             </a>
           </div>
-          <h4>{project.title}</h4>
+
+          <div className="mt-5 space-y-4">
+            <h4>{project.title}</h4>
+            <p>{project.description}</p>
+            <div className="flex flex-wrap gap-1 justify-center">
+              {project.skills.map((skill: string, index: number) => (
+                <Skill
+                  key={`skill-${index}`}
+                  text={skill}
+                  isDarkMode={isDarkMode}
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
       ))}
     </div>

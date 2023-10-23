@@ -11,7 +11,7 @@ type ProjectsProp = {
 
 function Projects({ isMobile, isDarkMode }: ProjectsProp) {
   return (
-    <section className="relative w-full h-screen overflow-hidden p-5 mt-10">
+    <section className="relative w-full h-full overflow-hidden p-5 mt-10">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
