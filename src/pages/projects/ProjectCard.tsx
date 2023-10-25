@@ -2,6 +2,7 @@ import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { scaleAnimation, slideDown } from "../../utils/motionVariants";
 import Skill from "../../components/Skill";
+import Carousel from "./Carousel";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
@@ -45,9 +46,7 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
             </a>
           </div>
 
-          {project.images.map((image: string, index: number) => (
-            <img src={image} />
-          ))}
+          <Carousel images={project.images} />
 
           <div className="mt-5 space-y-4">
             <h4>{project.title}</h4>
