@@ -1,4 +1,4 @@
-import { creditsafe, financialforce, prayerpal } from "./assets";
+import { creditsafe, financialforce, prayerpal, instock } from "./assets";
 import {
   IconBarbell,
   IconCpu,
@@ -136,7 +136,7 @@ export const projects = [
     skills: ["Flutter", "Dart", "C# ASP .Net", "AWS"],
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
-    images: [],
+    images: instock,
     delay: 0.6,
   },
   {
