@@ -20,7 +20,7 @@ function Carousel({ images }: CarouselProp) {
   };
 
   return (
-    <div className="flex justify-center items-center w-[600px] h-[400px]">
+    <div className="relative flex justify-center items-center h-[500px]">
       <IconCircleArrowLeftFilled
         className="absolute w-8 h-8 left-4 hover:cursor-pointer filter drop-shadow-lg"
         onClick={prevSlide}
@@ -30,7 +30,9 @@ function Carousel({ images }: CarouselProp) {
           <img
             src={image}
             className={`${
-              slide === index ? "rounded-lg shadow-lg w-full h-full" : "hidden"
+              slide === index
+                ? "rounded-lg shadow-lg w-auto h-[400px]"
+                : "hidden"
             }`}
           />
         </div>
@@ -43,7 +45,7 @@ function Carousel({ images }: CarouselProp) {
         {images.map((_: any, index: number) => (
           <button
             className={`${
-              slide === index ? "bg-royal-blue-100" : "bg-white"
+              slide === index ? "bg-royal-blue-200" : "bg-white"
             } w-2 h-2 rounded-full border-none outline-none shadow-lg ml-2`}
             key={index}
             onClick={() => setSlide(index)}
