@@ -52,10 +52,11 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
             <h4>{project.title}</h4>
             <p>{project.description}</p>
             <div className="flex flex-wrap gap-1 justify-center">
-              {project.skills.map((skill: string, index: number) => (
+              {project.skills.map((skill: any, index: number) => (
                 <Skill
                   key={`skill-${index}`}
-                  text={skill}
+                  text={skill.title}
+                  icon={<skill.icon />}
                   isDarkMode={isDarkMode}
                 />
               ))}

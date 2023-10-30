@@ -16,7 +16,14 @@ import {
   IconBrandNodejs,
   IconBrandTerraform,
   IconBrandDocker,
-  IconGitPullRequest
+  IconGitPullRequest,
+  IconBrandFlutter,
+  IconBrandMysql,
+  IconCoffee,
+  IconFileTypeXml,
+  IconBrandHtml5,
+  IconBrandCss3,
+  IconBrandFigma
 } from "@tabler/icons-react";
 
 export const navLinks = [
@@ -180,7 +187,24 @@ export const projects = [
     title: "InStock App",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: ["Flutter", "Dart", "C# ASP .Net", "AWS"],
+    skills: [
+      {
+        title: "Flutter",
+        icon: IconBrandFlutter
+      },
+      {
+        title: "C# ASP .Net",
+        icon: IconBrandCSharp
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws
+      },
+      {
+        title: "Figma",
+        icon: IconBrandFigma
+      }
+    ],
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
     images: instock,
@@ -190,7 +214,24 @@ export const projects = [
     title: "E2S System",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: ["React.js", "TypeScript", "Node.js", "MySQL"],
+    skills: [
+      {
+      title: "React.js", 
+      icon: IconBrandReact
+      },
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs
+      },
+      {
+        title: "MySQL",
+        icon: IconBrandMysql
+      }
+    ],
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: [],
@@ -200,7 +241,16 @@ export const projects = [
     title: "PrayerPal App",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: ["Java", "XML"],
+    skills: [
+      {
+        title: "Java",
+        icon: IconCoffee
+      },
+      {
+        title: "XML",
+        icon: IconFileTypeXml
+      }
+    ],
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
     images: prayerpal,
@@ -210,7 +260,27 @@ export const projects = [
     title: "WrackReport",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: ["Java", "HTML", "CSS", "JavaScript", "MySQL"],
+    skills: [
+      {
+        title: "Java",
+        icon: IconCoffee
+      },
+      {
+        title: "HTML",
+        icon: IconBrandHtml5
+      },
+      {
+        title: "CSS",
+        icon: IconBrandCss3
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript
+      }, {
+        title: "MySQL",
+        icon: IconBrandMysql
+      }
+    ],
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
     images: [],
