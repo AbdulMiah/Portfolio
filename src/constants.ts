@@ -6,6 +6,17 @@ import {
   IconCar,
   IconPlayFootball,
   IconDeviceGamepad,
+  IconBrandReact,
+  IconBrandJavascript,
+  IconBrandCSharp,
+  IconDatabase,
+  IconBrandPython,
+  IconBrandAws,
+  IconBrandTypescript,
+  IconBrandNodejs,
+  IconBrandTerraform,
+  IconBrandDocker,
+  IconGitPullRequest
 } from "@tabler/icons-react";
 
 export const navLinks = [
@@ -94,12 +105,30 @@ export const experiences = [
       "Product Alignment: Engaged closely with the product manager to align technical solutions with business objectives, ensuring goal-aligned solutions.",
     ],
     skills: [
-      "React.js",
-      "JavaScript",
-      "C# ASP .Net",
-      "Oracle DB",
-      "Python",
-      "AWS Lambda",
+      {
+        title: "React.js", 
+        icon: IconBrandReact
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript
+      },
+      {
+        title: "C# ASP .Net",
+        icon: IconBrandCSharp
+      },
+      {
+        title: "Oracle DB",
+        icon: IconDatabase
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython
+      },
+      {
+        title: "AWS Lambda",
+        icon: IconBrandAws
+      },
     ],
   },
   {
@@ -118,12 +147,30 @@ export const experiences = [
       "Quality Advocate: Played a key role in code reviews, testing, and agile ceremonies, emphasising a commitment to delivering top-quality software solutions.",
     ],
     skills: [
-      "TypeScript",
-      "JavaScript",
-      "Node.js",
-      "Terraform",
-      "Docker",
-      "Jenkins",
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform
+      },
+      {
+        title: "Docker",
+        icon: IconBrandDocker
+      },
+      {
+        title: "Jenkins",
+        icon: IconGitPullRequest
+      }
     ],
   },
 ];

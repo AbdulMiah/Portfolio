@@ -79,10 +79,11 @@ function ExperienceCard({
         </motion.ul>
 
         <div className="flex flex-wrap gap-1 justify-center">
-          {experience.skills.map((skill: string, index: number) => (
+          {experience.skills.map((skill: any, index: number) => (
             <Skill
               key={`skill-${index}`}
-              text={skill}
+              text={skill.title}
+              icon={<skill.icon />}
               isDarkMode={isDarkMode}
             />
           ))}
