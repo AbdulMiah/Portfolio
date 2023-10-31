@@ -5,16 +5,16 @@ export type NavLink = {
     title: string;
 };
 
-export type About = {
-    description: string;
-    interests: Interest[];
-};
-
 export type Interest = {
     title: string;
     icon: (props: TablerIconsProps) => JSX.Element;
     description: string;
 }
+
+export type About = {
+    description: string;
+    interests: Interest[];
+};
 
 export type Skill = {
     title: string;
@@ -31,7 +31,7 @@ export type Project = {
     delay: number;
 };
 
-export type Expertise = {
+export type Experience = {
     title: string;
     employmentType: string;
     companyName: string;

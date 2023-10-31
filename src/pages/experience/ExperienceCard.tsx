@@ -3,12 +3,12 @@ import { IconMapPinFilled } from "@tabler/icons-react";
 import SkillButton from "../../components/SkillButton";
 import { motion } from "framer-motion";
 import { popOutAnimation, staggerAnimation } from "../../utils/motionVariants";
-import { Expertise, Skill } from "../../utils/types";
+import { Experience, Skill } from "../../utils/types";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
   isMobile: boolean;
-  experience: Expertise;
+  experience: Experience;
 };
 
 function ExperienceCard({

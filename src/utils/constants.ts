@@ -25,7 +25,7 @@ import {
   IconBrandCss3,
   IconBrandFigma
 } from "@tabler/icons-react";
-import { Project, NavLink, About, Expertise } from "./types";
+import { Project, NavLink, About, Experience } from "./types";
 
 export const navLinks: NavLink[] = [
   {
@@ -33,8 +33,8 @@ export const navLinks: NavLink[] = [
     title: "About",
   },
   {
-    id: "experience",
-    title: "Experience",
+    id: "experiences",
+    title: "Experiences",
   },
   {
     id: "projects",
@@ -96,7 +96,7 @@ export const about: About = {
   ],
 };
 
-export const experiences: Expertise[] = [
+export const experiences: Experience[] = [
   {
     title: "Software Developer",
     employmentType: "Full-time",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navigation, Landing, About, Experience, Projects } from "./pages";
+import { Navigation, Landing, About, Experiences, Projects } from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Landing isMobile={isMobile} />
       <About isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
+      <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
       <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
       <ScrollToTopButton isMobile={isMobile} />
     </div>
