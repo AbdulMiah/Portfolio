@@ -1,4 +1,4 @@
-import { creditsafe, financialforce, prayerpal, instock } from "./assets";
+import { creditsafe, financialforce, prayerpal, instock } from "../assets";
 import {
   IconBarbell,
   IconCpu,
@@ -25,6 +25,7 @@ import {
   IconBrandCss3,
   IconBrandFigma
 } from "@tabler/icons-react";
+import { Project } from "./types";
 
 export const navLinks = [
   {
@@ -182,7 +183,7 @@ export const experiences = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: "InStock App",
     description:

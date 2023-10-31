@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Socials from "../../components/Socials";
-import { cvPath, navLinks } from "../../constants";
+import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
 
 type NavigationProp = {

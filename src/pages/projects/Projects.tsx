@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { slideDown } from "../../utils/motionVariants";
 import SectionWrapper from "../../utils/SectionWrapper";
-import { projects } from "../../constants";
+import { projects } from "../../utils/constants";
 import ProjectCard from "./ProjectCard";
 
 type ProjectsProp = {
