@@ -25,7 +25,7 @@ import {
   IconBrandCss3,
   IconBrandFigma
 } from "@tabler/icons-react";
-import { Project, NavLink } from "./types";
+import { Project, NavLink, About } from "./types";
 
 export const navLinks: NavLink[] = [
   {
@@ -53,7 +53,7 @@ export const socialLinks = {
 
 export const cvPath = "/assets/Abdul Muktadir Miah - CV.pdf";
 
-export const about = {
+export const about: About = {
   description:
     "I am a driven Software Engineer with a strong passion for creating captivating applications. My dedication lies in crafting innovative and engaging software solutions. Constantly seeking opportunities to expand my knowledge and expertise in the ever-evolving field, I am fuelled by a deep curiosity for the latest technologies and their potential applications.",
   interests: [
