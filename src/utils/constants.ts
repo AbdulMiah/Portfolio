@@ -25,9 +25,9 @@ import {
   IconBrandCss3,
   IconBrandFigma
 } from "@tabler/icons-react";
-import { Project } from "./types";
+import { Project, NavLink } from "./types";
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   {
     id: "about",
     title: "About",

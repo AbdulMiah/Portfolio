@@ -1,3 +1,8 @@
+export type NavLink = {
+    id: string;
+    title: string;
+}
+
 export type Project = {
     title: string;
     description: string;

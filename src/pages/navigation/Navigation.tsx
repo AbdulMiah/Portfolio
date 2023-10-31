@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
+import { NavLink } from "../../utils/types";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -76,7 +77,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         } lg:items-center lg:w-auto`}
       >
         <div className="text-base lg:flex lg:justify-center lg:flex-grow dark:text-white">
-          {navLinks.map((nav) => (
+          {navLinks.map((nav: NavLink) => (
             <motion.a
               key={nav.id}
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
