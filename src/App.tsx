@@ -38,6 +38,13 @@ function App() {
     setDarkMode((prevState) => !prevState);
   }
 
+  const htmlElement = document.documentElement;
+  if (isDarkMode) {
+    htmlElement.classList.add("dark");
+  } else {
+    htmlElement.classList.remove("dark");
+  }
+
   return (
     <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
