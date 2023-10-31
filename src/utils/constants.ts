@@ -285,5 +285,6 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
     images: [],
+    delay: 1,
   },
 ];

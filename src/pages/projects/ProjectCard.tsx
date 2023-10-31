@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { scaleAnimation, slideDown } from "../../utils/motionVariants";
 import Skill from "../../components/Skill";
 import Carousel from "./Carousel";
+import { Project } from "../../utils/types";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
   isMobile: boolean;
-  projects: any;
+  projects: Project[];
 };
 
 function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
@@ -17,7 +18,7 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
         isMobile ? "grid-cols-1" : "grid-cols-3"
       } gap-5 text-white`}
     >
-      {projects.slice(0, 3).map((project: any, index: number) => (
+      {projects.slice(0, 3).map((project: Project, index: number) => (
         <motion.div
           variants={slideDown(project.delay)}
           initial="hidden"
