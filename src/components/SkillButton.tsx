@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { scaleAnimation } from "../utils/motionVariants";
 
-type SkillProp = {
+type SkillButtonProp = {
   isDarkMode: boolean;
   text: string;
   icon: JSX.Element;
 };
 
-function Skill({ isDarkMode, text, icon }: SkillProp) {
+function SkillButton({ isDarkMode, text, icon }: SkillButtonProp) {
   return (
     <motion.div
       variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
@@ -23,4 +23,4 @@ function Skill({ isDarkMode, text, icon }: SkillProp) {
   );
 }
 
-export default Skill;
+export default SkillButton;
