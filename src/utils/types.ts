@@ -16,6 +16,11 @@ export type Interest = {
     description: string;
 }
 
+export type Skill = {
+    title: string;
+    icon: (props: TablerIconsProps) => JSX.Element;
+}
+
 export type Project = {
     title: string;
     description: string;
@@ -26,7 +31,15 @@ export type Project = {
     delay: number;
 };
 
-export type Skill = {
+export type Expertise = {
     title: string;
-    icon: (props: TablerIconsProps) => JSX.Element;
+    employmentType: string;
+    companyName: string;
+    companyLink: string;
+    location: string;
+    icon: string;
+    iconBg: string;
+    date: string;
+    summary: string[];
+    skills: Skill[];
 }

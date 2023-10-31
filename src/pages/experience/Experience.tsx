@@ -7,6 +7,7 @@ import ExperienceCard from "./ExperienceCard";
 
 import SectionWrapper from "../../utils/SectionWrapper";
 import { popOutAnimation, slideDown } from "../../utils/motionVariants";
+import { Expertise } from "../../utils/types";
 
 type ExperienceProp = {
   isDarkMode: boolean;
@@ -35,7 +36,7 @@ function Experience({ isDarkMode, isMobile }: ExperienceProp) {
 
       <motion.div variants={popOutAnimation(0.8, 0.4)}>
         <VerticalTimeline lineColor={`${isDarkMode ? "#fff" : "#000"}`}>
-          {experiences.map((experience, index) => (
+          {experiences.map((experience: Expertise, index: number) => (
             <ExperienceCard
               isDarkMode={isDarkMode}
               isMobile={isMobile}
