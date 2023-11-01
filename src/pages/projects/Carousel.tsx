@@ -5,7 +5,7 @@ import {
 import { useState } from "react";
 
 type CarouselProp = {
-  images: any;
+  images: string[];
 };
 
 function Carousel({ images }: CarouselProp) {
