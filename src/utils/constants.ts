@@ -1,4 +1,4 @@
-import { creditsafe, financialforce, prayerpal, instock } from "../assets";
+import { creditsafe, financialforce, prayerpal, instock, wrackreport } from "../assets";
 import {
   IconBarbell,
   IconCpu,
@@ -284,7 +284,7 @@ export const projects: Project[] = [
     ],
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
-    images: [],
+    images: wrackreport,
     delay: 1,
   },
 ];
