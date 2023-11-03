@@ -212,52 +212,6 @@ export const projects: Project[] = [
     delay: 0.6,
   },
   {
-    title: "E2S System",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: [
-      {
-      title: "React.js", 
-      icon: IconBrandReact
-      },
-      {
-        title: "TypeScript",
-        icon: IconBrandTypescript
-      },
-      {
-        title: "Node.js",
-        icon: IconBrandNodejs
-      },
-      {
-        title: "MySQL",
-        icon: IconBrandMysql
-      }
-    ],
-    link: "https://github.com/AbdulMiah/E2S-System",
-    hero: "",
-    images: [],
-    delay: 0.8,
-  },
-  {
-    title: "PrayerPal App",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
-    skills: [
-      {
-        title: "Java",
-        icon: IconCoffee
-      },
-      {
-        title: "XML",
-        icon: IconFileTypeXml
-      }
-    ],
-    link: "https://github.com/AbdulMiah/PrayerPal",
-    hero: "",
-    images: prayerpal,
-    delay: 1,
-  },
-  {
     title: "WrackReport",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
@@ -285,6 +239,52 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
     images: wrackreport,
+    delay: 0.8,
+  },
+  {
+    title: "PrayerPal App",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
+    skills: [
+      {
+        title: "Java",
+        icon: IconCoffee
+      },
+      {
+        title: "XML",
+        icon: IconFileTypeXml
+      }
+    ],
+    link: "https://github.com/AbdulMiah/PrayerPal",
+    hero: "",
+    images: prayerpal,
     delay: 1,
+  },
+  {
+    title: "E2S System",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis sodales ligula id luctus.",
+    skills: [
+      {
+      title: "React.js", 
+      icon: IconBrandReact
+      },
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs
+      },
+      {
+        title: "MySQL",
+        icon: IconBrandMysql
+      }
+    ],
+    link: "https://github.com/AbdulMiah/E2S-System",
+    hero: "",
+    images: [],
+    delay: 0.8,
   },
 ];

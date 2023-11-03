@@ -3,6 +3,7 @@ import {
   IconCircleArrowLeftFilled,
 } from "@tabler/icons-react";
 import { useState } from "react";
+import { Modal } from "@mui/material";
 
 type CarouselProp = {
   images: string[];
@@ -10,6 +11,10 @@ type CarouselProp = {
 
 function Carousel({ images }: CarouselProp) {
   const [slide, setSlide] = useState(0);
+  const [selectedImg, setSelectedImage] = useState("");
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const nextSlide = () => {
     setSlide(slide === images.length - 1 ? 0 : slide + 1);
@@ -26,7 +31,13 @@ function Carousel({ images }: CarouselProp) {
         onClick={prevSlide}
       />
       {images.map((image: string, index: number) => (
-        <div key={`carousel-img-${index}`}>
+        <div
+          key={`carousel-img-${index}`}
+          onClick={() => {
+            handleOpen();
+            setSelectedImage(image);
+          }}
+        >
           <img
             src={image}
             className={`${
@@ -52,6 +63,16 @@ function Carousel({ images }: CarouselProp) {
           ></button>
         ))}
       </span>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        className="flex items-center justify-center"
+      >
+        <img
+          src={selectedImg}
+          className="rounded-lg shadow-lg max-w-full max-h-full"
+        />
+      </Modal>
     </div>
   );
 }
