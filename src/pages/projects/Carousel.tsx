@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Modal } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-creative";
 
 type CarouselProp = {
   images: string[];
@@ -36,14 +38,25 @@ function Carousel({ images }: CarouselProp) {
   return (
     <>
       <Swiper
-        modules={[Pagination, Navigation, Autoplay]}
+        modules={[Pagination, Navigation, Autoplay, EffectCreative]}
         tag="section"
         wrapperTag="ul"
-        spaceBetween={10}
+        effect={"creative"}
+        creativeEffect={{
+          prev: {
+            translate: ["-120%", 0, -500],
+          },
+          next: {
+            translate: ["120%", 0, -500],
+          },
+        }}
         grabCursor={true}
         loop={true}
-        navigation={true}
-        pagination={{ dynamicBullets: true }}
+        navigation
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
         autoplay
       >
         {slides}
