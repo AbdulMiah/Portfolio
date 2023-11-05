@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Modal } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectFlip,
-} from "swiper";
-import "swiper/swiper-bundle.css";
-
-SwiperCore.use([Navigation, Pagination, Autoplay, EffectFlip]);
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 type CarouselProp = {
   images: string[];
@@ -41,12 +36,13 @@ function Carousel({ images }: CarouselProp) {
   return (
     <>
       <Swiper
+        modules={[Pagination, Navigation, Autoplay]}
         tag="section"
         wrapperTag="ul"
         spaceBetween={10}
         grabCursor={true}
         loop={true}
-        navigation
+        navigation={true}
         pagination={{ dynamicBullets: true }}
         autoplay
       >
