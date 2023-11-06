@@ -47,7 +47,7 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
             </a>
           </div>
 
-          <Carousel images={project.images} />
+          <Carousel images={project.images} isMobile={isMobile} />
 
           <div className="mt-5 space-y-4">
             <h4>{project.title}</h4>

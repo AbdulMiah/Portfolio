@@ -10,9 +10,10 @@ import "swiper/css/effect-creative";
 
 type CarouselProp = {
   images: string[];
+  isMobile: boolean;
 };
 
-function Carousel({ images }: CarouselProp) {
+function Carousel({ images, isMobile }: CarouselProp) {
   const [selectedImg, setSelectedImage] = useState("");
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -58,13 +59,19 @@ function Carousel({ images }: CarouselProp) {
           clickable: true,
         }}
         autoplay
+        style={{
+          "--swiper-navigation-color": "white",
+          "--swiper-pagination-color": "white",
+        }}
       >
         {slides}
       </Swiper>
       <Modal
         open={open}
         onClose={handleClose}
-        className="flex items-center justify-center"
+        className={`${
+          isMobile ? "p-10" : "p-40"
+        } flex items-center justify-center`}
       >
         <img
           src={selectedImg}
