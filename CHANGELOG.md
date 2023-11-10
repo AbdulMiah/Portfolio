@@ -2,6 +2,25 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.0.0] (2023-11-10)
+
+### Added
+
+- Inserted 'projects' data to constants.
+- Added screenshots for projects.
+- Created a carousel using Swiper npm package.
+- Added modal for enlarged image viewing from carousel.
+
+### Changed
+
+- Changed skills to include icons.
+- Updated main scrollbar to have custom styling.
+- Added types to all constants.
+
+### Fixed
+
+- Fixed heading size for experience section.
+
 ## [4.0.0] (2023-10-08)
 
 ### Added
@@ -128,6 +147,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[5.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.0
 [4.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v4.0.0
 [3.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.1
 [3.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.0
