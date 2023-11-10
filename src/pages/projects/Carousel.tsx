@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import {
+  IconCircleArrowRightFilled,
+  IconCircleArrowLeftFilled,
+} from "@tabler/icons-react";
 import { Modal } from "@mui/material";
+import { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/effect-creative";
 
 type CarouselProp = {
@@ -15,9 +19,18 @@ type CarouselProp = {
 
 function Carousel({ images, isMobile }: CarouselProp) {
   const [selectedImg, setSelectedImage] = useState("");
+  const [swiperRef, setSwiperRef] = useState<SwiperClass>();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handlePrevious = useCallback(() => {
+    swiperRef?.slidePrev();
+  }, [swiperRef]);
+
+  const handleNext = useCallback(() => {
+    swiperRef?.slideNext();
+  }, [swiperRef]);
 
   const slides = images.map((image: string, index: number) => (
     <SwiperSlide
@@ -38,34 +51,44 @@ function Carousel({ images, isMobile }: CarouselProp) {
 
   return (
     <>
-      <Swiper
-        modules={[Pagination, Navigation, Autoplay, EffectCreative]}
-        tag="section"
-        wrapperTag="ul"
-        effect={"creative"}
-        creativeEffect={{
-          prev: {
-            translate: ["-120%", 0, -500],
-          },
-          next: {
-            translate: ["120%", 0, -500],
-          },
-        }}
-        grabCursor={true}
-        loop={true}
-        navigation
-        pagination={{
-          dynamicBullets: true,
-          clickable: true,
-        }}
-        autoplay
-        style={{
-          "--swiper-navigation-color": "white",
-          "--swiper-pagination-color": "white",
-        }}
-      >
-        {slides}
-      </Swiper>
+      <div className="flex items-center justify-center space-x-4">
+        <IconCircleArrowLeftFilled
+          className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
+          onClick={handlePrevious}
+        />
+        <Swiper
+          modules={[Pagination, Autoplay, EffectCreative]}
+          tag="div"
+          wrapperTag="ul"
+          effect={"creative"}
+          creativeEffect={{
+            prev: {
+              translate: ["-120%", 0, -500],
+            },
+            next: {
+              translate: ["120%", 0, -500],
+            },
+          }}
+          grabCursor={true}
+          loop={true}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          autoplay
+          style={
+            { "--swiper-pagination-color": "white" } as React.CSSProperties
+          }
+          onSwiper={setSwiperRef}
+        >
+          {slides}
+        </Swiper>
+        <IconCircleArrowRightFilled
+          className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
+          onClick={handleNext}
+        />
+      </div>
+
       <Modal
         open={open}
         onClose={handleClose}
