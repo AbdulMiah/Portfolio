@@ -40,11 +40,15 @@ function Carousel({ images, isMobile }: CarouselProp) {
         handleOpen();
         setSelectedImage(image);
       }}
-      className="flex justify-center items-center h-[500px]"
+      className={`${
+        isMobile ? "h-[300px]" : "h-[500px]"
+      } flex justify-center items-center`}
     >
       <img
         src={image}
-        className="rounded-lg shadow-lg max-w-full max-h-[400px]"
+        className={`${
+          isMobile ? "max-h-[250px]" : "max-h-[400px]"
+        } rounded-lg shadow-lg max-w-full`}
       />
     </SwiperSlide>
   ));
@@ -93,7 +97,7 @@ function Carousel({ images, isMobile }: CarouselProp) {
         open={open}
         onClose={handleClose}
         className={`${
-          isMobile ? "p-10" : "p-40"
+          isMobile ? "p-4" : "p-40"
         } flex items-center justify-center`}
       >
         <img
