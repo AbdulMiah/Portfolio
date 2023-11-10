@@ -38,4 +38,4 @@ function Projects({ isMobile, isDarkMode }: ProjectsProp) {
   );
 }
 
-export default SectionWrapper(Projects, "projects", 80);
+export default SectionWrapper(Projects, "projects", 60);
