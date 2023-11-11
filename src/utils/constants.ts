@@ -103,7 +103,7 @@ export const experiences: Experience[] = [
     companyName: "Creditsafe",
     companyLink: "https://www.creditsafe.com/",
     location: "Caerphilly, Wales",
-    icon: creditsafe,
+    logo: creditsafe,
     iconBg: "#EE2A1F",
     date: "May 2023 - Present",
     summary: [
@@ -145,7 +145,7 @@ export const experiences: Experience[] = [
     companyName: "FinancialForce",
     companyLink: "https://certinia.com/",
     location: "Harrogate, England",
-    icon: financialforce,
+    logo: financialforce,
     iconBg: "#fff",
     date: "Jun 2022 - Aug 2022",
     summary: [

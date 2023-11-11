@@ -36,7 +36,7 @@ function ExperienceCard({
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div>
-          <img src={experience.icon} alt={experience.companyName} />
+          <img src={experience.logo} alt={experience.companyName} />
         </div>
       }
     >

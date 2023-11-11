@@ -5,9 +5,11 @@ export type NavLink = {
     title: string;
 };
 
+type Icon = (props: TablerIconsProps) => JSX.Element;
+
 export type Interest = {
     title: string;
-    icon: (props: TablerIconsProps) => JSX.Element;
+    icon: Icon;
     description: string;
 }
 
@@ -18,7 +20,7 @@ export type About = {
 
 export type Skill = {
     title: string;
-    icon: (props: TablerIconsProps) => JSX.Element;
+    icon: Icon;
 }
 
 export type Project = {
@@ -37,7 +39,7 @@ export type Experience = {
     companyName: string;
     companyLink: string;
     location: string;
-    icon: string;
+    logo: string;
     iconBg: string;
     date: string;
     summary: string[];
