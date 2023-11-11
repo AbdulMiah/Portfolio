@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navigation, Landing, About, Experience } from "./pages";
+import { Navigation, Landing, About, Experiences, Projects } from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -38,12 +38,20 @@ function App() {
     setDarkMode((prevState) => !prevState);
   }
 
+  const htmlElement = document.documentElement;
+  if (isDarkMode) {
+    htmlElement.classList.add("dark");
+  } else {
+    htmlElement.classList.remove("dark");
+  }
+
   return (
     <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Landing isMobile={isMobile} />
       <About isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Experience isDarkMode={isDarkMode} isMobile={isMobile} />
+      <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
+      <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
       <ScrollToTopButton isMobile={isMobile} />
     </div>
   );

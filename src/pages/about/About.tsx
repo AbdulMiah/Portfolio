@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { about, cvPath } from "../../constants";
+import { about, cvPath } from "../../utils/constants";
 import SectionWrapper from "../../utils/SectionWrapper";
 import { popOutAnimation, slideDown } from "../../utils/motionVariants";
 import Socials from "../../components/Socials";

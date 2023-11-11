@@ -1,13 +1,14 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { IconMapPinFilled } from "@tabler/icons-react";
-import Skill from "../../components/Skill";
+import SkillButton from "../../components/SkillButton";
 import { motion } from "framer-motion";
 import { popOutAnimation, staggerAnimation } from "../../utils/motionVariants";
+import { Experience, Skill } from "../../utils/types";
 
 type ExperienceCardProp = {
   isDarkMode: boolean;
   isMobile: boolean;
-  experience: any;
+  experience: Experience;
 };
 
 function ExperienceCard({
@@ -35,7 +36,7 @@ function ExperienceCard({
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div>
-          <img src={experience.icon} alt={experience.companyName} />
+          <img src={experience.logo} alt={experience.companyName} />
         </div>
       }
     >
@@ -79,10 +80,11 @@ function ExperienceCard({
         </motion.ul>
 
         <div className="flex flex-wrap gap-1 justify-center">
-          {experience.skills.map((skill: string, index: number) => (
-            <Skill
+          {experience.skills.map((skill: Skill, index: number) => (
+            <SkillButton
               key={`skill-${index}`}
-              text={skill}
+              text={skill.title}
+              icon={<skill.icon />}
               isDarkMode={isDarkMode}
             />
           ))}

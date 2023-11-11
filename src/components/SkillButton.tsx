@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { scaleAnimation } from "../utils/motionVariants";
 
-type SkillProp = {
+type SkillButtonProp = {
   isDarkMode: boolean;
   text: string;
+  icon: JSX.Element;
 };
 
-function Skill({ isDarkMode, text }: SkillProp) {
+function SkillButton({ isDarkMode, text, icon }: SkillButtonProp) {
   return (
     <motion.div
       variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
@@ -14,11 +15,12 @@ function Skill({ isDarkMode, text }: SkillProp) {
       whileHover="show"
       className={`${
         isDarkMode ? "bg-grey-100 text-black" : "bg-dark-100 text-white"
-      } hover:bg-royal-blue-200 py-2 px-3 rounded-[12px] inline-flex cursor-default`}
+      } py-2 px-3 rounded-[12px] inline-flex space-x-1 cursor-default`}
     >
-      {text}
+      {icon}
+      <span className="text-base">{text}</span>
     </motion.div>
   );
 }
 
-export default Skill;
+export default SkillButton;

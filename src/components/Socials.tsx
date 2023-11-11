@@ -1,6 +1,6 @@
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { socialLinks } from "../constants";
+import { socialLinks } from "../utils/constants";
 import { scaleAnimation } from "../utils/motionVariants";
 
 function Socials() {

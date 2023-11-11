@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { scaleAnimation } from "../../utils/motionVariants";
+import { Interest } from "../../utils/types";
 
 type InterestsGridProp = {
   isDarkMode: boolean;
-  interests: any;
+  interests: Interest[];
   setDescription: (description: string) => void;
 };
 
@@ -14,7 +15,7 @@ function InterestsGrid({
 }: InterestsGridProp) {
   return (
     <div className="grid grid-cols-3 grid-rows-2 gap-5">
-      {interests.map((interest: any, index: number) => (
+      {interests.map((interest: Interest, index: number) => (
         <motion.div
           variants={scaleAnimation([null, 1.2, 1.1], 0.1)}
           initial="hidden"

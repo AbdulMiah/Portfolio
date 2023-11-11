@@ -1,11 +1,7 @@
 import Navigation from "./navigation/Navigation";
 import Landing from "./landing/Landing";
 import About from "./about/About";
-import Experience from "./experience/Experience";
+import Experiences from "./experience/Experiences";
+import Projects from "./projects/Projects";
 
-export {
-    Navigation,
-    Landing,
-    About,
-    Experience
-};
+export { Navigation, Landing, About, Experiences, Projects };
