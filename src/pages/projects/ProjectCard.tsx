@@ -21,8 +21,6 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
       {projects.slice(0, 3).map((project: Project, index: number) => (
         <motion.div
           variants={slideDown(project.delay)}
-          initial="hidden"
-          whileInView="show"
           key={`project-${index}`}
           className={`bg-royal-blue-100 rounded-xl p-5 border-b-8 ${
             !isDarkMode && "border-black"

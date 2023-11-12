@@ -37,8 +37,8 @@ function Carousel({ images, isMobile }: CarouselProp) {
       tag="li"
       key={`carousel-img-${index}`}
       onClick={() => {
-        handleOpen();
         setSelectedImage(image);
+        handleOpen();
       }}
       className={`${
         isMobile ? "h-[300px]" : "h-[500px]"
@@ -46,6 +46,7 @@ function Carousel({ images, isMobile }: CarouselProp) {
     >
       <img
         src={image}
+        alt={`image-${index}`}
         className={`${
           isMobile ? "max-h-[250px]" : "max-h-[400px]"
         } rounded-lg shadow-lg max-w-full`}
