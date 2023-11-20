@@ -1,6 +1,11 @@
 import { IconArrowRight, IconBrandGithub } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { scaleAnimation, slideDown } from "../../utils/motionVariants";
+import {
+  staggerAnimation,
+  scaleAnimation,
+  slideDown,
+  popOutAnimation,
+} from "../../utils/motionVariants";
 import SkillButton from "../../components/SkillButton";
 import Carousel from "./Carousel";
 import { Project, Skill } from "../../utils/types";
@@ -49,7 +54,25 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
 
           <div className="mt-5 space-y-4">
             <h4>{project.title}</h4>
-            <p>{project.description}</p>
+            <motion.ul
+              variants={staggerAnimation(0.2)}
+              initial="hidden"
+              whileInView="show"
+              className="p-5 list-disc"
+            >
+              {project.summary.map((point: string, index: number) => {
+                return (
+                  <motion.li
+                    key={`summary-point-${index}`}
+                    variants={popOutAnimation(0.5, 0.2)}
+                    initial="hidden"
+                    whileInView="show"
+                  >
+                    {point}
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
             <div className="flex flex-wrap gap-1 justify-center">
               {project.skills.map((skill: Skill, index: number) => (
                 <SkillButton
