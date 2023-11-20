@@ -2,6 +2,20 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.0.1] (2023-11-20)
+
+### Added
+
+- Added scale animation while hovering over images in carousel.
+
+### Changed
+
+- Display a summary list for projects descriptions instead of a full description.
+
+### Fixed
+
+- Fixed animations not triggering on long components that are scrolled out of view.
+
 ## [5.0.0] (2023-11-10)
 
 ### Added
@@ -147,6 +161,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[5.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.1
 [5.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.0
 [4.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v4.0.0
 [3.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v3.0.1
