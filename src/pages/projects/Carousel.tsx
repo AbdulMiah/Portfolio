@@ -6,11 +6,11 @@ import {
 import { Modal } from "@mui/material";
 import { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import { EffectCreative } from "swiper/modules";
+import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
+import { motion } from "framer-motion";
 
 type CarouselProp = {
   images: string[];
@@ -37,15 +37,17 @@ function Carousel({ images, isMobile }: CarouselProp) {
       tag="li"
       key={`carousel-img-${index}`}
       onClick={() => {
-        handleOpen();
         setSelectedImage(image);
+        handleOpen();
       }}
       className={`${
         isMobile ? "h-[300px]" : "h-[500px]"
       } flex justify-center items-center`}
     >
-      <img
+      <motion.img
+        whileHover={{ scale: 1.05 }}
         src={image}
+        alt={`image-${index}`}
         className={`${
           isMobile ? "max-h-[250px]" : "max-h-[400px]"
         } rounded-lg shadow-lg max-w-full`}

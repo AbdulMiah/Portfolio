@@ -25,6 +25,7 @@ export type Skill = {
 
 export type Project = {
     title: string;
+    summary: string[];
     description: string;
     skills: Skill[];
     link: string;
