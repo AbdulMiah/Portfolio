@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slideDown, staggerAnimation } from "../../utils/motionVariants";
+import { slideDown } from "../../utils/motionVariants";
 import SectionWrapper from "../../utils/SectionWrapper";
 import { projects } from "../../utils/constants";
 import ProjectCard from "./ProjectCard";
@@ -11,12 +11,7 @@ type ProjectsProp = {
 
 function Projects({ isMobile, isDarkMode }: ProjectsProp) {
   return (
-    <motion.section
-      variants={staggerAnimation(0.2)}
-      initial="hidden"
-      whileInView="show"
-      className="relative w-full h-full overflow-hidden p-5"
-    >
+    <section className="relative w-full h-full overflow-hidden p-5">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
@@ -39,7 +34,7 @@ function Projects({ isMobile, isDarkMode }: ProjectsProp) {
         isMobile={isMobile}
         projects={projects}
       />
-    </motion.section>
+    </section>
   );
 }
 
