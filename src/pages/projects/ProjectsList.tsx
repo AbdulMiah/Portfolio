@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { slideDown } from "../../utils/motionVariants";
+import { slideDown, staggerAnimation } from "../../utils/motionVariants";
 import { projects } from "../../utils/constants";
 import ProjectCard from "./ProjectCard";
 import { Project } from "../../utils/types";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 type ProjectsListProp = {
   isDarkMode: boolean;
@@ -10,8 +12,15 @@ type ProjectsListProp = {
 };
 
 function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
+  const navigate = useNavigate();
+
   return (
-    <section className="relative w-full h-full overflow-hidden p-5 mt-[100px]">
+    <motion.section
+      variants={staggerAnimation(0.2)}
+      initial="hidden"
+      whileInView="show"
+      className="relative w-full h-full overflow-hidden p-5 mt-[100px]"
+    >
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"
@@ -29,6 +38,17 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
         )}
       </motion.div>
 
+      <motion.button
+        variants={slideDown(0.4)}
+        className="flex flex-row space-x-2 mt-5 mb-5"
+        onClick={() => {
+          navigate("/");
+          window.scrollTo({ top: 0 });
+        }}
+      >
+        <IconArrowLeft className="bg-royal-blue-100 rounded-lg" />
+        <span>Back</span>
+      </motion.button>
       <div
         className={`grid ${
           isMobile ? "grid-cols-1" : "grid-cols-3"
@@ -43,7 +63,7 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

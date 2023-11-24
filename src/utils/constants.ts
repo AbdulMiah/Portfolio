@@ -324,6 +324,6 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: [],
-    delay: 0.8,
+    delay: 1.2,
   },
 ];
