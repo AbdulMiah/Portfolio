@@ -38,8 +38,9 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
         )}
       </motion.div>
 
-      <motion.button
+      <motion.a
         variants={slideDown(0.4)}
+        href="#projects"
         className="flex flex-row space-x-2 mt-5 mb-5"
         onClick={() => {
           navigate("/");
@@ -48,7 +49,7 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
       >
         <IconArrowLeft className="bg-royal-blue-100 rounded-lg" />
         <span>Back</span>
-      </motion.button>
+      </motion.a>
       <div
         className={`grid ${
           isMobile ? "grid-cols-1" : "grid-cols-3"

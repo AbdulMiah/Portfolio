@@ -12,7 +12,7 @@ import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
 import { NavLink } from "../../utils/types";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -20,6 +20,7 @@ type NavigationProp = {
 };
 
 function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
+  const navigate = useNavigate();
   const [isMenuOpen, setMenuOpen] = useState(window.innerWidth >= 1024);
   const [active, setActive] = useState("");
 
@@ -44,6 +45,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   };
 
   const handleNavClick = (title: string) => {
+    navigate("/");
     setActive(title);
 
     if (window.innerWidth <= 1024) {
@@ -85,7 +87,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
               initial="hidden"
               whileHover="show"
-              href={`/#${nav.id}`}
+              href={`#${nav.id}`}
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
               } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
