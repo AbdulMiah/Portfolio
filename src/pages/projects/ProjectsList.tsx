@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { slideDown } from "../../utils/motionVariants";
 import { projects } from "../../utils/constants";
 import ProjectCard from "./ProjectCard";
+import { Project } from "../../utils/types";
 
 type ProjectsListProp = {
   isDarkMode: boolean;
@@ -28,11 +29,20 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
         )}
       </motion.div>
 
-      <ProjectCard
-        isDarkMode={isDarkMode}
-        isMobile={isMobile}
-        projects={projects}
-      />
+      <div
+        className={`grid ${
+          isMobile ? "grid-cols-1" : "grid-cols-3"
+        } gap-5 text-white`}
+      >
+        {projects.map((project: Project, index: number) => (
+          <ProjectCard
+            isDarkMode={isDarkMode}
+            isMobile={isMobile}
+            project={project}
+            key={`project-${index}`}
+          />
+        ))}
+      </div>
     </section>
   );
 }

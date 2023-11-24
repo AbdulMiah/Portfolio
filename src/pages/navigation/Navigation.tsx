@@ -12,6 +12,7 @@ import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
 import { NavLink } from "../../utils/types";
+import { Link } from "react-router-dom";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -56,13 +57,13 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         isDarkMode ? "dark dark-nav" : "light-nav"
       } w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}
     >
-      <a
+      <Link
+        to="/"
         className="flex items-end text-black dark:text-white cursor-pointer"
-        onClick={() => window.scrollTo({ top: 0 })}
       >
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
-      </a>
+      </Link>
       <div className="block lg:hidden flex items-center">
         <a className="mr-5" href={cvPath} download={true}>
           <IconButton icon={<IconDownload />} text="CV" />
@@ -83,7 +84,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
               variants={scaleAnimation([null, 1.1, 1.05], 0.1)}
               initial="hidden"
               whileHover="show"
-              href={`#${nav.id}`}
+              href={`/#${nav.id}`}
               className={`${
                 active === nav.title ? "bg-grey-200 dark:bg-black" : ""
               } hover:bg-grey-200 dark:hover:bg-black px-3 py-2 rounded block mt-4 lg:inline-block lg:mt-0 mr-4`}
