@@ -60,6 +60,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
       <Link
         to="/"
         className="flex items-end text-black dark:text-white cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0 })}
       >
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>

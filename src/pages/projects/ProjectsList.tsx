@@ -11,7 +11,7 @@ type ProjectsListProp = {
 
 function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
   return (
-    <section className="relative w-full h-full overflow-hidden p-5">
+    <section className="relative w-full h-full overflow-hidden p-5 mt-[100px]">
       <motion.div
         variants={slideDown(0.2)}
         className="font-bold text-center mb-14"

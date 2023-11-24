@@ -16,26 +16,6 @@ type ProjectCardProp = {
   project: Project;
 };
 
-const ArrowLink = ({
-  link,
-  text,
-  styles,
-}: {
-  link: string;
-  text: string;
-  styles?: string;
-}) => (
-  <a
-    href={link}
-    className={`flex flex-row space-x-2 text-base hover:underline ${
-      styles ? styles : ""
-    }`}
-  >
-    <span>{text}</span>
-    <IconArrowRight />
-  </a>
-);
-
 function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
   return (
     <motion.div
@@ -54,7 +34,13 @@ function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
         >
           <IconBrandGithub className="hover:fill-white" />
         </motion.a>
-        <ArrowLink link={"#"} text={"View Project"} />
+        <a
+          href="#"
+          className="flex flex-row space-x-2 text-base hover:underline"
+        >
+          <span>View Project</span>
+          <IconArrowRight />
+        </a>
       </div>
 
       <Carousel images={project.images} isMobile={isMobile} />
