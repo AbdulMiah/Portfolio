@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  Navigation,
-  Landing,
-  About,
-  Experiences,
-  Projects,
-  ProjectsList,
-} from "./pages";
+import { Navigation, Home, ProjectsList } from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -60,14 +53,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={
-              <>
-                <Landing isMobile={isMobile} />
-                <About isDarkMode={isDarkMode} isMobile={isMobile} />
-                <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
-                <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
-              </>
-            }
+            element={<Home isDarkMode={isDarkMode} isMobile={isMobile} />}
           />
           <Route
             path="/projects/all"
