@@ -9,6 +9,8 @@ import {
 import SkillButton from "../../components/SkillButton";
 import Carousel from "./Carousel";
 import { Project, Skill } from "../../utils/types";
+import IconButton from "../../components/IconButton";
+import { Link } from "react-router-dom";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
@@ -106,11 +108,9 @@ function ProjectCard({ isDarkMode, isMobile, projects }: ProjectCardProp) {
           !isMobile && "col-span-3"
         } flex justify-center items-center`}
       >
-        <ArrowLink
-          link={"#"}
-          text={"Show More Projects"}
-          styles={"bg-royal-blue-100 rounded-xl p-2"}
-        />
+        <Link to={"/projects/all"}>
+          <IconButton icon={<IconArrowRight />} text="Show More Projects" />
+        </Link>
       </motion.div>
     </div>
   );

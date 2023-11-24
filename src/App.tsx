@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { Navigation, Landing, About, Experiences, Projects } from "./pages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  Navigation,
+  Landing,
+  About,
+  Experiences,
+  Projects,
+  ProjectsList,
+} from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -46,14 +54,31 @@ function App() {
   }
 
   return (
-    <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
-      <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Landing isMobile={isMobile} />
-      <About isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
-      <ScrollToTopButton isMobile={isMobile} />
-    </div>
+    <BrowserRouter>
+      <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
+        <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Landing isMobile={isMobile} />
+                <About isDarkMode={isDarkMode} isMobile={isMobile} />
+                <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
+                <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
+              </>
+            }
+          />
+          <Route
+            path="/projects/all"
+            element={
+              <ProjectsList isDarkMode={isDarkMode} isMobile={isMobile} />
+            }
+          />
+        </Routes>
+        <ScrollToTopButton isMobile={isMobile} />
+      </div>
+    </BrowserRouter>
   );
 }
 
