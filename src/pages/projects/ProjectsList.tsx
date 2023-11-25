@@ -47,7 +47,7 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
           window.scrollTo({ top: 0 });
         }}
       >
-        <IconArrowLeft className="bg-royal-blue-100 rounded-lg" />
+        <IconArrowLeft className="bg-royal-blue-100 rounded-lg text-white" />
         <span>Back</span>
       </motion.a>
       <div

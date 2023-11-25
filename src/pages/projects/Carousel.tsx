@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import {
   IconCircleArrowRightFilled,
   IconCircleArrowLeftFilled,
+  IconX,
 } from "@tabler/icons-react";
 import { Modal } from "@mui/material";
 import { Swiper as SwiperClass } from "swiper/types";
@@ -102,10 +103,20 @@ function Carousel({ images, isMobile }: CarouselProp) {
           isMobile ? "p-4" : "p-40"
         } flex items-center justify-center`}
       >
-        <img
-          src={selectedImg}
-          className="rounded-lg shadow-lg max-w-full max-h-full"
-        />
+        <div>
+          <div
+            className="flex flex-row space-x-2 fixed top-12 right-5 z-50 text-white bg-royal-blue-100 p-1 rounded-lg"
+            onClick={handleClose}
+          >
+            <IconX />
+            <span>Close</span>
+          </div>
+
+          <img
+            src={selectedImg}
+            className="rounded-lg shadow-lg max-w-full max-h-full"
+          />
+        </div>
       </Modal>
     </>
   );
