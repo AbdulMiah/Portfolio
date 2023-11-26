@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
 import { motion } from "framer-motion";
+import IconButton from "../../components/IconButton";
 
 type CarouselProp = {
   images: string[];
@@ -99,23 +100,20 @@ function Carousel({ images, isMobile }: CarouselProp) {
       <Modal
         open={open}
         onClose={handleClose}
-        className={`${
-          isMobile ? "p-4" : "p-40"
-        } flex items-center justify-center`}
+        className="flex items-center justify-center p-4"
       >
-        <div>
-          <div
-            className="flex flex-row space-x-2 fixed top-12 right-5 z-50 text-white bg-royal-blue-100 p-1 rounded-lg"
-            onClick={handleClose}
-          >
-            <IconX />
-            <span>Close</span>
-          </div>
-
+        <div className="relative">
           <img
             src={selectedImg}
-            className="rounded-lg shadow-lg max-w-full max-h-full"
+            className={`${
+              isMobile ? "max-h-full" : "h-[600px]"
+            } max-w-full rounded-lg shadow-lg`}
+            alt="Selected Image"
           />
+
+          <div className="absolute top-0 right-0 p-4" onClick={handleClose}>
+            <IconButton icon={<IconX />} />
+          </div>
         </div>
       </Modal>
     </>
