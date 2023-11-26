@@ -9,6 +9,7 @@ import {
 import SkillButton from "../../components/SkillButton";
 import Carousel from "./Carousel";
 import { Project, Skill } from "../../utils/types";
+import Tooltip from "@mui/material/Tooltip";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
@@ -25,15 +26,17 @@ function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
       }`}
     >
       <div className="flex justify-between items-center">
-        <motion.a
-          variants={scaleAnimation([null, 1.3, 1.2], 0.1)}
-          initial="hidden"
-          whileHover="show"
-          href={project.link}
-          target="_blank"
-        >
-          <IconBrandGithub className="hover:fill-white" />
-        </motion.a>
+        <Tooltip title="View Source Code on GitHub">
+          <motion.a
+            variants={scaleAnimation([null, 1.3, 1.2], 0.1)}
+            initial="hidden"
+            whileHover="show"
+            href={project.link}
+            target="_blank"
+          >
+            <IconBrandGithub className="hover:fill-white" />
+          </motion.a>
+        </Tooltip>
         <a
           href="#"
           className="flex flex-row space-x-2 text-base hover:underline"
