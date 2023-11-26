@@ -107,9 +107,15 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             onClick={toggleDarkMode}
           >
             {isDarkMode ? (
-              <IconSunHigh className="text-white hover:fill-white" />
+              <IconSunHigh
+                className="text-white hover:fill-white"
+                onClick={toggleMenu}
+              />
             ) : (
-              <IconMoon className="text-black hover:fill-black" />
+              <IconMoon
+                className="text-black hover:fill-black"
+                onClick={toggleMenu}
+              />
             )}
           </motion.a>
         </div>
