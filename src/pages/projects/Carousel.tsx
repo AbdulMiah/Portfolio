@@ -112,7 +112,7 @@ function Carousel({ images, isMobile }: CarouselProp) {
           />
 
           <div className="absolute top-0 right-0 p-4" onClick={handleClose}>
-            <IconButton icon={<IconX />} />
+            <IconButton icon={<IconX />} tooltipText="Close" />
           </div>
         </div>
       </Modal>

@@ -13,6 +13,7 @@ import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
 import { NavLink } from "../../utils/types";
 import { useNavigate, Link } from "react-router-dom";
+import Tooltip from "@mui/material/Tooltip";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -121,9 +122,13 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             onClick={toggleDarkMode}
           >
             {isDarkMode ? (
-              <IconSunHigh className="text-white hover:fill-white" />
+              <Tooltip title="Light Mode">
+                <IconSunHigh className="text-white hover:fill-white" />
+              </Tooltip>
             ) : (
-              <IconMoon className="text-black hover:fill-black" />
+              <Tooltip title="Dark Mode">
+                <IconMoon className="text-black hover:fill-black" />
+              </Tooltip>
             )}
           </motion.a>
           <a href={cvPath} download={true}>
