@@ -24,7 +24,7 @@ function Home({ isMobile, isDarkMode }: HomeProp) {
 
   return (
     <div className="relative w-full h-screen">
-      <InitialLoader isLoading={isLoading} />
+      <InitialLoader isLoading={isLoading} isDarkMode={isDarkMode} />
 
       <div className="relative z-0">
         <Landing isMobile={isMobile} />
