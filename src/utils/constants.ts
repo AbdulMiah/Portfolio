@@ -1,9 +1,10 @@
 import {
   creditsafe,
   financialforce,
-  prayerpal,
   instock,
   wrackreport,
+  prayerpal,
+  e2s,
   hafod,
 } from "../assets";
 import {
@@ -336,7 +337,7 @@ export const projects: Project[] = [
     ],
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
-    images: [],
+    images: e2s,
     delay: 1.2,
   },
   {
