@@ -37,6 +37,7 @@ function Home({ isMobile, isDarkMode }: HomeProp) {
     <div className="relative w-full h-screen">
       <InitialLoader
         isLoading={isLoading}
+        isMobile={isMobile}
         isDarkMode={isDarkMode}
         loadingText={loadingText}
       />
