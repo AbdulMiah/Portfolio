@@ -1,8 +1,9 @@
 import creditsafe from "./company_logos/creditsafe.png";
 import financialforce from "./company_logos/financialforce.png";
-import { prayerpal } from "./project_screenshots/prayerpal/index";
-import { instock } from "./project_screenshots/instock/index";
+import { prayerpal } from "./project_screenshots/prayerpal";
+import { instock } from "./project_screenshots/instock";
 import { wrackreport } from "./project_screenshots/wrackreport";
+import { hafod } from "./project_screenshots/hafod";
 import wave from "./loading/wave.png";
 
 export {
@@ -11,5 +12,6 @@ export {
     prayerpal,
     instock,
     wrackreport,
+    hafod,
     wave
 }
