@@ -9,7 +9,9 @@ type LandingProp = {
 };
 
 function Landing({ isMobile }: LandingProp) {
-  const isLoading = sessionStorage.getItem("displayLoader") === "true";
+  const isLoading =
+    sessionStorage.getItem("displayLoader") === "true" ||
+    sessionStorage.getItem("displayLoader") === null;
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
