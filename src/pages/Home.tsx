@@ -16,21 +16,28 @@ function Home({ isMobile, isDarkMode }: HomeProp) {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    const displayLoader = sessionStorage.getItem("displayLoader");
 
-    let counter = 0;
+    if (displayLoader === null || displayLoader === "true") {
+      let counter = 0;
 
-    const timer = setInterval(() => {
-      setLoadingText(loadingMessages[counter % loadingMessages.length]);
-      counter++;
-    }, 2666);
+      const timer = setInterval(() => {
+        setLoadingText(loadingMessages[counter % loadingMessages.length]);
+        counter++;
+      }, 2666);
 
-    setTimeout(() => {
-      clearInterval(timer);
+      setTimeout(() => {
+        clearInterval(timer);
+        setIsLoading(false);
+        document.body.style.overflow = "auto";
+        sessionStorage.setItem("displayLoader", "false");
+      }, 8000);
+
+      return () => clearInterval(timer);
+    } else {
       setIsLoading(false);
       document.body.style.overflow = "auto";
-    }, 8000);
-
-    return () => clearInterval(timer);
+    }
   }, []);
 
   return (
