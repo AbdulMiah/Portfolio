@@ -27,6 +27,11 @@ import {
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience } from "./types";
 
+export const loadingMessages: string[] = [
+  "Just a tad more patience! 3D models are preparing for their grand entrance...",
+  "Almost there...",
+];
+
 export const navLinks: NavLink[] = [
   {
     id: "about",

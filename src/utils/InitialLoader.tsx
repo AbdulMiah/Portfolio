@@ -5,9 +5,14 @@ import LinearProgress from "@mui/material/LinearProgress";
 type InitialLoaderProp = {
   isLoading: boolean;
   isDarkMode: boolean;
+  loadingText: string;
 };
 
-function InitialLoader({ isLoading, isDarkMode }: InitialLoaderProp) {
+function InitialLoader({
+  isLoading,
+  isDarkMode,
+  loadingText,
+}: InitialLoaderProp) {
   const skeletonBgColor = isDarkMode ? "#18191b" : "#DCDCDC";
   return (
     isLoading && (
@@ -48,9 +53,7 @@ function InitialLoader({ isLoading, isDarkMode }: InitialLoaderProp) {
         </>
         <div className="absolute inset-0 z-50 flex flex-col justify-center items-center gap-5">
           <img src={wave} className="h-80" />
-          <h5 className="text-royal-blue-100 font-bold">
-            Just a moment, rendering all 3D assets...
-          </h5>
+          <h5 className="text-royal-blue-100 font-bold">{loadingText}</h5>
           <LinearProgress className="w-1/3" color="inherit" />
         </div>
       </div>
