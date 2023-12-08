@@ -2,6 +2,7 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { socialLinks } from "../utils/constants";
 import { scaleAnimation } from "../utils/motionVariants";
+import Tooltip from "@mui/material/Tooltip";
 
 function Socials() {
   return (
@@ -13,7 +14,9 @@ function Socials() {
         href={socialLinks.linkedin}
         target="_blank"
       >
-        <IconBrandLinkedin className="hover:fill-royal-blue-200" />
+        <Tooltip title="Follow me on LinkedIn">
+          <IconBrandLinkedin className="hover:fill-royal-blue-200" />
+        </Tooltip>
       </motion.a>
       <motion.a
         variants={scaleAnimation([null, 1.3, 1.2], 0.1)}
@@ -22,7 +25,9 @@ function Socials() {
         href={socialLinks.github}
         target="_blank"
       >
-        <IconBrandGithub className="hover:fill-royal-blue-200" />
+        <Tooltip title="Explore my GitHub">
+          <IconBrandGithub className="hover:fill-royal-blue-200" />
+        </Tooltip>
       </motion.a>
     </div>
   );

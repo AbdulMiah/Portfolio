@@ -12,6 +12,8 @@ import Socials from "../../components/Socials";
 import { cvPath, navLinks } from "../../utils/constants";
 import { scaleAnimation } from "../../utils/motionVariants";
 import { NavLink } from "../../utils/types";
+import { useNavigate, Link } from "react-router-dom";
+import Tooltip from "@mui/material/Tooltip";
 
 type NavigationProp = {
   isDarkMode: boolean;
@@ -19,6 +21,7 @@ type NavigationProp = {
 };
 
 function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
+  const navigate = useNavigate();
   const [isMenuOpen, setMenuOpen] = useState(window.innerWidth >= 1024);
   const [active, setActive] = useState("");
 
@@ -43,6 +46,7 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
   };
 
   const handleNavClick = (title: string) => {
+    navigate("/");
     setActive(title);
 
     if (window.innerWidth <= 1024) {
@@ -56,13 +60,14 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
         isDarkMode ? "dark dark-nav" : "light-nav"
       } w-full fixed top-0 z-50 flex items-center justify-between flex-wrap p-6`}
     >
-      <a
+      <Link
+        to="/"
         className="flex items-end text-black dark:text-white cursor-pointer"
         onClick={() => window.scrollTo({ top: 0 })}
       >
         <span className="text-xl">AbdulMiah</span>
         <span className="text-sm">.com</span>
-      </a>
+      </Link>
       <div className="block lg:hidden flex items-center">
         <a className="mr-5" href={cvPath} download={true}>
           <IconButton icon={<IconDownload />} text="CV" />
@@ -102,9 +107,15 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             onClick={toggleDarkMode}
           >
             {isDarkMode ? (
-              <IconSunHigh className="text-white hover:fill-white" />
+              <IconSunHigh
+                className="text-white hover:fill-white"
+                onClick={toggleMenu}
+              />
             ) : (
-              <IconMoon className="text-black hover:fill-black" />
+              <IconMoon
+                className="text-black hover:fill-black"
+                onClick={toggleMenu}
+              />
             )}
           </motion.a>
         </div>
@@ -117,9 +128,13 @@ function Navigation({ isDarkMode, toggleDarkMode }: NavigationProp) {
             onClick={toggleDarkMode}
           >
             {isDarkMode ? (
-              <IconSunHigh className="text-white hover:fill-white" />
+              <Tooltip title="Light Mode">
+                <IconSunHigh className="text-white hover:fill-white" />
+              </Tooltip>
             ) : (
-              <IconMoon className="text-black hover:fill-black" />
+              <Tooltip title="Dark Mode">
+                <IconMoon className="text-black hover:fill-black" />
+              </Tooltip>
             )}
           </motion.a>
           <a href={cvPath} download={true}>

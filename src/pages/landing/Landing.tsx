@@ -2,13 +2,17 @@ import { motion } from "framer-motion";
 import { IconMouse } from "@tabler/icons-react";
 import AvatarSitting from "./AvatarSitting";
 import Socials from "../../components/Socials";
-import { popOutAnimation } from "../../utils/motionVariants";
+import { slideDown } from "../../utils/motionVariants";
 
 type LandingProp = {
   isMobile: boolean;
 };
 
 function Landing({ isMobile }: LandingProp) {
+  const isLoading =
+    sessionStorage.getItem("displayLoader") === "true" ||
+    sessionStorage.getItem("displayLoader") === null;
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0 top-[120px] items-start">
@@ -16,7 +20,7 @@ function Landing({ isMobile }: LandingProp) {
           {isMobile ? (
             <>
               <motion.h2
-                variants={popOutAnimation(0.8, 0.2)}
+                variants={isLoading ? slideDown(8.2) : slideDown(0.2)}
                 initial="hidden"
                 animate="show"
                 className="font-bold text-center"
@@ -25,7 +29,7 @@ function Landing({ isMobile }: LandingProp) {
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h2>
               <motion.h5
-                variants={popOutAnimation(0.8, 0.3)}
+                variants={isLoading ? slideDown(8.3) : slideDown(0.3)}
                 initial="hidden"
                 animate="show"
               >
@@ -35,7 +39,7 @@ function Landing({ isMobile }: LandingProp) {
           ) : (
             <>
               <motion.h1
-                variants={popOutAnimation(0.8, 0.2)}
+                variants={isLoading ? slideDown(8.2) : slideDown(0.2)}
                 initial="hidden"
                 animate="show"
                 className="font-bold text-center"
@@ -44,7 +48,7 @@ function Landing({ isMobile }: LandingProp) {
                 <span className="text-royal-blue-100"> Abdul!</span>
               </motion.h1>
               <motion.h4
-                variants={popOutAnimation(0.8, 0.3)}
+                variants={isLoading ? slideDown(8.3) : slideDown(0.3)}
                 initial="hidden"
                 animate="show"
               >
@@ -53,14 +57,9 @@ function Landing({ isMobile }: LandingProp) {
             </>
           )}
 
-          <motion.div
-            className="w-[60vw] h-[60vh] flex justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, scale: [null, 1.4, 1] }}
-            transition={{ duration: 0.3, delay: 2.5 }}
-          >
+          <div className="w-[60vw] h-[60vh] flex justify-center">
             <AvatarSitting />
-          </motion.div>
+          </div>
           <Socials />
           <a href="#about">
             <IconMouse className="animate-bounce h-12 w-12" />

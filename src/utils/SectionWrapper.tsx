@@ -1,40 +1,27 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { staggerAnimation } from "./motionVariants";
 
 const SectionWrapper = (PageComponent: any, id: string, offset: number = 0) =>
   function HOC(props: any) {
-    const [isVisible, setIsVisible] = useState(false);
-    const [hasAnimated, setHasAnimated] = useState(false);
+    const ref = useRef(null);
+    const controls = useAnimation();
+    const inView = useInView(ref, { once: true });
 
     useEffect(() => {
-      const handleScroll = () => {
-        const element = document.getElementById(id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const currentlyVisible =
-            rect.top <= window.innerHeight && rect.bottom >= 0;
-
-          if (currentlyVisible && !hasAnimated) {
-            setIsVisible(true);
-            setHasAnimated(true);
-          }
-        }
-      };
-
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, [id, hasAnimated]);
+      if (inView) {
+        controls.start("show");
+      } else {
+        controls.start("hidden");
+      }
+    }, [inView, controls]);
 
     return (
       <motion.section
         variants={staggerAnimation(0.2)}
         initial="hidden"
-        animate={isVisible ? "show" : "hidden"}
-        viewport={{ once: true, amount: 0.25 }}
+        animate={controls}
+        ref={ref}
       >
         <div
           id={id}

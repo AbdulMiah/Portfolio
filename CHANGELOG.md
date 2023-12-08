@@ -2,6 +2,27 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.1.0] (2023-12-07)
+
+### Added
+
+- Used `react-router-dom` to create and handle routes.
+- Added a close button to carousel modals.
+- Used the Tooltip API from mui material library.
+- Implemented a skeleton loader with avatar and linear progress bar for initial website rendering.
+- Utilised `sessionStorage` to track if site has been initially loaded to decide whether to show the loader.
+- Added other project data and screenshots.
+
+### Changed
+
+- Modified `ProjectCard` component to move the map logic outside of the component.
+- Moved all main components into a Home component.
+- Collapse menu when toggling between light and dark mode in mobile view.
+
+### Fixed
+
+- Fixed hover animations not returning to initial state after being hovered over.
+
 ## [5.0.1] (2023-11-20)
 
 ### Added
@@ -22,7 +43,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Inserted 'projects' data to constants.
 - Added screenshots for projects.
-- Created a carousel using Swiper npm package.
+- Created a carousel using `Swiper` npm package.
 - Added modal for enlarged image viewing from carousel.
 
 ### Changed
@@ -74,7 +95,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Updated favicon.
 - Moved logic for checking if device is mobile to parent component and pass bool value as props.
-- Moved all framer-motion animation logic to a separate utils file.
+- Moved all `framer-motion` animation logic to a separate utils file.
 
 ### Fixed
 
@@ -114,7 +135,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Removed all hardcoded strings from `.tsx` files.
 - Moved CV file to `public/` folder.
-- Updated deploy.yml to deploy static web content to S3 bucket.
+- Updated `deploy.yml` to deploy static web content to S3 bucket.
 
 ## [2.2.0] (2023-08-21)
 
@@ -161,6 +182,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[5.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.0
 [5.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.1
 [5.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.0
 [4.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v4.0.0

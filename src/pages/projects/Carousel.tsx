@@ -2,8 +2,9 @@ import { useState, useCallback } from "react";
 import {
   IconCircleArrowRightFilled,
   IconCircleArrowLeftFilled,
+  IconX,
 } from "@tabler/icons-react";
-import { Modal } from "@mui/material";
+import { Modal, Tooltip } from "@mui/material";
 import { Swiper as SwiperClass } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
@@ -11,6 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
 import { motion } from "framer-motion";
+import IconButton from "../../components/IconButton";
 
 type CarouselProp = {
   images: string[];
@@ -58,10 +60,12 @@ function Carousel({ images, isMobile }: CarouselProp) {
   return (
     <>
       <div className="flex items-center justify-center space-x-4">
-        <IconCircleArrowLeftFilled
-          className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
-          onClick={handlePrevious}
-        />
+        <Tooltip title="Previous">
+          <IconCircleArrowLeftFilled
+            className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
+            onClick={handlePrevious}
+          />
+        </Tooltip>
         <Swiper
           modules={[Pagination, Autoplay, EffectCreative]}
           tag="div"
@@ -89,23 +93,32 @@ function Carousel({ images, isMobile }: CarouselProp) {
         >
           {slides}
         </Swiper>
-        <IconCircleArrowRightFilled
-          className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
-          onClick={handleNext}
-        />
+        <Tooltip title="Next">
+          <IconCircleArrowRightFilled
+            className="w-8 h-8 flex-shrink-0 hover:cursor-pointer filter drop-shadow-lg"
+            onClick={handleNext}
+          />
+        </Tooltip>
       </div>
 
       <Modal
         open={open}
         onClose={handleClose}
-        className={`${
-          isMobile ? "p-4" : "p-40"
-        } flex items-center justify-center`}
+        className="flex items-center justify-center p-4"
       >
-        <img
-          src={selectedImg}
-          className="rounded-lg shadow-lg max-w-full max-h-full"
-        />
+        <div className="relative">
+          <img
+            src={selectedImg}
+            className={`${
+              isMobile ? "max-h-full" : "h-[600px]"
+            } max-w-full rounded-lg shadow-lg`}
+            alt="Selected Image"
+          />
+
+          <div className="absolute top-0 right-0 p-4" onClick={handleClose}>
+            <IconButton icon={<IconX />} tooltipText="Close" />
+          </div>
+        </div>
       </Modal>
     </>
   );

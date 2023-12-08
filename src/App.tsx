@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Navigation, Landing, About, Experiences, Projects } from "./pages";
+import { Routes, Route } from "react-router-dom";
+import { Navigation, Home, ProjectsList } from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -48,10 +49,16 @@ function App() {
   return (
     <div className={`${isDarkMode ? "dark" : ""} w-full min-h-screen`}>
       <Navigation isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Landing isMobile={isMobile} />
-      <About isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
-      <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home isDarkMode={isDarkMode} isMobile={isMobile} />}
+        />
+        <Route
+          path="/projects/all"
+          element={<ProjectsList isDarkMode={isDarkMode} isMobile={isMobile} />}
+        />
+      </Routes>
       <ScrollToTopButton isMobile={isMobile} />
     </div>
   );

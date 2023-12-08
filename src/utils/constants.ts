@@ -1,4 +1,12 @@
-import { creditsafe, financialforce, prayerpal, instock, wrackreport } from "../assets";
+import {
+  creditsafe,
+  financialforce,
+  instock,
+  wrackreport,
+  prayerpal,
+  e2s,
+  hafod,
+} from "../assets";
 import {
   IconBarbell,
   IconCpu,
@@ -23,9 +31,14 @@ import {
   IconFileTypeXml,
   IconBrandHtml5,
   IconBrandCss3,
-  IconBrandFigma
+  IconBrandFigma,
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience } from "./types";
+
+export const loadingMessages: string[] = [
+  "Just a tad more patience! 3D models are preparing for their grand entrance...",
+  "Almost there...",
+];
 
 export const navLinks: NavLink[] = [
   {
@@ -114,28 +127,28 @@ export const experiences: Experience[] = [
     ],
     skills: [
       {
-        title: "React.js", 
-        icon: IconBrandReact
+        title: "React.js",
+        icon: IconBrandReact,
       },
       {
         title: "JavaScript",
-        icon: IconBrandJavascript
+        icon: IconBrandJavascript,
       },
       {
         title: "C# ASP .Net",
-        icon: IconBrandCSharp
+        icon: IconBrandCSharp,
       },
       {
         title: "Oracle DB",
-        icon: IconDatabase
+        icon: IconDatabase,
       },
       {
         title: "Python",
-        icon: IconBrandPython
+        icon: IconBrandPython,
       },
       {
         title: "AWS Lambda",
-        icon: IconBrandAws
+        icon: IconBrandAws,
       },
     ],
   },
@@ -157,27 +170,27 @@ export const experiences: Experience[] = [
     skills: [
       {
         title: "TypeScript",
-        icon: IconBrandTypescript
+        icon: IconBrandTypescript,
       },
       {
         title: "JavaScript",
-        icon: IconBrandJavascript
+        icon: IconBrandJavascript,
       },
       {
         title: "Node.js",
-        icon: IconBrandNodejs
+        icon: IconBrandNodejs,
       },
       {
         title: "Terraform",
-        icon: IconBrandTerraform
+        icon: IconBrandTerraform,
       },
       {
         title: "Docker",
-        icon: IconBrandDocker
+        icon: IconBrandDocker,
       },
       {
         title: "Jenkins",
-        icon: IconGitPullRequest
+        icon: IconGitPullRequest,
       },
     ],
   },
@@ -201,20 +214,20 @@ export const projects: Project[] = [
     skills: [
       {
         title: "Flutter",
-        icon: IconBrandFlutter
+        icon: IconBrandFlutter,
       },
       {
         title: "C# ASP .Net",
-        icon: IconBrandCSharp
+        icon: IconBrandCSharp,
       },
       {
         title: "AWS",
-        icon: IconBrandAws
+        icon: IconBrandAws,
       },
       {
         title: "Figma",
-        icon: IconBrandFigma
-      }
+        icon: IconBrandFigma,
+      },
     ],
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
@@ -237,23 +250,24 @@ export const projects: Project[] = [
     skills: [
       {
         title: "Java",
-        icon: IconCoffee
+        icon: IconCoffee,
       },
       {
         title: "HTML",
-        icon: IconBrandHtml5
+        icon: IconBrandHtml5,
       },
       {
         title: "CSS",
-        icon: IconBrandCss3
+        icon: IconBrandCss3,
       },
       {
         title: "JavaScript",
-        icon: IconBrandJavascript
-      }, {
+        icon: IconBrandJavascript,
+      },
+      {
         title: "MySQL",
-        icon: IconBrandMysql
-      }
+        icon: IconBrandMysql,
+      },
     ],
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
@@ -276,12 +290,12 @@ export const projects: Project[] = [
     skills: [
       {
         title: "Java",
-        icon: IconCoffee
+        icon: IconCoffee,
       },
       {
         title: "XML",
-        icon: IconFileTypeXml
-      }
+        icon: IconFileTypeXml,
+      },
     ],
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
@@ -305,25 +319,65 @@ export const projects: Project[] = [
       "This project addresses the identified problem of energy site managers, specifically facility energy managers, lacking essential data and tools for making informed decisions on energy cost savings and emission reduction. Key features include automated email updates on energy asset performance, a visual energy flow diagram for intuitive insights, data consolidation for streamlined analysis, and accurate energy cost and consumption forecasting. Users can easily adjust granularity on charts, access historical reports, and switch between sites. Admin functionalities encompass importing energy data, user management, site management, and organisation management.",
     skills: [
       {
-      title: "React.js", 
-      icon: IconBrandReact
+        title: "React.js",
+        icon: IconBrandReact,
       },
       {
         title: "TypeScript",
-        icon: IconBrandTypescript
+        icon: IconBrandTypescript,
       },
       {
         title: "Node.js",
-        icon: IconBrandNodejs
+        icon: IconBrandNodejs,
       },
       {
         title: "MySQL",
-        icon: IconBrandMysql
-      }
+        icon: IconBrandMysql,
+      },
     ],
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
-    images: [],
-    delay: 0.8,
+    images: e2s,
+    delay: 1.2,
+  },
+  {
+    title: "Hafod Data",
+    summary: [
+      "Software solution for a non-profit organisation focusing on affordable homes and support services.",
+      "Features a map displaying Hafod's properties across Wales.",
+      "Includes a heatmap for real-time COVID-19 cases near Wales and Hafod properties.",
+      "Utilises bar graphs to show vaccination and infection status of residents.",
+      "Incorporates a pie chart indicating popular vaccines among carers and tenants.",
+      "Accessible to both carers and administrators for real-time updates.",
+      "Admins can view and manage tenant and carer information through tables.",
+    ],
+    description:
+      "This software is a tailored solution for a non-profit organisation committed to providing affordable homes and comprehensive support services. The platform features an interactive map showcasing Hafod's properties across Wales, alongside a dynamic heatmap offering real-time insights into COVID-19 cases in proximity to both Wales and Hafod properties. Through clear and informative bar graphs, the software presents the vaccination and infection status of residents, while a pie graph highlights popular vaccines among carers and tenants. Accessible to both carers and administrators, the user-friendly interface ensures real-time updates, with administrators having additional capabilities to manage tenant and carer information efficiently through intuitive tables.",
+    skills: [
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "HTML",
+        icon: IconBrandHtml5,
+      },
+      {
+        title: "CSS",
+        icon: IconBrandCss3,
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript,
+      },
+      {
+        title: "MySQL",
+        icon: IconBrandMysql,
+      },
+    ],
+    link: "https://github.com/AbdulMiah/Hafod-Data",
+    hero: "",
+    images: hafod,
+    delay: 1.4,
   },
 ];
