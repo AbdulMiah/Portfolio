@@ -38,18 +38,19 @@ function ProjectsList({ isMobile, isDarkMode }: ProjectsListProp) {
         )}
       </motion.div>
 
-      <motion.a
-        variants={slideDown(0.4)}
-        href="#projects"
-        className="flex flex-row space-x-2 mt-5 mb-5"
-        onClick={() => {
-          navigate("/");
-          window.scrollTo({ top: 0 });
-        }}
-      >
-        <IconArrowLeft className="bg-royal-blue-100 rounded-lg text-white" />
-        <span>Back</span>
-      </motion.a>
+      <motion.div variants={slideDown(0.4)} className="flex flex-row mt-5 mb-5">
+        <a
+          href="#projects"
+          className="flex space-x-2"
+          onClick={() => {
+            navigate("/");
+            window.scrollTo({ top: 0 });
+          }}
+        >
+          <IconArrowLeft className="bg-royal-blue-100 rounded-lg text-white" />
+          <span>Back</span>
+        </a>
+      </motion.div>
       <div
         className={`grid ${
           isMobile ? "grid-cols-1" : "grid-cols-3"
