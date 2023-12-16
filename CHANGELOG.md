@@ -2,6 +2,19 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [5.1.1] (2023-12-16)
+
+## Changed
+
+- Changed the URL for the project list page from `/projects/all` to `/project/all`.
+
+### Fixed
+
+- Adjusted the back button on the project list page to prevent accidental onClick triggers.
+- Centerd the interest description in About section.
+- Fixed the `X` button onClick triggering on whitespace.
+- Fixed the About section animations triggering early when landing page is rendered.
+
 ## [5.1.0] (2023-12-07)
 
 ### Added
@@ -182,6 +195,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[5.1.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.1
 [5.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.0
 [5.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.1
 [5.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.0

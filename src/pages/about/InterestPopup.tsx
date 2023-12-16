@@ -22,10 +22,15 @@ function InterestPopup({
         isDarkMode ? "bg-black" : "bg-grey-200"
       } h-full w-full grid grid-rows-5 rounded-xl p-5`}
     >
-      <div onClick={() => setDescription("")}>
-        <IconX className="cursor-pointer float-right" />
+      <div className="relative row-span-5">
+        <IconX
+          onClick={() => setDescription("")}
+          className="absolute top-0 right-0 cursor-pointer"
+        />
+        <span className="flex items-center justify-center h-full pt-6">
+          {description}
+        </span>
       </div>
-      <div className="row-span-4">{description}</div>
     </motion.div>
   );
 }

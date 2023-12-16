@@ -14,7 +14,7 @@ function Landing({ isMobile }: LandingProp) {
     sessionStorage.getItem("displayLoader") === null;
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden mb-1">
       <div className="absolute inset-0 top-[120px] items-start">
         <div className="flex flex-col justify-center items-center h-[80vh] gap-9">
           {isMobile ? (

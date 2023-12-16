@@ -55,7 +55,7 @@ function App() {
           element={<Home isDarkMode={isDarkMode} isMobile={isMobile} />}
         />
         <Route
-          path="/projects/all"
+          path="/project/all"
           element={<ProjectsList isDarkMode={isDarkMode} isMobile={isMobile} />}
         />
       </Routes>

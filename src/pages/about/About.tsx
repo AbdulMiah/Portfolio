@@ -20,9 +20,7 @@ function About({ isDarkMode, isMobile }: AboutProp) {
 
   return (
     <section
-      className={`grid ${
-        isMobile ? "grid-cols-1" : "grid-cols-3"
-      } gap-7 p-5 mb-10`}
+      className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-7 p-5`}
     >
       {!isMobile && (
         <div className="col-span-1 row-span-6">
@@ -131,4 +129,4 @@ function About({ isDarkMode, isMobile }: AboutProp) {
   );
 }
 
-export default SectionWrapper(About, "about", 120);
+export default SectionWrapper(About, "about", 100);

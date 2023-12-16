@@ -54,7 +54,7 @@ function Projects({ isMobile, isDarkMode }: ProjectsProp) {
             !isMobile && "col-span-3"
           } flex justify-center items-center`}
           onClick={() => {
-            navigate("/projects/all");
+            navigate("/project/all");
             window.scrollTo({ top: 0 });
           }}
         >
