@@ -50,4 +50,4 @@ function Experiences({ isDarkMode, isMobile }: ExperiencesProp) {
   );
 }
 
-export default SectionWrapper(Experiences, "experiences", 120);
+export default SectionWrapper(Experiences, "experiences", 100);

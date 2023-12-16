@@ -23,10 +23,7 @@ const SectionWrapper = (PageComponent: any, id: string, offset: number = 0) =>
         animate={controls}
         ref={ref}
       >
-        <div
-          id={id}
-          style={{ paddingTop: `${offset}px`, marginTop: `-${offset}px` }}
-        >
+        <div id={id} style={{ paddingTop: `${offset}px` }}>
           <PageComponent {...props} />
         </div>
       </motion.section>
