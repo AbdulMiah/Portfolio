@@ -17,7 +17,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         isMobile ? "grid-cols-1" : "grid-cols-[5%,80%,5%]"
       } gap-7 p-5 mt-[100px]`}
     >
-      <div className="flex flex-row mt-5 mb-5">
+      <div className="flex flex-row">
         <Link
           to="/project/all"
           className="flex space-x-2"
@@ -30,7 +30,13 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </Link>
       </div>
       <div className="grid-rows-4 space-y-5">
-        <div className="flex flex-row justify-between items-center">
+        <div
+          className={`flex ${
+            isMobile
+              ? "flex-col space-y-2"
+              : "flex-row justify-between items-center"
+          }`}
+        >
           {isMobile ? <h3>{project.title}</h3> : <h2>{project.title}</h2>}
           <a href={project.link} target="_blank">
             <IconButton
