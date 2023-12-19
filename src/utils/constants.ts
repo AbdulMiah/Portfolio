@@ -198,6 +198,7 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "InStock App",
     summary: [
       "Streamlines inventory management for small independent sellers.",
@@ -235,6 +236,7 @@ export const projects: Project[] = [
     delay: 0.6,
   },
   {
+    id: 2,
     title: "WrackReport",
     summary: [
       "Comprehensive platform for flood incident management.",
@@ -275,6 +277,7 @@ export const projects: Project[] = [
     delay: 0.8,
   },
   {
+    id: 3,
     title: "PrayerPal App",
     summary: [
       "Islamic prayer application for Muslims.",
@@ -303,6 +306,7 @@ export const projects: Project[] = [
     delay: 1,
   },
   {
+    id: 4,
     title: "E2S System",
     summary: [
       "Data visualisation tool for Facility Energy Managers to help monitor energy performance.",
@@ -341,6 +345,7 @@ export const projects: Project[] = [
     delay: 1.2,
   },
   {
+    id: 5,
     title: "Hafod Data",
     summary: [
       "Software solution for a non-profit organisation focusing on affordable homes and support services.",
