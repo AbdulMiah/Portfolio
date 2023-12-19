@@ -38,14 +38,16 @@ function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
             <IconBrandGithub className="hover:fill-white" />
           </motion.a>
         </Tooltip>
-        <Link
-          to={`/project/${project.id}`}
-          className="flex flex-row space-x-2 text-base hover:underline"
-          onClick={() => window.scrollTo({ top: 0 })}
-        >
-          <span>View Project</span>
-          <IconArrowRight />
-        </Link>
+        <Tooltip title="Learn More">
+          <Link
+            to={`/project/${project.id}`}
+            className="flex flex-row space-x-2 text-base hover:underline"
+            onClick={() => window.scrollTo({ top: 0 })}
+          >
+            <span>View Project</span>
+            <IconArrowRight />
+          </Link>
+        </Tooltip>
       </div>
 
       <Carousel images={project.images} isMobile={isMobile} />

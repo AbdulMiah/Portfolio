@@ -32,7 +32,13 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
       <div className="grid-rows-4 space-y-5">
         <div className="flex flex-row justify-between items-center">
           {isMobile ? <h3>{project.title}</h3> : <h2>{project.title}</h2>}
-          <IconButton icon={<IconBrandGithub />} text="Open Project" />
+          <a href={project.link} target="_blank">
+            <IconButton
+              icon={<IconBrandGithub />}
+              text="Open Project"
+              tooltipText="View Source Code on GitHub"
+            />
+          </a>
         </div>
         <div>{project.description}</div>
         <div className="flex flex-wrap gap-1 justify-start">
@@ -42,6 +48,18 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
               text={skill.title}
               icon={<skill.icon />}
               isDarkMode={isDarkMode}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col items-center space-y-5">
+          {project.images.map((image, index) => (
+            <img
+              src={image}
+              className={`${
+                isMobile ? "max-h-full" : "h-[700px]"
+              } max-w-full rounded-lg shadow-lg`}
+              alt={`Project Image ${index}`}
+              key={`image-${index}`}
             />
           ))}
         </div>
