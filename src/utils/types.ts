@@ -23,8 +23,14 @@ export type Skill = {
   icon: Icon;
 };
 
+export enum ProjectType {
+  WEB_APP,
+  MOBILE_APP,
+}
+
 export type Project = {
   id: number;
+  projectType: ProjectType;
   title: string;
   summary: string[];
   description: string;
