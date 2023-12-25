@@ -63,7 +63,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </div>
 
         {!isMobile && (
-          <div className="flex items-center justify-center">
+          <div className="flex h-[40vh] items-center justify-center cursor-move">
             <MonitorCanvas demo={project.demo} />
           </div>
         )}
