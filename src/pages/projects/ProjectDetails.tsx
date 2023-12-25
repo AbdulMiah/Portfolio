@@ -1,9 +1,10 @@
-import { Project, Skill } from "../../utils/types";
+import { Project, ProjectType, Skill } from "../../utils/types";
 import { Link } from "react-router-dom";
 import SkillButton from "../../components/SkillButton";
 import { IconArrowLeft, IconBrandGithub } from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
 import MonitorCanvas from "./MonitorCanvas";
+import PhoneCanvas from "./PhoneCanvas";
 
 type ProjectDetailsProp = {
   isDarkMode: boolean;
@@ -64,7 +65,11 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
 
         {!isMobile && (
           <div className="flex h-[40vh] items-center justify-center cursor-move">
-            <MonitorCanvas demo={project.demo} />
+            {project.projectType === ProjectType.WEB_APP ? (
+              <MonitorCanvas demo={project.demo} />
+            ) : (
+              <PhoneCanvas demo={project.demo} />
+            )}
           </div>
         )}
 
