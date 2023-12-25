@@ -32,6 +32,7 @@ export type Project = {
   link: string;
   hero: string;
   images: string[];
+  demo: string;
   delay: number;
 };
 

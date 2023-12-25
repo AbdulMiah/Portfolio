@@ -5,6 +5,7 @@ import submission from "./submission.png";
 import reportDetails from "./report_details.png";
 import adminPage from "./admin_page.png";
 import reportQuery from "./report_query.png";
+import demo from "./wrackreport_demo.mp4";
 
 export const wrackreport = [
     landing,
@@ -15,3 +16,5 @@ export const wrackreport = [
     adminPage,
     reportQuery,
 ]
+
+export const wrackReportDemo = demo;

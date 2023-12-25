@@ -3,6 +3,7 @@ import {
   financialforce,
   instock,
   wrackreport,
+  wrackReportDemo,
   prayerpal,
   e2s,
   hafod,
@@ -233,6 +234,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
     images: instock,
+    demo: "",
     delay: 0.6,
   },
   {
@@ -274,6 +276,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
     images: wrackreport,
+    demo: wrackReportDemo,
     delay: 0.8,
   },
   {
@@ -303,6 +306,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
     images: prayerpal,
+    demo: "",
     delay: 1,
   },
   {
@@ -342,6 +346,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: e2s,
+    demo: "",
     delay: 1.2,
   },
   {
@@ -383,6 +388,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/Hafod-Data",
     hero: "",
     images: hafod,
+    demo: "",
     delay: 1.4,
   },
 ];
