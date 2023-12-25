@@ -31,7 +31,7 @@ function MonitorCanvas({ demo }: MonitorCanvasProp) {
             resolution={256}
             color={"#000000"}
           />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls minDistance={40} maxDistance={100} enablePan={false} />
           <Monitor demo={video} />
           <ambientLight intensity={2} />
         </group>
