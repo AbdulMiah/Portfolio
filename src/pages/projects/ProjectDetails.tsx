@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SkillButton from "../../components/SkillButton";
 import { IconArrowLeft, IconBrandGithub } from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
+import MonitorCanvas from "./MonitorCanvas";
 
 type ProjectDetailsProp = {
   isDarkMode: boolean;
@@ -62,7 +63,9 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </div>
 
         {!isMobile && (
-          <div className="flex items-center justify-center">3D model</div>
+          <div className="flex items-center justify-center">
+            <MonitorCanvas demo={project.demo} />
+          </div>
         )}
 
         <div className="flex flex-col col-span-2 items-center space-y-5">

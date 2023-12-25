@@ -24,7 +24,11 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function Monitor(props: JSX.IntrinsicElements["group"]) {
+type MonitorProp = {
+  demo: HTMLVideoElement;
+} & JSX.IntrinsicElements["group"];
+
+export function Monitor(props: MonitorProp) {
   const group = useRef<Group>(null);
   const { nodes, materials } = useGLTF("models/monitor.glb") as GLTFResult;
 
@@ -56,6 +60,15 @@ export function Monitor(props: JSX.IntrinsicElements["group"]) {
               material={materials.layar}
               position={[3.567, -0.002, 11.668]}
             />
+            <mesh
+              rotation={[Math.PI / 2, Math.PI / 2, 0]}
+              position={[3.6, 0, 11.5]}
+            >
+              <planeGeometry args={[28, 15]} />
+              <meshStandardMaterial side={THREE.DoubleSide}>
+                <videoTexture attach="map" args={[props.demo]} />
+              </meshStandardMaterial>
+            </mesh>
           </group>
           <mesh
             geometry={nodes.SketchUp001_Material002_0.geometry}
