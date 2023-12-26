@@ -1,6 +1,6 @@
 import creditsafe from "./company_logos/creditsafe.png";
 import financialforce from "./company_logos/financialforce.png";
-import { instock } from "./project_screenshots/instock";
+import { instock, instockDemo } from "./project_screenshots/instock";
 import {
   wrackreport,
   wrackReportDemo,
@@ -21,4 +21,4 @@ export {
   wave,
 };
 
-export { wrackReportDemo, prayerPalDemo };
+export { instockDemo, wrackReportDemo, prayerPalDemo };
