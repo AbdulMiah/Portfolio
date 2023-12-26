@@ -2,6 +2,7 @@ import {
   creditsafe,
   financialforce,
   instock,
+  instockDemo,
   wrackreport,
   wrackReportDemo,
   prayerpal,
@@ -236,8 +237,9 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
     images: instock,
-    demo: "",
+    demo: instockDemo,
     delay: 0.6,
+    color: "#2FD4A3",
   },
   {
     id: 2,
@@ -281,6 +283,7 @@ export const projects: Project[] = [
     images: wrackreport,
     demo: wrackReportDemo,
     delay: 0.8,
+    color: "#093d61",
   },
   {
     id: 3,
@@ -312,6 +315,7 @@ export const projects: Project[] = [
     images: prayerpal,
     demo: prayerPalDemo,
     delay: 1,
+    color: "#1a4331",
   },
   {
     id: 4,
@@ -353,6 +357,7 @@ export const projects: Project[] = [
     images: e2s,
     demo: "",
     delay: 1.2,
+    color: "#417285",
   },
   {
     id: 5,
@@ -396,5 +401,6 @@ export const projects: Project[] = [
     images: hafod,
     demo: "",
     delay: 1.4,
+    color: "gold",
   },
 ];

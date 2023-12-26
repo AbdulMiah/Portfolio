@@ -40,6 +40,7 @@ export type Project = {
   images: string[];
   demo: string;
   delay: number;
+  color: string;
 };
 
 export type Experience = {
