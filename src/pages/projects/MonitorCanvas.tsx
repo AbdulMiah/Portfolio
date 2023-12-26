@@ -1,14 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import CanvasLoader from "../../components/canvas/CanvasLoader";
-import { ContactShadows, OrbitControls } from "@react-three/drei";
+import { OrbitControls, Sparkles, Stars } from "@react-three/drei";
 import { Monitor } from "../../components/canvas/Monitor";
 
 type MonitorCanvasProp = {
+  isDarkMode: boolean;
   demo: string;
+  sparkleColor: string;
 };
 
-function MonitorCanvas({ demo }: MonitorCanvasProp) {
+function MonitorCanvas({ isDarkMode, demo, sparkleColor }: MonitorCanvasProp) {
   const [video] = useState(() => {
     const vid = document.createElement("video");
     vid.src = demo;
@@ -23,17 +25,19 @@ function MonitorCanvas({ demo }: MonitorCanvasProp) {
     <Canvas shadows camera={{ position: [90, 0, 0], fov: 30 }}>
       <Suspense fallback={<CanvasLoader />}>
         <group position-y={-15}>
-          <ContactShadows
-            opacity={0.6}
-            scale={10}
-            blur={1}
-            far={10}
-            resolution={256}
-            color={"#000000"}
-          />
+          {isDarkMode ? (
+            <Stars />
+          ) : (
+            <Sparkles scale={80} color={sparkleColor} size={40} speed={5} />
+          )}
           <OrbitControls minDistance={40} maxDistance={100} enablePan={false} />
           <Monitor demo={video} />
           <ambientLight intensity={2} />
+          <directionalLight intensity={1} position={[0, 0, -30]} />
+          <directionalLight intensity={1} position={[0, 50, 0]} />
+          <directionalLight intensity={1} position={[0, -50, 0]} />
+          <directionalLight intensity={1} position={[50, 0, 0]} />
+          <directionalLight intensity={1} position={[-50, 0, 0]} />
         </group>
       </Suspense>
     </Canvas>

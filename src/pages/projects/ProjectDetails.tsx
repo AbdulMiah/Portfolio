@@ -66,9 +66,17 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         {!isMobile && (
           <div className="flex h-[40vh] items-center justify-center cursor-move">
             {project.projectType === ProjectType.WEB_APP ? (
-              <MonitorCanvas demo={project.demo} />
+              <MonitorCanvas
+                isDarkMode={isDarkMode}
+                demo={project.demo}
+                sparkleColor={project.color}
+              />
             ) : (
-              <PhoneCanvas demo={project.demo} />
+              <PhoneCanvas
+                isDarkMode={isDarkMode}
+                demo={project.demo}
+                sparkleColor={project.color}
+              />
             )}
           </div>
         )}
