@@ -5,6 +5,7 @@ import { IconArrowLeft, IconBrandGithub } from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
 import MonitorCanvas from "./MonitorCanvas";
 import PhoneCanvas from "./PhoneCanvas";
+import ProjectNavigator from "./ProjectNavigator";
 
 type ProjectDetailsProp = {
   isDarkMode: boolean;
@@ -17,7 +18,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
     <section
       className={`grid ${
         isMobile ? "grid-cols-1" : "grid-cols-[10%,70%,10%]"
-      } gap-7 p-5 mt-[100px]`}
+      } gap-7 p-5 justify-center mt-[100px]`}
     >
       <div className="flex flex-row">
         <Link
@@ -95,7 +96,9 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </div>
       </div>
 
-      <div>Next Project</div>
+      <div className="flex justify-center">
+        <ProjectNavigator currentProjectId={project.id} />
+      </div>
     </section>
   );
 }

@@ -33,7 +33,7 @@ function PhoneCanvas({ isDarkMode, demo, sparkleColor }: PhoneCanvasProp) {
           <OrbitControls minDistance={3} maxDistance={7} enablePan={false} />
           <Phone demo={video} />
           <ambientLight intensity={2} />
-          <directionalLight intensity={2} position={[0, 0, -3]} />
+          <directionalLight intensity={3} position={[0, 0, -3]} />
           <directionalLight intensity={2} position={[0, 5, 0]} />
           <directionalLight intensity={2} position={[0, -5, 0]} />
           <directionalLight intensity={2} position={[5, 0, 0]} />
