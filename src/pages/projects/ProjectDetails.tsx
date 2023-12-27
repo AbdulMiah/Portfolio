@@ -17,7 +17,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
   return (
     <section
       className={`grid ${
-        isMobile ? "grid-cols-1" : "grid-cols-[10%,70%,10%]"
+        isMobile ? "grid-cols-1" : "grid-cols-[10%,70%,15%]"
       } gap-7 p-5 justify-center mt-[100px]`}
     >
       <div className="flex flex-row">
@@ -96,7 +96,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className={`${!isMobile && "px-10"} flex flex-col`}>
         <ProjectNavigator currentProjectId={project.id} />
       </div>
     </section>

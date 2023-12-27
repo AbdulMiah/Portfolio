@@ -17,7 +17,7 @@ function ProjectNavigator({ currentProjectId }: ProjectNavigatorProp) {
   const nextProject = projects.find(({ id }) => id === nextId);
 
   return (
-    <div className="flex flex-col items-center gap-2 p-5 h-32 rounded-lg shadow-[0_0px_20px_rgba(0,0,0,0.25)]">
+    <div className="sticky top-[120px] flex flex-col text-center items-center gap-4 p-5 rounded-lg shadow-[0_0px_20px_rgba(0,0,0,0.25)]">
       <p>Project Navigator</p>
       <div className="flex flex-row gap-5 text-white">
         <Link to={`/project/${prevId}`}>
