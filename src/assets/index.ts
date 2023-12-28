@@ -5,7 +5,7 @@ import {
   wrackreport,
   wrackreportDemo,
 } from "./project_screenshots/wrackreport";
-import { prayerpal, prayerPalDemo } from "./project_screenshots/prayerpal";
+import { prayerpal, prayerpalDemo } from "./project_screenshots/prayerpal";
 import { e2s, e2sDemo } from "./project_screenshots/e2s";
 import { hafod, hafodDemo } from "./project_screenshots/hafod";
 import wave from "./loading/wave.png";
@@ -21,4 +21,4 @@ export {
   wave,
 };
 
-export { instockDemo, wrackreportDemo, prayerPalDemo, e2sDemo, hafodDemo };
+export { instockDemo, wrackreportDemo, prayerpalDemo, e2sDemo, hafodDemo };

@@ -17,4 +17,4 @@ export const prayerpal = [
   dua,
 ];
 
-export const prayerPalDemo = demo;
+export const prayerpalDemo = demo;
