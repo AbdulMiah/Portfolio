@@ -8,6 +8,7 @@ import {
   prayerpal,
   prayerPalDemo,
   e2s,
+  e2sDemo,
   hafod,
   hafodDemo,
 } from "../assets";
@@ -356,7 +357,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: e2s,
-    demo: "",
+    demo: e2sDemo,
     delay: 1.2,
     color: "#417285",
   },
