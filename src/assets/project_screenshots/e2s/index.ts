@@ -9,6 +9,7 @@ import addUser from "./add_user.png";
 import siteManagement from "./site_management.png";
 import addSite from "./add_site.png";
 import deleteSite from "./delete_site.png";
+import demo from "./e2s_demo.mp4";
 
 export const e2s = [
   dashboard,
@@ -23,3 +24,5 @@ export const e2s = [
   addSite,
   deleteSite,
 ];
+
+export const e2sDemo = demo;

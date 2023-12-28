@@ -10,6 +10,7 @@ import SkillButton from "../../components/SkillButton";
 import Carousel from "./Carousel";
 import { Project, Skill } from "../../utils/types";
 import Tooltip from "@mui/material/Tooltip";
+import { Link } from "react-router-dom";
 
 type ProjectCardProp = {
   isDarkMode: boolean;
@@ -37,13 +38,16 @@ function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
             <IconBrandGithub className="hover:fill-white" />
           </motion.a>
         </Tooltip>
-        <a
-          href="#"
-          className="flex flex-row space-x-2 text-base hover:underline"
-        >
-          <span>View Project</span>
-          <IconArrowRight />
-        </a>
+        <Tooltip title="Learn More">
+          <Link
+            to={`/project/${project.id}`}
+            className="flex flex-row space-x-2 text-base hover:underline"
+            onClick={() => window.scrollTo({ top: 0 })}
+          >
+            <span>View Project</span>
+            <IconArrowRight />
+          </Link>
+        </Tooltip>
       </div>
 
       <Carousel images={project.images} isMobile={isMobile} />

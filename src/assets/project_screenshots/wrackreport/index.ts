@@ -5,13 +5,16 @@ import submission from "./submission.png";
 import reportDetails from "./report_details.png";
 import adminPage from "./admin_page.png";
 import reportQuery from "./report_query.png";
+import demo from "./wrackreport_demo.mp4";
 
 export const wrackreport = [
-    landing,
-    reportPage,
-    reportingFlood,
-    submission,
-    reportDetails,
-    adminPage,
-    reportQuery,
-]
+  landing,
+  reportPage,
+  reportingFlood,
+  submission,
+  reportDetails,
+  adminPage,
+  reportQuery,
+];
+
+export const wrackreportDemo = demo;

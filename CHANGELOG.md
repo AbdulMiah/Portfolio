@@ -2,6 +2,25 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [6.0.0] (2023-12-28)
+
+### Added
+
+- Added IDs to all projects.
+- Created routes for project detail pages.
+- Added demo videos for all projects.
+- Added monitor and phone models and allow user to interact and view demo videos on the 3D models.
+- Implemented a color attribute for each project, displaying sparkling effects in the corresponding color when in light mode. Display stars when in dark mode.
+- Introduced a project navigator to allow users to easily navigated between project detail pages.
+
+### Changed
+
+- Added a tooltip on the `View Project` button for each Project Card.
+
+### Fixed
+
+- Fixed the show more projects button `onClick` attribute being triggered on whitespace.
+
 ## [5.1.1] (2023-12-16)
 
 ## Changed
@@ -195,6 +214,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[6.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v6.0.0
 [5.1.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.1
 [5.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.0
 [5.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.0.1

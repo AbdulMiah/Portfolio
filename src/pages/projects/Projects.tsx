@@ -53,12 +53,15 @@ function Projects({ isMobile, isDarkMode }: ProjectsProp) {
           className={`${
             !isMobile && "col-span-3"
           } flex justify-center items-center`}
-          onClick={() => {
-            navigate("/project/all");
-            window.scrollTo({ top: 0 });
-          }}
         >
-          <IconButton icon={<IconArrowRight />} text="Show More Projects" />
+          <span
+            onClick={() => {
+              navigate("/project/all");
+              window.scrollTo({ top: 0 });
+            }}
+          >
+            <IconButton icon={<IconArrowRight />} text="Show More Projects" />
+          </span>
         </motion.div>
       </div>
     </section>

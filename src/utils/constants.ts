@@ -2,10 +2,15 @@ import {
   creditsafe,
   financialforce,
   instock,
+  instockDemo,
   wrackreport,
+  wrackreportDemo,
   prayerpal,
+  prayerpalDemo,
   e2s,
+  e2sDemo,
   hafod,
+  hafodDemo,
 } from "../assets";
 import {
   IconBarbell,
@@ -33,7 +38,7 @@ import {
   IconBrandCss3,
   IconBrandFigma,
 } from "@tabler/icons-react";
-import { Project, NavLink, About, Experience } from "./types";
+import { Project, NavLink, About, Experience, ProjectType } from "./types";
 
 export const loadingMessages: string[] = [
   "Just a tad more patience! 3D models are preparing for their grand entrance...",
@@ -198,6 +203,8 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: 1,
+    projectType: ProjectType.MOBILE_APP,
     title: "InStock App",
     summary: [
       "Streamlines inventory management for small independent sellers.",
@@ -232,9 +239,13 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/InStock",
     hero: "",
     images: instock,
+    demo: instockDemo,
     delay: 0.6,
+    color: "#2FD4A3",
   },
   {
+    id: 2,
+    projectType: ProjectType.WEB_APP,
     title: "WrackReport",
     summary: [
       "Comprehensive platform for flood incident management.",
@@ -272,9 +283,13 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     hero: "",
     images: wrackreport,
+    demo: wrackreportDemo,
     delay: 0.8,
+    color: "#093d61",
   },
   {
+    id: 3,
+    projectType: ProjectType.MOBILE_APP,
     title: "PrayerPal App",
     summary: [
       "Islamic prayer application for Muslims.",
@@ -300,9 +315,13 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
     images: prayerpal,
+    demo: prayerpalDemo,
     delay: 1,
+    color: "#1a4331",
   },
   {
+    id: 4,
+    projectType: ProjectType.WEB_APP,
     title: "E2S System",
     summary: [
       "Data visualisation tool for Facility Energy Managers to help monitor energy performance.",
@@ -338,9 +357,13 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     hero: "",
     images: e2s,
+    demo: e2sDemo,
     delay: 1.2,
+    color: "#417285",
   },
   {
+    id: 5,
+    projectType: ProjectType.WEB_APP,
     title: "Hafod Data",
     summary: [
       "Software solution for a non-profit organisation focusing on affordable homes and support services.",
@@ -378,6 +401,8 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/Hafod-Data",
     hero: "",
     images: hafod,
+    demo: hafodDemo,
     delay: 1.4,
+    color: "gold",
   },
 ];

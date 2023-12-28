@@ -9,17 +9,20 @@ import business from "./business.png";
 import connections from "./connections.png";
 import account from "./account.png";
 import logout from "./logout.png";
+import demo from "./instock_demo.mp4";
 
 export const instock = [
-    landing,
-    login,
-    inventory,
-    itemDetails,
-    milestones,
-    performance,
-    addItem,
-    business,
-    connections,
-    account,
-    logout
-]
+  landing,
+  login,
+  inventory,
+  itemDetails,
+  milestones,
+  performance,
+  addItem,
+  business,
+  connections,
+  account,
+  logout,
+];
+
+export const instockDemo = demo;
