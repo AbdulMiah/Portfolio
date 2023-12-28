@@ -25,7 +25,9 @@ function ProjectNavigator({ currentProjectId }: ProjectNavigatorProp) {
             title={`Previous: ${prevProject?.title}`}
             onClick={() => window.scrollTo({ top: 0 })}
           >
-            <IconArrowLeft className="bg-royal-blue-100 rounded-lg cursor-pointer" />
+            <div className="bg-royal-blue-100 p-2 rounded-xl cursor-pointer">
+              <IconArrowLeft />
+            </div>
           </Tooltip>
         </Link>
         <Link
@@ -33,7 +35,9 @@ function ProjectNavigator({ currentProjectId }: ProjectNavigatorProp) {
           onClick={() => window.scrollTo({ top: 0 })}
         >
           <Tooltip title={`Next: ${nextProject?.title}`}>
-            <IconArrowRight className="bg-royal-blue-100 rounded-lg cursor-pointer" />
+            <div className="bg-royal-blue-100 p-2 rounded-xl cursor-pointer">
+              <IconArrowRight />
+            </div>
           </Tooltip>
         </Link>
       </div>
