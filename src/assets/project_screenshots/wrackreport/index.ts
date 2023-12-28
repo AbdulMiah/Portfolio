@@ -8,13 +8,13 @@ import reportQuery from "./report_query.png";
 import demo from "./wrackreport_demo.mp4";
 
 export const wrackreport = [
-    landing,
-    reportPage,
-    reportingFlood,
-    submission,
-    reportDetails,
-    adminPage,
-    reportQuery,
-]
+  landing,
+  reportPage,
+  reportingFlood,
+  submission,
+  reportDetails,
+  adminPage,
+  reportQuery,
+];
 
-export const wrackReportDemo = demo;
+export const wrackreportDemo = demo;
