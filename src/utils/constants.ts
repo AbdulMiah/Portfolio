@@ -9,6 +9,7 @@ import {
   prayerPalDemo,
   e2s,
   hafod,
+  hafodDemo,
 } from "../assets";
 import {
   IconBarbell,
@@ -399,7 +400,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/Hafod-Data",
     hero: "",
     images: hafod,
-    demo: "",
+    demo: hafodDemo,
     delay: 1.4,
     color: "gold",
   },

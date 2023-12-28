@@ -32,7 +32,7 @@ function MonitorCanvas({ isDarkMode, demo, sparkleColor }: MonitorCanvasProp) {
           )}
           <OrbitControls minDistance={40} maxDistance={100} enablePan={false} />
           <Monitor demo={video} />
-          <ambientLight intensity={2} />
+          <ambientLight intensity={1} />
           <directionalLight intensity={1} position={[0, 0, -30]} />
           <directionalLight intensity={1} position={[0, 50, 0]} />
           <directionalLight intensity={1} position={[0, -50, 0]} />

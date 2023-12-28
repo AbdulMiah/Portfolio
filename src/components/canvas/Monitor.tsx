@@ -62,9 +62,9 @@ export function Monitor(props: MonitorProp) {
             />
             <mesh
               rotation={[Math.PI / 2, Math.PI / 2, 0]}
-              position={[3.6, 0, 11.5]}
+              position={[3.59, 0, 11.7]}
             >
-              <planeGeometry args={[28, 15]} />
+              <planeGeometry args={[29.5, 15.1]} />
               <meshStandardMaterial side={THREE.DoubleSide}>
                 <videoTexture attach="map" args={[props.demo]} />
               </meshStandardMaterial>
