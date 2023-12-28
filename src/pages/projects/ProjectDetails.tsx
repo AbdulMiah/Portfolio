@@ -33,7 +33,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </Link>
       </div>
 
-      <div className={`grid ${isMobile ? "" : "grid-cols-[60%,40%]"} gap-5`}>
+      <div className={`grid ${!isMobile && "grid-cols-[60%,40%]"} gap-5`}>
         <div className="space-y-5">
           <div
             className={`flex ${
