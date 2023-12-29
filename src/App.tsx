@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navigation, Home, ProjectsList, ProjectDetails } from "./pages";
+import {
+  Navigation,
+  Home,
+  ProjectsList,
+  ProjectDetails,
+  Footer,
+} from "./pages";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { projects } from "./utils/constants";
 
@@ -73,6 +79,7 @@ function App() {
           />
         ))}
       </Routes>
+      <Footer isDarkMode={isDarkMode} />
       <ScrollToTopButton isMobile={isMobile} />
     </div>
   );
