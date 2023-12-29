@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Landing, About, Experiences, Projects } from "../pages";
-import InitialLoader from "../utils/InitialLoader";
-import { loadingMessages } from "../utils/constants";
+import { Landing, About, Experiences, Projects } from "..";
+import InitialLoader from "../../utils/InitialLoader";
+import { loadingMessages } from "../../utils/constants";
 
 type HomeProp = {
   isDarkMode: boolean;

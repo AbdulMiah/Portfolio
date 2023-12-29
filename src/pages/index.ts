@@ -1,5 +1,5 @@
 import Navigation from "./navigation/Navigation";
-import Home from "./Home";
+import Home from "./main/Home";
 import Landing from "./landing/Landing";
 import About from "./about/About";
 import Experiences from "./experience/Experiences";
