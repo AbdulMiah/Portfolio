@@ -1,5 +1,7 @@
 import { IconSend } from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
+import { motion } from "framer-motion";
+import { slideDown } from "../../utils/motionVariants";
 
 type FormProp = {
   isDarkMode: boolean;
@@ -7,7 +9,10 @@ type FormProp = {
 
 function Form({ isDarkMode }: FormProp) {
   return (
-    <form className="flex flex-col gap-5 w-1/2">
+    <motion.form
+      variants={slideDown(0.6)}
+      className="flex flex-col gap-5 w-1/2"
+    >
       <label className="flex flex-col">
         <span className="self-start">Your Name</span>
         <input
@@ -40,7 +45,7 @@ function Form({ isDarkMode }: FormProp) {
       <div>
         <IconButton text="Send Message" icon={<IconSend />} />
       </div>
-    </form>
+    </motion.form>
   );
 }
 
