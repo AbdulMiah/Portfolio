@@ -406,3 +406,6 @@ export const projects: Project[] = [
     color: "gold",
   },
 ];
+
+export const footerText =
+  "Copyright © 2023 All Rights Reserved | Created with passion by Abdul Miah.";
