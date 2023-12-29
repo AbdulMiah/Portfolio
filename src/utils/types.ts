@@ -55,3 +55,10 @@ export type Experience = {
   summary: string[];
   skills: Skill[];
 };
+
+export type PillProp = {
+  icon: JSX.Element;
+  text: string;
+  color: string;
+  bgColor: string;
+};
