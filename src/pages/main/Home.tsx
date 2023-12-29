@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Landing, About, Experiences, Projects } from "..";
+import { Landing, About, Experiences, Projects, Contact } from "..";
 import InitialLoader from "../../utils/InitialLoader";
 import { loadingMessages } from "../../utils/constants";
 
@@ -54,6 +54,7 @@ function Home({ isMobile, isDarkMode }: HomeProp) {
         <About isDarkMode={isDarkMode} isMobile={isMobile} />
         <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
         <Projects isDarkMode={isDarkMode} isMobile={isMobile} />
+        <Contact isDarkMode={isDarkMode} isMobile={isMobile} />
       </div>
     </div>
   );
