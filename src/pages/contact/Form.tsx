@@ -1,6 +1,7 @@
 import {
   IconAlertCircleFilled,
   IconAlertTriangleFilled,
+  IconCircleCheckFilled,
   IconSend,
 } from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
@@ -18,7 +19,7 @@ type FormProp = {
 function Form({ isDarkMode }: FormProp) {
   const [fields, setFields] = useState<{ [key: string]: string }>({});
   const [errors, setErrors] = useState<{ [key: string]: PillProp }>({});
-  const [isEmailSent, setIsEmailSent] = useState(true);
+  const [isEmailSent, setIsEmailSent] = useState(false);
 
   const handleValidation = () => {
     const formFields = { ...fields };
@@ -28,7 +29,7 @@ function Form({ isDarkMode }: FormProp) {
     if (!formFields["from_name"]) {
       formIsValid = false;
       formErrors["from_name"] = {
-        icon: <IconAlertCircleFilled className={`h-4 w-4 text-red-200`} />,
+        icon: <IconAlertCircleFilled className="h-4 w-4 text-red-200" />,
         text: "Required",
         color: "red-200",
         bgColor: "red-100",
@@ -36,7 +37,7 @@ function Form({ isDarkMode }: FormProp) {
     } else if (!formFields["from_name"].match(/^[a-zA-Z]+$/)) {
       formIsValid = false;
       formErrors["from_name"] = {
-        icon: <IconAlertTriangleFilled className={`h-4 w-4 text-yellow-200`} />,
+        icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
         text: "Only Letters",
         color: "yellow-200",
         bgColor: "yellow-100",
@@ -46,7 +47,7 @@ function Form({ isDarkMode }: FormProp) {
     if (!formFields["from_email"]) {
       formIsValid = false;
       formErrors["from_email"] = {
-        icon: <IconAlertCircleFilled className={`h-4 w-4 text-red-200`} />,
+        icon: <IconAlertCircleFilled className="h-4 w-4 text-red-200" />,
         text: "Required",
         color: "red-200",
         bgColor: "red-100",
@@ -65,9 +66,7 @@ function Form({ isDarkMode }: FormProp) {
       ) {
         formIsValid = false;
         formErrors["from_email"] = {
-          icon: (
-            <IconAlertTriangleFilled className={`h-4 w-4 text-yellow-200`} />
-          ),
+          icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
           text: "Invalid Email",
           color: "yellow-200",
           bgColor: "yellow-100",
@@ -143,6 +142,7 @@ function Form({ isDarkMode }: FormProp) {
           className={`${
             isDarkMode ? "bg-dark-300" : "bg-grey-200"
           } rounded-xl p-2`}
+          placeholder="Enter your name"
           onChange={(e) => handleChange("from_name", e.target.value)}
         />
       </label>
@@ -168,6 +168,7 @@ function Form({ isDarkMode }: FormProp) {
           className={`${
             isDarkMode ? "bg-dark-300" : "bg-grey-200"
           } rounded-xl p-2`}
+          placeholder="Enter your email"
           onChange={(e) => handleChange("from_email", e.target.value)}
         />
       </label>
@@ -196,6 +197,15 @@ function Form({ isDarkMode }: FormProp) {
           onChange={(e) => handleChange("message", e.target.value)}
         />
       </label>
+
+      {isEmailSent && (
+        <Pill
+          icon={<IconCircleCheckFilled className="h-4 w-4 text-green-200" />}
+          text="Successfully sent your message"
+          color="green-200"
+          bgColor="green-100"
+        />
+      )}
 
       <div>
         <IconButton text="Send Message" icon={<IconSend />} type="submit" />
