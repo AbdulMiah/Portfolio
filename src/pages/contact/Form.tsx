@@ -11,6 +11,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Pill from "../../components/Pill";
 import { PillProp } from "../../utils/types";
+import LabeledInput from "./LabeledInput";
 
 type FormProp = {
   isDarkMode: boolean;
@@ -121,82 +122,35 @@ function Form({ isDarkMode }: FormProp) {
       className="flex flex-col gap-5 w-1/2"
       onSubmit={sendEmail}
     >
-      <label className="flex flex-col gap-1">
-        <div className="flex flex-row justify-between">
-          <span className="self-start">Your Name</span>
-          <span>
-            {errors["from_name"] && (
-              <Pill
-                key="from_name"
-                icon={errors["from_name"].icon}
-                text={errors["from_name"].text}
-                color={errors["from_name"].color}
-                bgColor={errors["from_name"].bgColor}
-              />
-            )}
-          </span>
-        </div>
-        <input
-          type="text"
-          name="from_name"
-          className={`${
-            isDarkMode ? "bg-dark-300" : "bg-grey-200"
-          } rounded-xl p-2`}
-          placeholder="Enter your name"
-          onChange={(e) => handleChange("from_name", e.target.value)}
-        />
-      </label>
+      <LabeledInput
+        isDarkMode={isDarkMode}
+        label="Your Name"
+        name="from_name"
+        type="text"
+        placeholder="Enter your name"
+        handleChange={handleChange}
+        errors={errors["from_name"]}
+      />
 
-      <label className="flex flex-col gap-1">
-        <div className="flex flex-row justify-between">
-          <span className="self-start">Your Email</span>
-          <span>
-            {errors["from_email"] && (
-              <Pill
-                key="from_email"
-                icon={errors["from_email"].icon}
-                text={errors["from_email"].text}
-                color={errors["from_email"].color}
-                bgColor={errors["from_email"].bgColor}
-              />
-            )}
-          </span>
-        </div>
-        <input
-          type="email"
-          name="from_email"
-          className={`${
-            isDarkMode ? "bg-dark-300" : "bg-grey-200"
-          } rounded-xl p-2`}
-          placeholder="Enter your email"
-          onChange={(e) => handleChange("from_email", e.target.value)}
-        />
-      </label>
+      <LabeledInput
+        isDarkMode={isDarkMode}
+        label="Your Email"
+        name="from_email"
+        type="email"
+        placeholder="Enter your email"
+        handleChange={handleChange}
+        errors={errors["from_email"]}
+      />
 
-      <label className="flex flex-col gap-1">
-        <div className="flex flex-row justify-between">
-          <span className="self-start">Your Message</span>
-          <span>
-            {errors["message"] && (
-              <Pill
-                key="message"
-                icon={errors["message"].icon}
-                text={errors["message"].text}
-                color={errors["message"].color}
-                bgColor={errors["message"].bgColor}
-              />
-            )}
-          </span>
-        </div>
-        <textarea
-          name="message"
-          className={`${
-            isDarkMode ? "bg-dark-300" : "bg-grey-200"
-          } rounded-xl p-2`}
-          placeholder="Type your message here..."
-          onChange={(e) => handleChange("message", e.target.value)}
-        />
-      </label>
+      <LabeledInput
+        isDarkMode={isDarkMode}
+        label="Your Message"
+        name="message"
+        type="textarea"
+        placeholder="Type your message here..."
+        handleChange={handleChange}
+        errors={errors["message"]}
+      />
 
       {isEmailSent && (
         <Pill
