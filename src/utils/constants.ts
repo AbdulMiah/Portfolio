@@ -407,5 +407,4 @@ export const projects: Project[] = [
   },
 ];
 
-export const footerText =
-  "Copyright © 2023 All Rights Reserved | Developed with passion by Abdul Muktadir Miah.";
+export const footerText = `Copyright © 2023 - ${new Date().getFullYear()} | All Rights Reserved | Developed with passion by Abdul Muktadir Miah.`;
