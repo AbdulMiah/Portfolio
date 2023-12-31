@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import Pill from "../../components/Pill";
 import { PillProp } from "../../utils/types";
+import { slideUp } from "../../utils/motionVariants";
 
 type LabeledInputProp = {
   isDarkMode: boolean;
@@ -24,8 +26,8 @@ function LabeledInput({
     <label className="flex flex-col gap-1">
       <div className="flex flex-row justify-between">
         <span className="self-start">{label}</span>
-        <span>
-          {errors && (
+        {errors && (
+          <motion.span variants={slideUp(0.2)} initial="hidden" animate="show">
             <Pill
               key={name}
               icon={errors.icon}
@@ -33,8 +35,8 @@ function LabeledInput({
               color={errors.color}
               bgColor={errors.bgColor}
             />
-          )}
-        </span>
+          </motion.span>
+        )}
       </div>
       {type === "textarea" ? (
         <textarea
