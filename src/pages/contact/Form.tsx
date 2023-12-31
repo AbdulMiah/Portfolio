@@ -20,6 +20,7 @@ type FormProp = {
 function Form({ isDarkMode }: FormProp) {
   const [fields, setFields] = useState<{ [key: string]: string }>({});
   const [errors, setErrors] = useState<{ [key: string]: PillProp }>({});
+  const [isFormValid, setIsFormValid] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState<boolean>(() => {
     const storedIsEmailSent = sessionStorage.getItem("isEmailSent");
     return storedIsEmailSent ? JSON.parse(storedIsEmailSent) : false;
@@ -93,6 +94,7 @@ function Form({ isDarkMode }: FormProp) {
     }
 
     setErrors(formErrors);
+    setIsFormValid(formIsValid);
     return formIsValid;
   };
 
@@ -175,8 +177,11 @@ function Form({ isDarkMode }: FormProp) {
           text="Send Message"
           icon={<IconSend />}
           type="submit"
-          disabled={isEmailSent}
-          tooltipText={isEmailSent ? "You can only send one message" : ""}
+          disabled={!isFormValid || isEmailSent}
+          tooltipText={
+            (!isFormValid ? "Fill in all the required fields" : "") ||
+            (isEmailSent ? "You can only send one message" : "")
+          }
         />
       </div>
     </motion.form>
