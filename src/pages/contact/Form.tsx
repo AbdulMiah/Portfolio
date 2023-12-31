@@ -8,7 +8,7 @@ import IconButton from "../../components/IconButton";
 import { motion } from "framer-motion";
 import { slideDown } from "../../utils/motionVariants";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pill from "../../components/Pill";
 import { PillProp } from "../../utils/types";
 import LabeledInput from "./LabeledInput";
@@ -20,7 +20,14 @@ type FormProp = {
 function Form({ isDarkMode }: FormProp) {
   const [fields, setFields] = useState<{ [key: string]: string }>({});
   const [errors, setErrors] = useState<{ [key: string]: PillProp }>({});
-  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isEmailSent, setIsEmailSent] = useState<boolean>(() => {
+    const storedIsEmailSent = sessionStorage.getItem("isEmailSent");
+    return storedIsEmailSent ? JSON.parse(storedIsEmailSent) : false;
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem("isEmailSent", JSON.stringify(isEmailSent));
+  }, [isEmailSent]);
 
   const handleValidation = () => {
     const formFields = { ...fields };
@@ -35,7 +42,7 @@ function Form({ isDarkMode }: FormProp) {
         color: "red-200",
         bgColor: "red-100",
       };
-    } else if (!formFields["from_name"].match(/^[a-zA-Z]+$/)) {
+    } else if (!formFields["from_name"].match(/^[a-z ,.'-]+$/i)) {
       formIsValid = false;
       formErrors["from_name"] = {
         icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
@@ -111,7 +118,6 @@ function Form({ isDarkMode }: FormProp) {
     //   .then(() => setIsEmailSent(true));
 
     if (handleValidation()) {
-      alert("Form submitted");
       setIsEmailSent(true);
     }
   };
@@ -162,7 +168,13 @@ function Form({ isDarkMode }: FormProp) {
       )}
 
       <div>
-        <IconButton text="Send Message" icon={<IconSend />} type="submit" />
+        <IconButton
+          text="Send Message"
+          icon={<IconSend />}
+          type="submit"
+          disabled={isEmailSent}
+          tooltipText={isEmailSent ? "You can only send one message" : ""}
+        />
       </div>
     </motion.form>
   );
