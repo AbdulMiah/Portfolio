@@ -27,8 +27,9 @@ function Form({ isDarkMode }: FormProp) {
   });
 
   useEffect(() => {
+    handleValidation();
     sessionStorage.setItem("isEmailSent", JSON.stringify(isEmailSent));
-  }, [isEmailSent]);
+  }, [fields, isEmailSent]);
 
   const handleValidation = () => {
     const formFields = { ...fields };
@@ -103,8 +104,6 @@ function Form({ isDarkMode }: FormProp) {
       ...fields,
       [field]: value,
     });
-
-    handleValidation();
   };
 
   const sendEmail = (e: React.FormEvent) => {
