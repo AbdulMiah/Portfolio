@@ -11,6 +11,7 @@ type LabeledInputProp = {
   placeholder: string;
   handleChange: (name: string, value: string) => void;
   errors?: PillProp | undefined;
+  disabled: boolean;
 };
 
 function LabeledInput({
@@ -21,6 +22,7 @@ function LabeledInput({
   placeholder,
   handleChange,
   errors,
+  disabled,
 }: LabeledInputProp) {
   return (
     <label className="flex flex-col gap-1">
@@ -40,6 +42,7 @@ function LabeledInput({
       </div>
       {type === "textarea" ? (
         <textarea
+          disabled={disabled}
           name={name}
           className={`${
             isDarkMode ? "bg-dark-300" : "bg-grey-200"
@@ -49,6 +52,7 @@ function LabeledInput({
         />
       ) : (
         <input
+          disabled={disabled}
           type={type}
           name={name}
           className={`${

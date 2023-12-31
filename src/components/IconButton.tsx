@@ -21,6 +21,7 @@ function IconButton({
     <Tooltip title={tooltipText}>
       <button
         type={type}
+        disabled
         className="bg-royal-blue-200 text-white py-2 px-3 rounded-[12px] inline-flex space-x-4 cursor-not-allowed"
       >
         {text && <span className="text-base">{text}</span>}

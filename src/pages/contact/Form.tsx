@@ -136,6 +136,7 @@ function Form({ isDarkMode }: FormProp) {
         placeholder="Enter your name"
         handleChange={handleChange}
         errors={errors["from_name"]}
+        disabled={isEmailSent}
       />
 
       <LabeledInput
@@ -146,6 +147,7 @@ function Form({ isDarkMode }: FormProp) {
         placeholder="Enter your email"
         handleChange={handleChange}
         errors={errors["from_email"]}
+        disabled={isEmailSent}
       />
 
       <LabeledInput
@@ -156,6 +158,7 @@ function Form({ isDarkMode }: FormProp) {
         placeholder="Type your message here..."
         handleChange={handleChange}
         errors={errors["message"]}
+        disabled={isEmailSent}
       />
 
       {isEmailSent && (
