@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Pill from "../../components/Pill";
 import { PillProp } from "../../utils/types";
 import { slideUp } from "../../utils/motionVariants";
@@ -28,17 +28,24 @@ function LabeledInput({
     <label className="flex flex-col gap-1">
       <div className="flex flex-row justify-between">
         <span className="self-start">{label}</span>
-        {errors && (
-          <motion.span variants={slideUp(0.2)} initial="hidden" animate="show">
-            <Pill
-              key={name}
-              icon={errors.icon}
-              text={errors.text}
-              color={errors.color}
-              bgColor={errors.bgColor}
-            />
-          </motion.span>
-        )}
+        <AnimatePresence mode="wait" initial={false}>
+          {errors && (
+            <motion.span
+              variants={slideUp(0.2)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+            >
+              <Pill
+                key={name}
+                icon={errors.icon}
+                text={errors.text}
+                color={errors.color}
+                bgColor={errors.bgColor}
+              />
+            </motion.span>
+          )}
+        </AnimatePresence>
       </div>
       {type === "textarea" ? (
         <textarea
@@ -65,5 +72,12 @@ function LabeledInput({
     </label>
   );
 }
+
+const framer_error = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 10 },
+  transition: { duration: 0.2 },
+};
 
 export default LabeledInput;

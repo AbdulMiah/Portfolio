@@ -61,8 +61,11 @@ export const slideDown = (delay: number) => {
 export const slideUp = (duration: number) => {
   return {
     hidden: {
-      y: 10,
+      y: 5,
       opacity: 0,
+      transition: {
+        duration: duration,
+      },
     },
     show: {
       y: 0,
