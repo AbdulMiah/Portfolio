@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SectionWrapper from "../../utils/SectionWrapper";
 import { slideDown } from "../../utils/motionVariants";
 import Form from "./Form";
+import PhoneRinging from "./PhoneRinging";
 
 type ContactProp = {
   isDarkMode: boolean;
@@ -37,7 +38,7 @@ function Contact({ isDarkMode, isMobile }: ContactProp) {
 
       {!isMobile && (
         <div className="flex justify-center items-center">
-          <h3>Telephone Model</h3>
+          <PhoneRinging />
         </div>
       )}
     </section>
