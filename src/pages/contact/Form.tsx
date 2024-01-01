@@ -110,17 +110,15 @@ function Form({ isDarkMode, isMobile }: FormProp) {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_dggxdwd",
-    //     "template_j5fdmsn",
-    //     e.target as HTMLFormElement,
-    //     "1WMou0YgjyHfq-I6j"
-    //   )
-    //   .then(() => setIsEmailSent(true));
-
     if (handleValidation()) {
-      setIsEmailSent(true);
+      emailjs
+        .sendForm(
+          "service_dggxdwd",
+          "template_j5fdmsn",
+          e.target as HTMLFormElement,
+          "1WMou0YgjyHfq-I6j"
+        )
+        .then(() => setIsEmailSent(true));
     }
   };
 
