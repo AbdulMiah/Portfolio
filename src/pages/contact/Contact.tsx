@@ -32,7 +32,7 @@ function Contact({ isDarkMode, isMobile }: ContactProp) {
           Questions, bug reports, feedback - I'm here for it all.
         </motion.p>
 
-        <Form isDarkMode={isDarkMode} />
+        <Form isDarkMode={isDarkMode} isMobile={isMobile} />
       </div>
 
       {!isMobile && (

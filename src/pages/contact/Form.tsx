@@ -15,9 +15,10 @@ import LabeledInput from "./LabeledInput";
 
 type FormProp = {
   isDarkMode: boolean;
+  isMobile: boolean;
 };
 
-function Form({ isDarkMode }: FormProp) {
+function Form({ isDarkMode, isMobile }: FormProp) {
   const [fields, setFields] = useState<{ [key: string]: string }>({});
   const [errors, setErrors] = useState<{ [key: string]: PillProp }>({});
   const [isFormValid, setIsFormValid] = useState(false);
@@ -126,7 +127,7 @@ function Form({ isDarkMode }: FormProp) {
   return (
     <motion.form
       variants={slideDown(0.6)}
-      className="flex flex-col gap-5 w-1/2"
+      className={`flex flex-col gap-5 ${isMobile ? "" : "w-1/2"}`}
       onSubmit={sendEmail}
     >
       <LabeledInput
