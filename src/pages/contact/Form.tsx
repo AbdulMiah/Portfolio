@@ -42,7 +42,7 @@ function Form({ isDarkMode }: FormProp) {
         icon: <IconAlertCircleFilled className="h-4 w-4 text-red-200" />,
         text: "Required",
         color: "red-200",
-        bgColor: "red-100",
+        bgColor: "bg-red-100",
       };
     } else if (!formFields["from_name"].match(/^[a-z ,.'-]+$/i)) {
       formIsValid = false;
@@ -50,7 +50,7 @@ function Form({ isDarkMode }: FormProp) {
         icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
         text: "Only Letters",
         color: "yellow-200",
-        bgColor: "yellow-100",
+        bgColor: "bg-yellow-100",
       };
     }
 
@@ -60,7 +60,7 @@ function Form({ isDarkMode }: FormProp) {
         icon: <IconAlertCircleFilled className="h-4 w-4 text-red-200" />,
         text: "Required",
         color: "red-200",
-        bgColor: "red-100",
+        bgColor: "bg-red-100",
       };
     } else {
       let lastAtPos = formFields["from_email"].lastIndexOf("@");
@@ -79,7 +79,7 @@ function Form({ isDarkMode }: FormProp) {
           icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
           text: "Invalid Email",
           color: "yellow-200",
-          bgColor: "yellow-100",
+          bgColor: "bg-yellow-100",
         };
       }
     }
@@ -90,7 +90,7 @@ function Form({ isDarkMode }: FormProp) {
         icon: <IconAlertCircleFilled className={`h-4 w-4 text-red-200`} />,
         text: "Required",
         color: "red-200",
-        bgColor: "red-100",
+        bgColor: "bg-red-100",
       };
     }
 
@@ -167,7 +167,7 @@ function Form({ isDarkMode }: FormProp) {
           icon={<IconCircleCheckFilled className="h-4 w-4 text-green-200" />}
           text="Successfully sent your message"
           color="green-200"
-          bgColor="green-100"
+          bgColor="bg-green-100"
         />
       )}
 
