@@ -55,7 +55,7 @@ function LabeledInput({
           name={name}
           className={`${
             isDarkMode ? "bg-dark-300" : "bg-grey-200"
-          } rounded-xl p-2`}
+          } rounded-xl p-2 ${disabled && "cursor-not-allowed"}`}
           placeholder={placeholder}
           onChange={(e) => handleChange(name, e.target.value)}
         />
@@ -66,7 +66,7 @@ function LabeledInput({
           name={name}
           className={`${
             isDarkMode ? "bg-dark-300" : "bg-grey-200"
-          } rounded-xl p-2`}
+          } rounded-xl p-2 ${disabled && "cursor-not-allowed"}`}
           placeholder={placeholder}
           onChange={(e) => handleChange(name, e.target.value)}
         />
