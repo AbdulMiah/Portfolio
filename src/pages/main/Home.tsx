@@ -49,7 +49,11 @@ function Home({ isMobile, isDarkMode }: HomeProp) {
         loadingText={loadingText}
       />
 
-      <div className="relative z-0">
+      <div
+        className={`relative z-0 ${
+          isLoading ? "opacity-0 pointer-events-none" : "opacity-1"
+        }`}
+      >
         <Landing isMobile={isMobile} />
         <About isDarkMode={isDarkMode} isMobile={isMobile} />
         <Experiences isDarkMode={isDarkMode} isMobile={isMobile} />
