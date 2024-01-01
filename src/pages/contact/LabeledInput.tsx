@@ -28,24 +28,26 @@ function LabeledInput({
     <label className="flex flex-col gap-1">
       <div className="flex flex-row justify-between">
         <span className="self-start">{label}</span>
-        <AnimatePresence mode="wait" initial={false}>
-          {errors && (
-            <motion.span
-              variants={slideUp(0.2)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-            >
-              <Pill
-                key={name}
-                icon={errors.icon}
-                text={errors.text}
-                color={errors.color}
-                bgColor={errors.bgColor}
-              />
-            </motion.span>
-          )}
-        </AnimatePresence>
+        {!disabled && (
+          <AnimatePresence mode="wait" initial={false}>
+            {errors && (
+              <motion.span
+                variants={slideUp(0.2)}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+              >
+                <Pill
+                  key={name}
+                  icon={errors.icon}
+                  text={errors.text}
+                  color={errors.color}
+                  bgColor={errors.bgColor}
+                />
+              </motion.span>
+            )}
+          </AnimatePresence>
+        )}
       </div>
       {type === "textarea" ? (
         <textarea

@@ -179,8 +179,8 @@ function Form({ isDarkMode, isMobile }: FormProp) {
           type="submit"
           disabled={!isFormValid || isEmailSent}
           tooltipText={
-            (!isFormValid ? "Fill in all the required fields" : "") ||
-            (isEmailSent ? "You can only send one message" : "")
+            (isEmailSent ? "You can only send one message" : "") ||
+            (!isFormValid ? "Fill in all the required fields" : "")
           }
         />
       </div>
