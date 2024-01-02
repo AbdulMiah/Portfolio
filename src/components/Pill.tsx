@@ -1,12 +1,12 @@
 import { PillProp } from "../utils/types";
 
-function Pill({ icon, text, color, bgColor }: PillProp) {
+function Pill({ icon, text, color, borderColor, bgColor }: PillProp) {
   return (
     <div
-      className={`inline-flex space-x-1 items-center justify-center border-2 border-${color} rounded-xl p-1 ${bgColor}`}
+      className={`inline-flex space-x-1 items-center justify-center border-2 ${borderColor} rounded-xl p-1 ${bgColor}`}
     >
       {icon}
-      <span className={`text-sm text-${color}`}>{text}</span>
+      <span className={`text-sm ${color}`}>{text}</span>
     </div>
   );
 }

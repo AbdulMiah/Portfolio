@@ -42,6 +42,7 @@ function LabeledInput({
                   icon={errors.icon}
                   text={errors.text}
                   color={errors.color}
+                  borderColor={errors.borderColor}
                   bgColor={errors.bgColor}
                 />
               </motion.span>

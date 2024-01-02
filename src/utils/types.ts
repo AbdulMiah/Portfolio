@@ -60,5 +60,6 @@ export type PillProp = {
   icon: JSX.Element;
   text: string;
   color: string;
+  borderColor: string;
   bgColor: string;
 };
