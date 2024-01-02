@@ -406,3 +406,5 @@ export const projects: Project[] = [
     color: "gold",
   },
 ];
+
+export const footerText = `Copyright © 2023 - ${new Date().getFullYear()} | All Rights Reserved | Developed with passion by Abdul Muktadir Miah.`;

@@ -19,6 +19,7 @@ function AvatarStanding() {
           />
           <OrbitControls
             enableZoom={false}
+            enablePan={false}
             minAzimuthAngle={-Math.PI / 4}
             maxAzimuthAngle={Math.PI / 4}
             minPolarAngle={Math.PI / 6}
