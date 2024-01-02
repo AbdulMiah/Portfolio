@@ -17,11 +17,7 @@ function PhoneRinging() {
             resolution={256}
             color={"#000000"}
           />
-          <OrbitControls
-            minDistance={0.5}
-            maxDistance={1.5}
-            enablePan={false}
-          />
+          <OrbitControls enablePan={false} enableZoom={false} />
           <RetroTelephone />
           <ambientLight intensity={3} />
         </group>

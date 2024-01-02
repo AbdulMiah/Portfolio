@@ -37,7 +37,7 @@ function Contact({ isDarkMode, isMobile }: ContactProp) {
       </div>
 
       {!isMobile && (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center cursor-move">
           <PhoneRinging />
         </div>
       )}
