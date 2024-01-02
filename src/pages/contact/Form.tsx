@@ -64,8 +64,8 @@ function Form({ isDarkMode, isMobile }: FormProp) {
         bgColor: "bg-red-100",
       };
     } else {
-      let lastAtPos = formFields["from_email"].lastIndexOf("@");
-      let lastDotPos = formFields["from_email"].lastIndexOf(".");
+      const lastAtPos = formFields["from_email"].lastIndexOf("@");
+      const lastDotPos = formFields["from_email"].lastIndexOf(".");
       if (
         !(
           lastAtPos < lastDotPos &&
