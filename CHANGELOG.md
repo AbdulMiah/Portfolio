@@ -2,6 +2,25 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [7.0.0] (2023-01-01)
+
+### Added
+
+- Added a footer to the bottom of the webpage.
+- Created the contact section with custom form.
+- Implemented form validation.
+- Using `sessionStorage`, allow users to send only one message per session.
+- Added a 3D model of a retro telephone to contact section.
+
+### Changed
+
+- Modified the `IconButton` component to include the option to disable the button.
+
+### Fixed
+
+- Disabled pan on Avatar model in the About section.
+- Resolved the loading screen issue by hidding the Landing page and disabling pointer events during the application loading process.
+
 ## [6.0.0] (2023-12-28)
 
 ### Added
@@ -214,6 +233,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[7.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.0
 [6.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v6.0.0
 [5.1.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.1
 [5.1.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.0
