@@ -6,7 +6,7 @@ import { AnimationConfig, Avatar } from "../../components/canvas/Avatar";
 
 function AvatarStanding() {
   return (
-    <Canvas shadows camera={{ position: [0, 0, 5], fov: 25 }}>
+    <Canvas shadows camera={{ position: [0, 0, 6], fov: 35 }}>
       <Suspense fallback={<CanvasLoader />}>
         <group position-y={-0.9}>
           <ContactShadows
