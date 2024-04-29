@@ -119,7 +119,7 @@ export const experiences: Experience[] = [
   {
     title: "Director & CTO",
     employmentType: "Part-time",
-    companyName: "FIT-IN APP Limited",
+    companyName: "FIT-IN APP",
     companyLink: "https://www.fit-in.app/",
     location: "Cardiff, Wales",
     logo: fitin,
