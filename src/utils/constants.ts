@@ -124,7 +124,7 @@ export const experiences: Experience[] = [
     location: "Cardiff, Wales",
     logo: fitin,
     iconBg: "#000",
-    date: "February 2024 - Present",
+    date: "Feb 2024 - Present",
     summary: [
       "Strategic Decision-Making: Collaborated closely with board members and directors to make strategic decisions, driving pivotal changes that aligned with company goals and market demands.",
       "Technology Evaluation: Led technology evaluation and selection processes, driving informed decisions to enhance development efficiency and product performance.",

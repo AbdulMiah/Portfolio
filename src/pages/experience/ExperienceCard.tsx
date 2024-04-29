@@ -11,11 +11,36 @@ type ExperienceCardProp = {
   experience: Experience;
 };
 
+const calculateTimeDifference = (
+  startDate: string,
+  endDate: string
+): string => {
+  const start = new Date(startDate);
+  const end = endDate === "Present" ? new Date() : new Date(endDate);
+
+  const diffInMonths =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
+
+  const years = Math.floor(diffInMonths / 12);
+  const months = diffInMonths % 12;
+
+  return years > 0
+    ? months > 0
+      ? `${years} year${years > 1 ? "s" : ""} ${months} month${
+          months > 1 ? "s" : ""
+        }`
+      : `${years} year${years > 1 ? "s" : ""}`
+    : `${months} month${months > 1 ? "s" : ""}`;
+};
+
 function ExperienceCard({
   isDarkMode,
   isMobile,
   experience,
 }: ExperienceCardProp) {
+  const [start, end] = experience.date.split(" - ");
+  const timeDifference = calculateTimeDifference(start, end);
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -25,7 +50,7 @@ function ExperienceCard({
       contentArrowStyle={{
         borderRight: `${isDarkMode ? "8px solid #fff" : "8px solid #000"}`,
       }}
-      date={experience.date}
+      date={`${experience.date} ≈ ${timeDifference}`}
       dateClassName={`${
         isDarkMode && !isMobile
           ? "dark"
