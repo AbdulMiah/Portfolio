@@ -41,7 +41,7 @@ function ProjectCard({ isDarkMode, isMobile, project }: ProjectCardProp) {
         <Tooltip title="Learn More">
           <Link
             to={`/project/${project.id}`}
-            className="flex flex-row space-x-2 text-base hover:underline"
+            className="flex flex-row space-x-2 text-base hover:underline animate-bounce"
             onClick={() => window.scrollTo({ top: 0 })}
           >
             <span>View Project</span>

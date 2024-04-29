@@ -55,7 +55,7 @@ function ExperienceCard({
           </h6>
         </div>
         <h6 className="flex space-x-1 items-center">
-          <IconMapPinFilled className="h-5 w-5 animate-bounce" />
+          <IconMapPinFilled className="h-5 w-5 animate-pulse" />
           <span> {experience.location}</span>
         </h6>
         <motion.ul
