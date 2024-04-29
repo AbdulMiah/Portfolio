@@ -98,6 +98,15 @@ function Form({ isDarkMode, isMobile }: FormProp) {
         borderColor: "border-red-200",
         bgColor: "bg-red-100",
       };
+    } else if (formFields["message"].length > 1500) {
+      formIsValid = false;
+      formErrors["message"] = {
+        icon: <IconAlertTriangleFilled className="h-4 w-4 text-yellow-200" />,
+        text: "Max 1500 Characters",
+        color: "text-yellow-200",
+        borderColor: "border-yellow-200",
+        bgColor: "bg-yellow-100",
+      };
     }
 
     setErrors(formErrors);
