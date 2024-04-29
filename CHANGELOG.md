@@ -2,6 +2,14 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [7.2.0] (2024-04-29)
+
+### Added
+
+- Added new experience, FIT-IN.
+- Change location pin animation from bounce to pulse.
+- Add bounce animation to view project details button.
+
 ## [7.0.1] (2024-04-29)
 
 ### Added
@@ -244,6 +252,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[7.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.0
 [7.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.1
 [7.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.0
 [6.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v6.0.0
