@@ -2,7 +2,18 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [7.0.0] (2023-01-01)
+## [7.0.1] (2024-04-29)
+
+### Added
+
+- Added max length validation to message field in the contact form. Capped at 1500 characters.
+
+### Fixed
+
+- Added maximum height to textarea field to stop telephone model getting infinitely huge!
+- Shrink the model in the about section to resolve the hair-loss issue - lol!
+
+## [7.0.0] (2024-01-02)
 
 ### Added
 
@@ -233,6 +244,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[7.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.1
 [7.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.0
 [6.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v6.0.0
 [5.1.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v5.1.1
