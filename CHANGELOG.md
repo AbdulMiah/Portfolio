@@ -7,8 +7,9 @@ All notable changes to the Personal Portfolio project will be documented in this
 ### Added
 
 - Added new experience, FIT-IN.
-- Change location pin animation from bounce to pulse.
-- Add bounce animation to view project details button.
+- Changed location pin animation from bounce to pulse.
+- Added bounce animation to view project details button.
+- Calulated experience time and display it in the experience section.
 
 ## [7.0.1] (2024-04-29)
 
