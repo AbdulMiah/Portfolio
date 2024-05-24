@@ -11,12 +11,27 @@ type ExperienceCardProp = {
   experience: Experience;
 };
 
+const parseShortMonthYear = (
+  dateStr: string
+): Date => {
+  const [month, yearStr] = dateStr.split(" ");
+  const months: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const monthIndex = months.indexOf(month);
+  if (monthIndex === -1) {
+      throw new Error("Invalid month");
+  }
+
+  const year = parseInt(yearStr);
+
+  return new Date(year, monthIndex);
+}
+
 const calculateTimeDifference = (
   startDate: string,
   endDate: string
 ): string => {
-  const start = new Date(startDate);
-  const end = endDate === "Present" ? new Date() : new Date(endDate);
+  const start = parseShortMonthYear(startDate);
+  const end = endDate === "Present" ? new Date() : parseShortMonthYear(endDate);
 
   const diffInMonths =
     (end.getFullYear() - start.getFullYear()) * 12 +
