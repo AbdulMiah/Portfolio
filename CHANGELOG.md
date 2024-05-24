@@ -2,6 +2,12 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [7.2.1] (2024-05-24)
+
+### Fixed
+
+- Special thanks to @oliverphardman, for finding and fixing the Date in the Experience section displaying NaN error for Firefox or other browsers using the SpiderMonkey JS engine.
+
 ## [7.2.0] (2024-04-29)
 
 ### Added
@@ -253,6 +259,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[7.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.1
 [7.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.0
 [7.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.1
 [7.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.0
