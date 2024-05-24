@@ -6,7 +6,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 ### Fixed
 
-- Special thanks to @oliverphardman, for finding and fixing the Date in the Experience section displaying NaN error for Firefox or other browsers using the SpiderMonkey JS engine.
+- Special thanks to [https://github.com/oliverphardman](@oliverphardman), for finding and fixing the Date in the Experience section displaying NaN error for Firefox or other browsers using the SpiderMonkey JS engine.
 
 ## [7.2.0] (2024-04-29)
 
