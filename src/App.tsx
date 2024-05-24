@@ -67,6 +67,7 @@ function App() {
         />
         {projects.map((project, index) => (
           <Route
+            key={index}
             path={`/project/${project.id}`}
             element={
               <ProjectDetails
