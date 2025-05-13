@@ -117,54 +117,11 @@ export const about: About = {
 
 export const experiences: Experience[] = [
   {
-    title: "Director & CTO",
-    employmentType: "Part-time",
-    companyName: "FIT-IN APP",
-    companyLink: "https://www.fit-in.app/",
-    location: "Cardiff, Wales",
-    logo: fitin,
-    iconBg: "#000",
-    date: "Feb 2024 - Present",
-    summary: [
-      "Strategic Decision-Making: Collaborated closely with board members and directors to make strategic decisions, driving pivotal changes that aligned with company goals and market demands.",
-      "Technology Evaluation: Led technology evaluation and selection processes, driving informed decisions to enhance development efficiency and product performance.",
-      "AWS API Development: Configured and built AWS Lambda functions and API Gateway to establish a robust API infrastructure, leveraging Python for backend logic.",
-      "DevOps: Led DevOps initiatives by setting up GitHub Actions pipelines to automate deployment processes, facilitating smooth transitions of APIs to dev and production environments on AWS.",
-      "UX Design: Played a key role in UX design using Figma, ensuring a user-centric approach to app development and enhancing overall user experience.",
-    ],
-    skills: [
-      {
-        title: "Python",
-        icon: IconBrandPython,
-      },
-      {
-        title: "AWS",
-        icon: IconBrandAws,
-      },
-      {
-        title: "Terraform",
-        icon: IconBrandTerraform,
-      },
-      {
-        title: "Postgres DB",
-        icon: IconDatabase,
-      },
-      {
-        title: "Flutter",
-        icon: IconBrandFlutter,
-      },
-      {
-        title: "Figma",
-        icon: IconBrandFigma,
-      },
-    ],
-  },
-  {
-    title: "Software Developer",
+    title: "Software Engineer",
     employmentType: "Full-time",
     companyName: "Creditsafe",
     companyLink: "https://www.creditsafe.com/",
-    location: "Caerphilly, Wales",
+    location: "Cardiff, Wales",
     logo: creditsafe,
     iconBg: "#EE2A1F",
     date: "May 2023 - Present",
