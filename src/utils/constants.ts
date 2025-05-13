@@ -2,6 +2,7 @@ import {
   creditsafe,
   financialforce,
   fitin,
+  fitinDemo,
   instock,
   instockDemo,
   wrackreport,
@@ -38,6 +39,7 @@ import {
   IconBrandHtml5,
   IconBrandCss3,
   IconBrandFigma,
+  IconBrandGithub,
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience, ProjectType } from "./types";
 
@@ -206,6 +208,45 @@ export const projects: Project[] = [
   {
     id: 1,
     projectType: ProjectType.MOBILE_APP,
+    title: "FIT-IN App",
+    summary: [],
+    description: "",
+    skills: [
+      {
+        title: "Flutter",
+        icon: IconBrandFlutter,
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Postgres",
+        icon: IconDatabase,
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform,
+      },
+      {
+        title: "GitHub Actions",
+        icon: IconBrandGithub,
+      },
+    ],
+    link: "",
+    hero: "",
+    images: fitin,
+    demo: fitinDemo,
+    delay: 0.6,
+    color: "#FD8F29",
+  },
+  {
+    id: 2,
+    projectType: ProjectType.MOBILE_APP,
     title: "InStock App",
     summary: [
       "Streamlines inventory management for small independent sellers.",
@@ -241,11 +282,11 @@ export const projects: Project[] = [
     hero: "",
     images: instock,
     demo: instockDemo,
-    delay: 0.6,
+    delay: 0.8,
     color: "#2FD4A3",
   },
   {
-    id: 2,
+    id: 3,
     projectType: ProjectType.WEB_APP,
     title: "WrackReport",
     summary: [
@@ -285,11 +326,11 @@ export const projects: Project[] = [
     hero: "",
     images: wrackreport,
     demo: wrackreportDemo,
-    delay: 0.8,
+    delay: 1,
     color: "#093d61",
   },
   {
-    id: 3,
+    id: 4,
     projectType: ProjectType.MOBILE_APP,
     title: "PrayerPal App",
     summary: [
@@ -317,11 +358,11 @@ export const projects: Project[] = [
     hero: "",
     images: prayerpal,
     demo: prayerpalDemo,
-    delay: 1,
+    delay: 1.2,
     color: "#1a4331",
   },
   {
-    id: 4,
+    id: 5,
     projectType: ProjectType.WEB_APP,
     title: "E2S System",
     summary: [
@@ -359,11 +400,11 @@ export const projects: Project[] = [
     hero: "",
     images: e2s,
     demo: e2sDemo,
-    delay: 1.2,
+    delay: 1.4,
     color: "#417285",
   },
   {
-    id: 5,
+    id: 6,
     projectType: ProjectType.WEB_APP,
     title: "Hafod Data",
     summary: [
@@ -403,7 +444,7 @@ export const projects: Project[] = [
     hero: "",
     images: hafod,
     demo: hafodDemo,
-    delay: 1.4,
+    delay: 1.6,
     color: "gold",
   },
 ];
