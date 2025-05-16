@@ -364,6 +364,10 @@ export const projects: Project[] = [
         title: "XML",
         icon: IconFileTypeXml,
       },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
     ],
     link: "https://github.com/AbdulMiah/PrayerPal",
     hero: "",
