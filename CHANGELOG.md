@@ -2,6 +2,18 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [8.0.0] (2025-05-16)
+
+### Added
+
+- Moved FIT-IN experience to projects.
+- Added ability to mark projects as public/private.
+
+### Changed
+
+- Updated Creditsafe job title and location.
+- Included Python to PrayerPal skills.
+
 ## [7.2.1] (2024-05-24)
 
 ### Fixed
