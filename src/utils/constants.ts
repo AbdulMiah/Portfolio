@@ -216,7 +216,6 @@ export const projects: Project[] = [
       "Organisers get tools to manage events, communicate, and monetise their communities.",
       "Offers an all-in-one solution for running and growing sports communities.",
       "Features tailored search tools for members and robust admin tools for group owners.",
-      "Encourages real-world activity and connection through shared sports interests.",
     ],
     description:
       "FIT-IN is a platform designed specifically for real-world sports communities, making it easy for people to discover, join, and create sports groups in just a few clicks. Members can find groups that match their interests, location, and schedule, while organisers get powerful tools to manage events, communicate, and monetise their communities — all in one place. Unlike generic platforms like Facebook, Meetup, or WhatsApp, FIT-IN offers tailored search and organisational features built for the unique needs of sports groups, helping both members and organisers connect, grow, and thrive.",

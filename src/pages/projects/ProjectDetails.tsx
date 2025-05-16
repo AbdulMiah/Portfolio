@@ -1,7 +1,11 @@
 import { Project, ProjectType, Skill } from "../../utils/types";
 import { Link } from "react-router-dom";
 import SkillButton from "../../components/SkillButton";
-import { IconArrowLeft, IconBrandGithub } from "@tabler/icons-react";
+import {
+  IconArrowLeft,
+  IconBrandGithub,
+  IconLockCode,
+} from "@tabler/icons-react";
 import IconButton from "../../components/IconButton";
 import MonitorCanvas from "./MonitorCanvas";
 import PhoneCanvas from "./PhoneCanvas";
@@ -43,13 +47,22 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
             }`}
           >
             {isMobile ? <h3>{project.title}</h3> : <h2>{project.title}</h2>}
-            <a href={project.link} target="_blank">
+            {project.isPublic ? (
+              <a href={project.link!} target="_blank">
+                <IconButton
+                  icon={<IconBrandGithub />}
+                  text="Open Project"
+                  tooltipText="View Source Code on GitHub"
+                />
+              </a>
+            ) : (
               <IconButton
-                icon={<IconBrandGithub />}
-                text="Open Project"
-                tooltipText="View Source Code on GitHub"
+                icon={<IconLockCode />}
+                text="Private Repository"
+                tooltipText="Source code is in a private repository"
+                disabled={true}
               />
-            </a>
+            )}
           </div>
           <div>{project.description}</div>
           <div className="flex flex-wrap gap-1 justify-start">
