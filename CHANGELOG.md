@@ -8,6 +8,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Moved FIT-IN experience to projects.
 - Added ability to mark projects as public/private.
+- Installed `serve` npm package for testing compilation of local builds.
 
 ### Changed
 
@@ -271,6 +272,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[8.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v8.0.0
 [7.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.1
 [7.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.0
 [7.0.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.0.1
