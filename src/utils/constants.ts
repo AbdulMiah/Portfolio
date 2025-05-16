@@ -246,12 +246,13 @@ export const projects: Project[] = [
         icon: IconBrandGithub,
       },
     ],
-    link: "",
+    link: null,
     hero: "",
     images: fitin,
     demo: fitinDemo,
     delay: 0.6,
     color: "#FD8F29",
+    isPublic: false,
   },
   {
     id: 2,
@@ -293,6 +294,7 @@ export const projects: Project[] = [
     demo: instockDemo,
     delay: 0.8,
     color: "#2FD4A3",
+    isPublic: true,
   },
   {
     id: 3,
@@ -337,6 +339,7 @@ export const projects: Project[] = [
     demo: wrackreportDemo,
     delay: 1,
     color: "#093d61",
+    isPublic: true,
   },
   {
     id: 4,
@@ -369,6 +372,7 @@ export const projects: Project[] = [
     demo: prayerpalDemo,
     delay: 1.2,
     color: "#1a4331",
+    isPublic: true,
   },
   {
     id: 5,
@@ -411,6 +415,7 @@ export const projects: Project[] = [
     demo: e2sDemo,
     delay: 1.4,
     color: "#417285",
+    isPublic: true,
   },
   {
     id: 6,
@@ -455,6 +460,7 @@ export const projects: Project[] = [
     demo: hafodDemo,
     delay: 1.6,
     color: "gold",
+    isPublic: true,
   },
 ];
 

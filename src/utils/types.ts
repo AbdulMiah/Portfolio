@@ -35,12 +35,13 @@ export type Project = {
   summary: string[];
   description: string;
   skills: Skill[];
-  link: string;
+  link: string | null;
   hero: string;
   images: string[];
   demo: string;
   delay: number;
   color: string;
+  isPublic: boolean;
 };
 
 export type Experience = {
