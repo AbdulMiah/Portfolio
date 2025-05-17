@@ -40,6 +40,7 @@ import {
   IconBrandCss3,
   IconBrandFigma,
   IconBrandGithub,
+  IconRocket,
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience, ProjectType } from "./types";
 
@@ -135,6 +136,22 @@ export const experiences: Experience[] = [
     ],
     skills: [
       {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform,
+      },
+      {
+        title: "Azure CI/CD Pipelines",
+        icon: IconRocket,
+      },
+      {
         title: "React.js",
         icon: IconBrandReact,
       },
@@ -147,23 +164,15 @@ export const experiences: Experience[] = [
         icon: IconBrandCSharp,
       },
       {
-        title: "Oracle DB",
+        title: "Postgres / Oracle DB",
         icon: IconDatabase,
-      },
-      {
-        title: "Python",
-        icon: IconBrandPython,
-      },
-      {
-        title: "AWS Lambda",
-        icon: IconBrandAws,
       },
     ],
   },
   {
     title: "Software Engineer",
     employmentType: "Internship",
-    companyName: "FinancialForce",
+    companyName: "Certinia (Formerly FinancialForce)",
     companyLink: "https://certinia.com/",
     location: "Harrogate, England",
     logo: financialforce,
