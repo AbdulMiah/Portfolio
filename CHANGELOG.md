@@ -12,7 +12,8 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 ### Changed
 
-- Updated Creditsafe job title and location.
+- Updated Creditsafe job title, location and skills.
+- Updated internship experience company's name.
 - Included Python to PrayerPal skills.
 - Removed unused `hero` field from `Project` type.
 
