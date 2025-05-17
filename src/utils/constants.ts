@@ -2,6 +2,7 @@ import {
   creditsafe,
   financialforce,
   fitin,
+  fitinDemo,
   instock,
   instockDemo,
   wrackreport,
@@ -38,6 +39,8 @@ import {
   IconBrandHtml5,
   IconBrandCss3,
   IconBrandFigma,
+  IconBrandGithub,
+  IconRocket,
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience, ProjectType } from "./types";
 
@@ -117,20 +120,19 @@ export const about: About = {
 
 export const experiences: Experience[] = [
   {
-    title: "Director & CTO",
-    employmentType: "Part-time",
-    companyName: "FIT-IN APP",
-    companyLink: "https://www.fit-in.app/",
+    title: "Software Engineer",
+    employmentType: "Full-time",
+    companyName: "Creditsafe",
+    companyLink: "https://www.creditsafe.com/",
     location: "Cardiff, Wales",
-    logo: fitin,
-    iconBg: "#000",
-    date: "Feb 2024 - Present",
+    logo: creditsafe,
+    iconBg: "#EE2A1F",
+    date: "May 2023 - Present",
     summary: [
-      "Strategic Decision-Making: Collaborated closely with board members and directors to make strategic decisions, driving pivotal changes that aligned with company goals and market demands.",
-      "Technology Evaluation: Led technology evaluation and selection processes, driving informed decisions to enhance development efficiency and product performance.",
-      "AWS API Development: Configured and built AWS Lambda functions and API Gateway to establish a robust API infrastructure, leveraging Python for backend logic.",
-      "DevOps: Led DevOps initiatives by setting up GitHub Actions pipelines to automate deployment processes, facilitating smooth transitions of APIs to dev and production environments on AWS.",
-      "UX Design: Played a key role in UX design using Figma, ensuring a user-centric approach to app development and enhancing overall user experience.",
+      "Full-stack development: Contributed to both React.js frontend development and ASP.NET backend API development.",
+      "Data Management Tools: Delivered valuable features and improvements to internal tools, facilitating the data team's efficient management of customer data.",
+      "Agile Collaboration: Actively participated in discussions during '3 Amigos' sessions to analyse, estimate workload, and determine story points for upcoming tasks.",
+      "Product Alignment: Engaged closely with the product manager to align technical solutions with business objectives, ensuring goal-aligned solutions.",
     ],
     skills: [
       {
@@ -146,35 +148,9 @@ export const experiences: Experience[] = [
         icon: IconBrandTerraform,
       },
       {
-        title: "Postgres DB",
-        icon: IconDatabase,
+        title: "Azure CI/CD Pipelines",
+        icon: IconRocket,
       },
-      {
-        title: "Flutter",
-        icon: IconBrandFlutter,
-      },
-      {
-        title: "Figma",
-        icon: IconBrandFigma,
-      },
-    ],
-  },
-  {
-    title: "Software Developer",
-    employmentType: "Full-time",
-    companyName: "Creditsafe",
-    companyLink: "https://www.creditsafe.com/",
-    location: "Caerphilly, Wales",
-    logo: creditsafe,
-    iconBg: "#EE2A1F",
-    date: "May 2023 - Present",
-    summary: [
-      "Full-stack development: Contributed to both React.js frontend development and ASP.NET backend API development.",
-      "Data Management Tools: Delivered valuable features and improvements to internal tools, facilitating the data team's efficient management of customer data.",
-      "Agile Collaboration: Actively participated in discussions during '3 Amigos' sessions to analyse, estimate workload, and determine story points for upcoming tasks.",
-      "Product Alignment: Engaged closely with the product manager to align technical solutions with business objectives, ensuring goal-aligned solutions.",
-    ],
-    skills: [
       {
         title: "React.js",
         icon: IconBrandReact,
@@ -188,23 +164,15 @@ export const experiences: Experience[] = [
         icon: IconBrandCSharp,
       },
       {
-        title: "Oracle DB",
+        title: "Postgres / Oracle DB",
         icon: IconDatabase,
-      },
-      {
-        title: "Python",
-        icon: IconBrandPython,
-      },
-      {
-        title: "AWS Lambda",
-        icon: IconBrandAws,
       },
     ],
   },
   {
     title: "Software Engineer",
     employmentType: "Internship",
-    companyName: "FinancialForce",
+    companyName: "Certinia (Formerly FinancialForce)",
     companyLink: "https://certinia.com/",
     location: "Harrogate, England",
     logo: financialforce,
@@ -249,6 +217,53 @@ export const projects: Project[] = [
   {
     id: 1,
     projectType: ProjectType.MOBILE_APP,
+    title: "FIT-IN App",
+    summary: [
+      "FIT-IN is a platform built specifically for real-world, in-person sports communities.",
+      "Helps people easily discover, join, or create sports groups in just a few clicks.",
+      "Members can find groups based on interests, location, schedule, and skill level.",
+      "Organisers get tools to manage events, communicate, and monetise their communities.",
+      "Offers an all-in-one solution for running and growing sports communities.",
+      "Features tailored search tools for members and robust admin tools for group owners.",
+    ],
+    description:
+      "FIT-IN is a platform designed specifically for real-world sports communities, making it easy for people to discover, join, and create sports groups in just a few clicks. Members can find groups that match their interests, location, and schedule, while organisers get powerful tools to manage events, communicate, and monetise their communities — all in one place. Unlike generic platforms like Facebook, Meetup, or WhatsApp, FIT-IN offers tailored search and organisational features built for the unique needs of sports groups, helping both members and organisers connect, grow, and thrive.",
+    skills: [
+      {
+        title: "Flutter",
+        icon: IconBrandFlutter,
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Postgres",
+        icon: IconDatabase,
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform,
+      },
+      {
+        title: "GitHub Actions",
+        icon: IconBrandGithub,
+      },
+    ],
+    link: null,
+    images: fitin,
+    demo: fitinDemo,
+    delay: 0.6,
+    color: "#FD8F29",
+    isPublic: false,
+  },
+  {
+    id: 2,
+    projectType: ProjectType.MOBILE_APP,
     title: "InStock App",
     summary: [
       "Streamlines inventory management for small independent sellers.",
@@ -281,14 +296,14 @@ export const projects: Project[] = [
       },
     ],
     link: "https://github.com/AbdulMiah/InStock",
-    hero: "",
     images: instock,
     demo: instockDemo,
-    delay: 0.6,
+    delay: 0.8,
     color: "#2FD4A3",
+    isPublic: true,
   },
   {
-    id: 2,
+    id: 3,
     projectType: ProjectType.WEB_APP,
     title: "WrackReport",
     summary: [
@@ -325,14 +340,14 @@ export const projects: Project[] = [
       },
     ],
     link: "https://github.com/AbdulMiah/WrackReport",
-    hero: "",
     images: wrackreport,
     demo: wrackreportDemo,
-    delay: 0.8,
+    delay: 1,
     color: "#093d61",
+    isPublic: true,
   },
   {
-    id: 3,
+    id: 4,
     projectType: ProjectType.MOBILE_APP,
     title: "PrayerPal App",
     summary: [
@@ -355,16 +370,20 @@ export const projects: Project[] = [
         title: "XML",
         icon: IconFileTypeXml,
       },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
     ],
     link: "https://github.com/AbdulMiah/PrayerPal",
-    hero: "",
     images: prayerpal,
     demo: prayerpalDemo,
-    delay: 1,
+    delay: 1.2,
     color: "#1a4331",
+    isPublic: true,
   },
   {
-    id: 4,
+    id: 5,
     projectType: ProjectType.WEB_APP,
     title: "E2S System",
     summary: [
@@ -399,14 +418,14 @@ export const projects: Project[] = [
       },
     ],
     link: "https://github.com/AbdulMiah/E2S-System",
-    hero: "",
     images: e2s,
     demo: e2sDemo,
-    delay: 1.2,
+    delay: 1.4,
     color: "#417285",
+    isPublic: true,
   },
   {
-    id: 5,
+    id: 6,
     projectType: ProjectType.WEB_APP,
     title: "Hafod Data",
     summary: [
@@ -443,11 +462,11 @@ export const projects: Project[] = [
       },
     ],
     link: "https://github.com/AbdulMiah/Hafod-Data",
-    hero: "",
     images: hafod,
     demo: hafodDemo,
-    delay: 1.4,
+    delay: 1.6,
     color: "gold",
+    isPublic: true,
   },
 ];
 
