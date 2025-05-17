@@ -14,6 +14,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Updated Creditsafe job title and location.
 - Included Python to PrayerPal skills.
+- Removed unused `hero` field from `Project` type.
 
 ## [7.2.1] (2024-05-24)
 

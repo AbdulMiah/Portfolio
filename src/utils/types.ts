@@ -36,7 +36,6 @@ export type Project = {
   description: string;
   skills: Skill[];
   link: string | null;
-  hero: string;
   images: string[];
   demo: string;
   delay: number;
