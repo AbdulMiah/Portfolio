@@ -57,7 +57,9 @@ function About({ isDarkMode, isMobile }: AboutProp) {
 
       <motion.div
         variants={popOutAnimation(0.8, 0.4)}
-        className={`${isMobile ? "" : "col-span-2 col-start-2"} text-lg`}
+        className={`${
+          isMobile ? "" : "col-span-2 col-start-2"
+        } text-lg whitespace-pre-line`}
       >
         {about.description}
       </motion.div>
