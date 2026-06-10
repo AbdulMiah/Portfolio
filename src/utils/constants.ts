@@ -1,4 +1,5 @@
 import {
+  bbc,
   creditsafe,
   financialforce,
   fitin,
@@ -125,12 +126,58 @@ export const experiences: Experience[] = [
   {
     title: "Software Engineer",
     employmentType: "Full-time",
+    companyName: "BBC",
+    companyLink: "https://www.bbc.co.uk/",
+    location: "Salford, Manchester",
+    logo: bbc,
+    iconBg: "#FFFFFF",
+    date: "Apr 2026 - Present",
+    summary: [
+      "CI/CD & Automation: Enhanced Jenkins pipeline templates to support Python projects, improving build consistency and developer experience across teams.",
+      "Search & ML Enhancements: Contributed to a new enhancement of the BBC search functionality, leveraging ML models to improve entity recognition from user queries and boost search relevance.",
+      "Scalable Deployment: Deployed the new service using scalable infrastructure practices, utilising Elastic Load Balancing (ELB) and Auto Scaling Groups (ASG) to ensure reliability and performance under load.",
+      "Monitoring & Observability: Built dashboards and configured alerts to monitor system health, helping proactively detect and resolve issues across the infrastructure and APIs.",
+    ],
+    skills: [
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript,
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript,
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs,
+      },
+      {
+        title: "Java",
+        icon: IconBrandCSharp,
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Jenkins",
+        icon: IconGitPullRequest,
+      },
+    ],
+  },
+  {
+    title: "Software Engineer",
+    employmentType: "Full-time",
     companyName: "Creditsafe",
     companyLink: "https://www.creditsafe.com/",
     location: "Cardiff, Wales",
     logo: creditsafe,
     iconBg: "#EE2A1F",
-    date: "May 2023 - Present",
+    date: "May 2023 - Mar 2026",
     summary: [
       "Full-stack development: Contributed to both React.js frontend development and ASP.NET backend API development.",
       "Data Management Tools: Delivered valuable features and improvements to internal tools, facilitating the data team's efficient management of customer data.",

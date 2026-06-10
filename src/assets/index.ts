@@ -1,3 +1,4 @@
+import bbc from "./company_logos/bbc.png";
 import creditsafe from "./company_logos/creditsafe.png";
 import financialforce from "./company_logos/financialforce.png";
 import { fitin, fitinDemo } from "./project_screenshots/fitin";
@@ -12,6 +13,7 @@ import { hafod, hafodDemo } from "./project_screenshots/hafod";
 import wave from "./loading/wave.png";
 
 export {
+  bbc,
   creditsafe,
   financialforce,
   fitin,
