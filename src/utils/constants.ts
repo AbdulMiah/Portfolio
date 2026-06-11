@@ -267,6 +267,57 @@ export const projects: Project[] = [
   {
     id: 1,
     projectType: ProjectType.MOBILE_APP,
+    title: "GetMeServed",
+    summary: [
+      "GetMeServed is an online ordering platform built to help food businesses grow while retaining full control over their brand and operations",
+      "0% commission model with a simple, transparent fixed fee per order",
+      "Fully branded online ordering websites for each business",
+      "Android POS system for streamlined in-store order management",
+      "Centralised portal to manage menus, promotions, and operations",
+      "Advanced analytics and reporting for data-driven decisions.",
+    ],
+    description:
+      "GetMeServed is an online ordering platform designed to help food businesses strengthen their digital presence while retaining full control over their brand, customers, and operations. It offers a transparent 0% commission model with a simple fixed fee, alongside fully branded ordering websites and an Android POS system for seamless order management. The platform also includes a centralised portal for managing menus, promotions, and performance, supported by analytics and reporting to help businesses make informed decisions.",
+    skills: [
+      {
+        title: "React.js",
+        icon: IconBrandReact,
+      },
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript,
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs,
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform,
+      },
+      {
+        title: "GitHub Actions",
+        icon: IconBrandGithub,
+      },
+    ],
+    link: null,
+    images: null,
+    demo: null,
+    delay: 0.6,
+    color: "#AF5C29",
+    isPublic: false,
+  },
+  {
+    id: 2,
+    projectType: ProjectType.MOBILE_APP,
     title: "FIT-IN App",
     summary: [
       "FIT-IN is a platform built specifically for real-world, in-person sports communities.",
@@ -307,12 +358,12 @@ export const projects: Project[] = [
     link: null,
     images: fitin,
     demo: fitinDemo,
-    delay: 0.6,
+    delay: 0.8,
     color: "#FD8F29",
     isPublic: false,
   },
   {
-    id: 2,
+    id: 3,
     projectType: ProjectType.MOBILE_APP,
     title: "InStock App",
     summary: [
@@ -348,12 +399,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/InStock",
     images: instock,
     demo: instockDemo,
-    delay: 0.8,
+    delay: 1,
     color: "#2FD4A3",
     isPublic: true,
   },
   {
-    id: 3,
+    id: 4,
     projectType: ProjectType.WEB_APP,
     title: "WrackReport",
     summary: [
@@ -392,12 +443,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     images: wrackreport,
     demo: wrackreportDemo,
-    delay: 1,
+    delay: 1.2,
     color: "#093d61",
     isPublic: true,
   },
   {
-    id: 4,
+    id: 5,
     projectType: ProjectType.MOBILE_APP,
     title: "PrayerPal App",
     summary: [
@@ -428,12 +479,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/PrayerPal",
     images: prayerpal,
     demo: prayerpalDemo,
-    delay: 1.2,
+    delay: 1.4,
     color: "#1a4331",
     isPublic: true,
   },
   {
-    id: 5,
+    id: 6,
     projectType: ProjectType.WEB_APP,
     title: "E2S System",
     summary: [
@@ -470,12 +521,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     images: e2s,
     demo: e2sDemo,
-    delay: 1.4,
+    delay: 1.6,
     color: "#417285",
     isPublic: true,
   },
   {
-    id: 6,
+    id: 7,
     projectType: ProjectType.WEB_APP,
     title: "Hafod Data",
     summary: [
@@ -514,7 +565,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/Hafod-Data",
     images: hafod,
     demo: hafodDemo,
-    delay: 1.6,
+    delay: 1.8,
     color: "gold",
     isPublic: true,
   },
