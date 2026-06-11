@@ -13,7 +13,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 
 - Updated interests and about description.
 - Updated CV.
-- Made `demo` field nullable in `Project` type and adjust the project details page to expand the full width when the `demo` field is null.
+- Made `demo` field nullable in `Project` type and adjusted the project details page to expand the full width when the `demo` field is null.
 
 ## [8.0.0] (2025-05-16)
 
