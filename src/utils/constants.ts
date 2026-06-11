@@ -1,6 +1,8 @@
 import {
+  bbc,
   creditsafe,
   financialforce,
+  gms,
   fitin,
   fitinDemo,
   instock,
@@ -20,7 +22,6 @@ import {
   IconPlaneTilt,
   IconCar,
   IconPlayFootball,
-  IconDeviceGamepad,
   IconBrandReact,
   IconBrandJavascript,
   IconBrandCSharp,
@@ -41,6 +42,7 @@ import {
   IconBrandFigma,
   IconBrandGithub,
   IconRocket,
+  IconDeviceWatch,
 } from "@tabler/icons-react";
 import { Project, NavLink, About, Experience, ProjectType } from "./types";
 
@@ -77,43 +79,46 @@ export const cvPath = "/assets/Abdul Muktadir Miah - CV.pdf";
 
 export const about: About = {
   description:
-    "I am a driven Software Engineer with a strong passion for creating captivating applications. My dedication lies in crafting innovative and engaging software solutions. Constantly seeking opportunities to expand my knowledge and expertise in the ever-evolving field, I am fuelled by a deep curiosity for the latest technologies and their potential applications.",
+    "If you made it here, you're curious about who I am and what I do, so hi, I'm Abdul, a Software Engineer who enjoys building scalable and reliable applications!\
+    \n\nI've worked in collaborative Agile teams where I take ownership of my work, contribute to improving the product, and help make the development process smoother (without setting anything on fire 😅)\
+    \n\nI also enjoy helping others grow by sharing knowledge and supporting teammates, and occasionally posting thoughts and insights on LinkedIn.\
+    \n\nMost of all, I'm driven by continuous improvement and always looking for ways to sharpen my skills, build better systems, and create meaningful impact through technology.",
   interests: [
     {
       title: "Gym",
       icon: IconBarbell,
       description:
-        "The gym is my second home 🏠, where iron meets determination and sweat transforms into strength 💪. I find solace in the rhythmic clank of weights 🏋️‍♂️, the adrenaline of a challenging workout 🏃‍♂️, and the pursuit of personal records 📈. It's more than just exercise; it's a lifestyle.",
+        "The gym is practically my second home. A place where I've built discipline and consistency, and learned that progress is earned, not given. I enjoy pushing past limits, and the quiet satisfaction of hitting a new personal best. It's not just about lifting weights; it's about showing up, staying consistent, and getting a little better each time (even on the days I really don't feel like it).",
     },
     {
       title: "Tech",
       icon: IconCpu,
       description:
-        "My passion lies in the ever-evolving world of technology 🌐. From the latest gadgets and cutting-edge innovations 📱 to coding and digital trends 💻, I thrive on staying at the forefront of what's happening in the tech universe 🚀.",
+        "I have a strong interest in the ever-evolving world of technology. I enjoy keeping up with new tools, trends, and innovations, and understanding how they shape the way we build and use software. For me, it's about staying curious, continuously learning, and keeping up with an industry that never really stands still.",
     },
     {
       title: "Travel",
       icon: IconPlaneTilt,
       description:
-        "Eager to explore the world 🌍, I'm captivated by the endless possibilities of travel ✈️. My heart belongs to the thrill of discovering new destinations 🗺️ and immersing myself in diverse cultures.",
+        "I enjoy travelling and exploring new places whenever I can. Experiencing different cultures, environments, and perspectives keeps things interesting and gives me a fresh outlook beyond day-to-day routines. Sometimes it's nice to step outside the familiar and seeing a bit more of what the world has to offer.",
     },
     {
       title: "Cars",
       icon: IconCar,
       description:
-        "Whether it's classic masterpieces or the latest in high-speed marvels, I'm continually impressed by the craftsmanship and innovation within the realm of automobiles 🏎️. My fascination knows no bounds as I delve into the design, innovation, and engineering of these four-wheeled machines 🛠️. And let's not forget the exhilaration that comes from harnessing the raw horsepower that powers them 🚀!",
+        "From classic designs to modern performance machines, I enjoy learning about the engineering, design, and innovation within the realm of automobiles! There's also something exhilarating about the experience of driving a high-performance four-wheeled machine that I can't quite explain...",
     },
     {
       title: "Sport",
       icon: IconPlayFootball,
       description:
-        "From the adrenaline rush of the game to the dedication and teamwork it entails, I'm all in 🙌. The electrifying realm of sports has a unique way of bringing people together and pushing the limits of human potential 🌟. The joy of victory (or even the lessons in defeat) keep me motivated 🏆.",
+        "Sports has a unique way of bringing people together while pushing your limits! I've recently joined the padel craze... still figuring out what all the hype is about, but enjoying it so far! Whether it's a win or a loss, it's always a good session!",
     },
     {
-      title: "Games",
-      icon: IconDeviceGamepad,
+      title: "Watches",
+      icon: IconDeviceWatch,
       description:
-        "In the captivating realm of video games 🎮, I thrive on the thrill of competition 🏆. Whether it's epic quests or strategic battles, I relish the opportunity to test my skills and outwit opponents in every game I play 🧠. These digital adventures not only ignite my imagination but also fuel my competitive spirit 🔥!",
+        "My interest in watches is relatively recent, but it's one I've quickly grown to appreciate. I'm fascinated by their design, craftsmanship, and innovation, especially given how they've evolved over centuries whilst remaining 'timeless'. There's something impressive about how they blend engineering and style, turning a functional object into a piece of art that sits on your wrist.",
     },
   ],
 };
@@ -122,12 +127,58 @@ export const experiences: Experience[] = [
   {
     title: "Software Engineer",
     employmentType: "Full-time",
+    companyName: "BBC",
+    companyLink: "https://www.bbc.co.uk/",
+    location: "Salford, Manchester",
+    logo: bbc,
+    iconBg: "#FFFFFF",
+    date: "Apr 2026 - Present",
+    summary: [
+      "CI/CD & Automation: Enhanced Jenkins pipeline templates to support Python projects, improving build consistency and developer experience across teams.",
+      "Search & ML Enhancements: Contributed to a new enhancement of the BBC search functionality, leveraging ML models to improve entity recognition from user queries and boost search relevance.",
+      "Scalable Deployment: Deployed the new service using scalable infrastructure practices, utilising Elastic Load Balancing (ELB) and Auto Scaling Groups (ASG) to ensure reliability and performance under load.",
+      "Monitoring & Observability: Built dashboards and configured alerts to monitor system health, helping proactively detect and resolve issues across the infrastructure and APIs.",
+    ],
+    skills: [
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript,
+      },
+      {
+        title: "JavaScript",
+        icon: IconBrandJavascript,
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs,
+      },
+      {
+        title: "Java",
+        icon: IconBrandCSharp,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Jenkins",
+        icon: IconGitPullRequest,
+      },
+    ],
+  },
+  {
+    title: "Software Engineer",
+    employmentType: "Full-time",
     companyName: "Creditsafe",
     companyLink: "https://www.creditsafe.com/",
     location: "Cardiff, Wales",
     logo: creditsafe,
     iconBg: "#EE2A1F",
-    date: "May 2023 - Present",
+    date: "May 2023 - Mar 2026",
     summary: [
       "Full-stack development: Contributed to both React.js frontend development and ASP.NET backend API development.",
       "Data Management Tools: Delivered valuable features and improvements to internal tools, facilitating the data team's efficient management of customer data.",
@@ -217,6 +268,57 @@ export const projects: Project[] = [
   {
     id: 1,
     projectType: ProjectType.MOBILE_APP,
+    title: "GetMeServed",
+    summary: [
+      "GetMeServed is an online ordering platform built to help food businesses grow while retaining full control over their brand and operations",
+      "0% commission model with a simple, transparent fixed fee per order",
+      "Fully branded online ordering websites for each business",
+      "Android POS system for streamlined in-store order management",
+      "Centralised portal to manage menus, promotions, and operations",
+      "Advanced analytics and reporting for data-driven decisions.",
+    ],
+    description:
+      "GetMeServed is an online ordering platform designed to help food businesses strengthen their digital presence while retaining full control over their brand, customers, and operations. It offers a transparent 0% commission model with a simple fixed fee, alongside fully branded ordering websites and an Android POS system for seamless order management. The platform also includes a centralised portal for managing menus, promotions, and performance, supported by analytics and reporting to help businesses make informed decisions.",
+    skills: [
+      {
+        title: "React.js",
+        icon: IconBrandReact,
+      },
+      {
+        title: "TypeScript",
+        icon: IconBrandTypescript,
+      },
+      {
+        title: "Node.js",
+        icon: IconBrandNodejs,
+      },
+      {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
+        title: "AWS",
+        icon: IconBrandAws,
+      },
+      {
+        title: "Terraform",
+        icon: IconBrandTerraform,
+      },
+      {
+        title: "GitHub Actions",
+        icon: IconBrandGithub,
+      },
+    ],
+    link: null,
+    images: gms,
+    demo: null,
+    delay: 0.6,
+    color: "#AF5C29",
+    isPublic: false,
+  },
+  {
+    id: 2,
+    projectType: ProjectType.MOBILE_APP,
     title: "FIT-IN App",
     summary: [
       "FIT-IN is a platform built specifically for real-world, in-person sports communities.",
@@ -257,12 +359,12 @@ export const projects: Project[] = [
     link: null,
     images: fitin,
     demo: fitinDemo,
-    delay: 0.6,
+    delay: 0.8,
     color: "#FD8F29",
     isPublic: false,
   },
   {
-    id: 2,
+    id: 3,
     projectType: ProjectType.MOBILE_APP,
     title: "InStock App",
     summary: [
@@ -298,12 +400,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/InStock",
     images: instock,
     demo: instockDemo,
-    delay: 0.8,
+    delay: 1,
     color: "#2FD4A3",
     isPublic: true,
   },
   {
-    id: 3,
+    id: 4,
     projectType: ProjectType.WEB_APP,
     title: "WrackReport",
     summary: [
@@ -342,12 +444,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/WrackReport",
     images: wrackreport,
     demo: wrackreportDemo,
-    delay: 1,
+    delay: 1.2,
     color: "#093d61",
     isPublic: true,
   },
   {
-    id: 4,
+    id: 5,
     projectType: ProjectType.MOBILE_APP,
     title: "PrayerPal App",
     summary: [
@@ -378,12 +480,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/PrayerPal",
     images: prayerpal,
     demo: prayerpalDemo,
-    delay: 1.2,
+    delay: 1.4,
     color: "#1a4331",
     isPublic: true,
   },
   {
-    id: 5,
+    id: 6,
     projectType: ProjectType.WEB_APP,
     title: "E2S System",
     summary: [
@@ -420,12 +522,12 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/E2S-System",
     images: e2s,
     demo: e2sDemo,
-    delay: 1.4,
+    delay: 1.6,
     color: "#417285",
     isPublic: true,
   },
   {
-    id: 6,
+    id: 7,
     projectType: ProjectType.WEB_APP,
     title: "Hafod Data",
     summary: [
@@ -464,7 +566,7 @@ export const projects: Project[] = [
     link: "https://github.com/AbdulMiah/Hafod-Data",
     images: hafod,
     demo: hafodDemo,
-    delay: 1.6,
+    delay: 1.8,
     color: "gold",
     isPublic: true,
   },

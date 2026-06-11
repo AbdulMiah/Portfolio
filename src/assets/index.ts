@@ -1,5 +1,7 @@
+import bbc from "./company_logos/bbc.png";
 import creditsafe from "./company_logos/creditsafe.png";
 import financialforce from "./company_logos/financialforce.png";
+import { gms } from "./project_screenshots/gms";
 import { fitin, fitinDemo } from "./project_screenshots/fitin";
 import { instock, instockDemo } from "./project_screenshots/instock";
 import {
@@ -12,8 +14,10 @@ import { hafod, hafodDemo } from "./project_screenshots/hafod";
 import wave from "./loading/wave.png";
 
 export {
+  bbc,
   creditsafe,
   financialforce,
+  gms,
   fitin,
   instock,
   wrackreport,

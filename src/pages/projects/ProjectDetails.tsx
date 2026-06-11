@@ -37,7 +37,11 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
         </Link>
       </div>
 
-      <div className={`grid ${!isMobile && "grid-cols-[60%,40%]"} gap-5`}>
+      <div
+        className={`grid ${
+          !isMobile && project.demo ? "grid-cols-[60%,40%]" : ""
+        } gap-5`}
+      >
         <div className="space-y-5">
           <div
             className={`flex ${
@@ -77,7 +81,7 @@ function ProjectDetails({ isMobile, isDarkMode, project }: ProjectDetailsProp) {
           </div>
         </div>
 
-        {!isMobile && (
+        {!isMobile && project.demo && (
           <div className="flex h-[40vh] items-center justify-center cursor-move">
             {project.projectType === ProjectType.WEB_APP ? (
               <MonitorCanvas

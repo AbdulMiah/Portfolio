@@ -2,6 +2,19 @@
 
 All notable changes to the Personal Portfolio project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [9.0.0] (2026-06-11)
+
+### Added
+
+- Added new experience, BBC.
+- Added new project, GetMeServed.
+
+### Changed
+
+- Updated interests and about description.
+- Updated CV.
+- Made `demo` field nullable in `Project` type and adjusted the project details page to expand the full width when the `demo` field is null.
+
 ## [8.0.0] (2025-05-16)
 
 ### Added
@@ -274,6 +287,7 @@ All notable changes to the Personal Portfolio project will be documented in this
 - Updated `deploy.yml` file to follow semantic versioning.
 - Updated `README.md`.
 
+[9.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v9.0.0
 [8.0.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v8.0.0
 [7.2.1]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.1
 [7.2.0]: https://github.com/AbdulMiah/Portfolio/releases/tag/v7.2.0
