@@ -37,7 +37,7 @@ export type Project = {
   skills: Skill[];
   link: string | null;
   images: string[];
-  demo: string;
+  demo: string | null;
   delay: number;
   color: string;
   isPublic: boolean;
