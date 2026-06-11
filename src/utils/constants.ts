@@ -87,7 +87,7 @@ export const about: About = {
       title: "Gym",
       icon: IconBarbell,
       description:
-        "The gym is practically my second home; a place where I've built discipline and consistency, and learned that progress is earned, not given. I enjoy pushing past limits, and the quiet satisfaction of hitting a new personal best. It's not just about lifting weights; it's about showing up, staying consistent, and getting a little better each time (even on the days I really don't feel like it).",
+        "The gym is practically my second home. A place where I've built discipline and consistency, and learned that progress is earned, not given. I enjoy pushing past limits, and the quiet satisfaction of hitting a new personal best. It's not just about lifting weights; it's about showing up, staying consistent, and getting a little better each time (even on the days I really don't feel like it).",
     },
     {
       title: "Tech",
@@ -140,6 +140,10 @@ export const experiences: Experience[] = [
     ],
     skills: [
       {
+        title: "Python",
+        icon: IconBrandPython,
+      },
+      {
         title: "TypeScript",
         icon: IconBrandTypescript,
       },
@@ -154,10 +158,6 @@ export const experiences: Experience[] = [
       {
         title: "Java",
         icon: IconBrandCSharp,
-      },
-      {
-        title: "Python",
-        icon: IconBrandPython,
       },
       {
         title: "AWS",
